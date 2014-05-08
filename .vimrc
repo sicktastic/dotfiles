@@ -44,6 +44,7 @@ nmap ,t :FufTaggedFile<CR>
 
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
+nmap <C-m> :vertical resize -5<cr>
 
 let g:fuf_abbrevMap = {
       \ "^ " : [ "**/", ],
