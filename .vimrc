@@ -3,7 +3,7 @@
 ""
 
 " Define paths
-let g:janus_path = escape(fnamemodify(resolve(expand("<sfile>:p")), ":h"), ' ')
+let g:janus_path = escape(fnamemodify(resolve(expand("<sfile>:p")), ":h").vimrc
 let g:janus_vim_path = escape(fnamemodify(resolve(expand("<sfile>:p" . "vim")), ":h"), ' ')
 let g:janus_custom_path = expand("~/.janus")
 
@@ -41,6 +41,9 @@ call janus#load_pathogen()
 nmap ,f :FufFileWithCurrentBufferDir<CR>
 nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
+
+" Split Window Resize
+nmap <C-v> :vertical resize +5<cr>
 
 let g:fuf_abbrevMap = {
       \ "^ " : [ "**/", ],
