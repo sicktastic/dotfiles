@@ -20,6 +20,8 @@ alias dev="cd ~/Sites/thriveministry.vagrant/"
 
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
 
+# Git Alias
+alias gs='git status'
 alias gad='git add --all .'
 alias gbc='gdc'
 alias gca='git commit -a'
