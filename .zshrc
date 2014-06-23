@@ -20,6 +20,22 @@ alias dev="cd ~/Sites/thriveministry.vagrant/"
 
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
 
+alias gad='git add --all .'
+alias gbc='gdc'
+alias gca='git commit -a'
+alias gcaa='git commit -a --amend -C HEAD'
+alias gcl='git clone'
+alias gcm="git commit -m"
+alias gco='git checkout'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gdm='git diff master'
+alias gg='git lg'
+alias gp='git push'
+alias gpf='git push -f'
+alias gpr='git pull --rebase'
+alias grc='git rebase --continue'
+
 # Disable flow control commands (keeps C-s from freezing everything)
 stty start undef
 stty stop undef
