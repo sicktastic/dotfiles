@@ -18,6 +18,14 @@ alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
 alias dev="cd ~/Sites/thriveministry.vagrant/"
 
+alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
+
+# Disable flow control commands (keeps C-s from freezing everything)
+stty start undef
+stty stop undef
+
+export TERM=xterm-256color
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
