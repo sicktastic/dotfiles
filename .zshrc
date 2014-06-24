@@ -20,8 +20,32 @@ alias dev="cd ~/Sites/thriveministry.vagrant/"
 
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
 
-# Git Alias
-alias gs='git status'
+alias ack='ag'
+alias amend="git commit --amend"
+alias asu="cd ~/code/rails/activesupport"
+alias aliases='vim ~/.dotfiles/zsh/aliases'
+alias b='ssh -t ben@downtowncrossingquartet.com screen -rd irc'
+alias bake='bundle exec rake'
+alias be='bundle exec'
+alias ben='ssh ben@benorenstein.com'
+alias bi='bundle install -j 8'
+alias be='bundle exec'
+alias bo='cd ~/code/boardwalk'
+alias bu='bundle update'
+alias bunbang='bundle install && !!'
+alias c='cd'
+alias cc='cd ~/Dropbox/freelancing/code-climate'
+alias chad='vim ~/Dropbox/work/thoughtbot/notes/1-1s/chad.txt'
+alias code='cd ~/code'
+alias codereview='vim ~/Dropbox/notes/code-review-checklist.txt'
+alias d='cd ~/.dotfiles'
+alias dbprep='rdm && rdtp'
+alias di='cd ~/code/discourse'
+alias dr='cd ~/Dropbox'
+alias drop='cd ~/Dropbox'
+alias edwin='vim ~/Dropbox/work/thoughtbot/notes/1-1s/edwin.txt'
+alias fs='foreman start'
+alias -g G='| grep'
 alias gad='git add --all .'
 alias gbc='gdc'
 alias gca='git commit -a'
@@ -32,11 +56,98 @@ alias gco='git checkout'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gdm='git diff master'
+alias get='sudo apt-get install'
 alias gg='git lg'
+alias gig='vim ~/Dropbox/notes/gigmasters-prefill.txt'
+alias gpush='echo "Use gp!" && git push'
 alias gp='git push'
 alias gpf='git push -f'
 alias gpr='git pull --rebase'
+alias gratitude='vim ~/Dropbox/docs/journal/gratitude.txt'
 alias grc='git rebase --continue'
+alias grake='rspec --drb spec/ && cucumber --drb features/'
+alias gurad='guard'
+alias h='sync'
+alias he='cd ~/code/hacker-engine'
+alias herkou='heroku'
+alias hpr='hub pull-request'
+alias hpush='git push heroku'
+alias irb='irb --readline -r irb/completion'
+alias journal='vim ~/Dropbox/docs/journal/2011.txt'
+alias killruby='killall -9 ruby'
+alias killrudy='killall -9 ruby'
+alias -g M='| more'
+alias mastre='master'
+alias mentor='vim ~/Dropbox/work/thoughtbot/notes/mentees.txt'
+alias newscreen="tmux"
+alias l='cd ~/code/learn'
+alias lt='lein test'
+alias lrs='lein ring server'
+alias -g L='| less'
+alias pc='production-console'
+alias parallel='rdtp && rake parallel:prepare test:parallel_with_specs'
+alias patch='git format-patch HEAD^ --stdout > patch.diff'
+alias phil='vim ~/Dropbox/work/thoughtbot/notes/1-1s/phil.txt'
+alias phonecall='vim ~/Dropbox/work/thoughtbot/notes/prime/phonecalls.txt'
+alias podcast='vim ~/Dropbox/work/thoughtbot/notes/podcast.txt'
+alias prepdb='dbprep'
+alias r='cd ~/code/refactoring-good-to-great'
+alias remore='!! | more'
+alias reguard='killall -9 ruby ; guard'
+alias rerake='!! && rake'
+alias restart_apache="sudo /etc/init.d/apache2 restart"
+alias restart_postgres="stoppostgres && startpostgres"
+alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
+alias retagwithcoffee='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp * && coffeetags -R -f >> tags'
+alias repush="gpr && git push"
+alias review="git diff master"
+alias rc='rails console'
+alias remigrate='rake db:migrate && rake db:migrate:redo && rake db:schema:dump && rake db:test:prepare'
+alias rdm="be rake db:migrate"
+alias rdtp="be rake db:test:prepare"
+alias rs='bundle install && rails server -p 3000'
+alias safepush='git pull --rebase && bundle install && rdm && rake && git push'
+alias sfh='cd ~/code/speaking-for-hackers-book'
+alias shpush='rake && hpush'
+alias sc='staging-console'
+alias so='source ~/.dotfiles/zsh/aliases'
+alias sp='safepush'
+alias speaking='cd ~/Dropbox/speaking'
+alias squash='git rebase -i master'
+alias ss='spring stop'
+alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias startredis='redis-server /usr/local/etc/redis.conf &'
+alias stoppostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop'
+alias status='vim ~/Dropbox/work/thoughtbot/notes/prime -c "Ex"'
+alias sync='git add -u . && git commit -m "Minor changes. Commit message skipped." && repush'
+alias tail-logs='heroku logs -t'
+alias thom='vim ~/Dropbox/work/thoughtbot/notes/1-1s/thom.txt'
+alias track='git checkout -t'
+alias w='cd ~/code/whetstone'
+alias worknotes='vim ~/Dropbox/work/thoughtbot/notes -c "Ex"'
+alias u='cd ..'
+alias v='vim'
+alias vi='vim'
+
+# Heroku staging
+alias staging-console='heroku run console --remote staging'
+alias staging-tail='heroku logs --tail --remote staging'
+
+# Heroku production
+alias production-console='heroku run console --remote production'
+alias production-tail='heroku logs --tail --remote production'
+
+# # Heroku databases
+
+alias db-pull-staging='development restore staging'
+alias db-pull-production='development restore production'
+
+alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku pgbackups:url --remote production` --remote staging  --confirm `basename $PWD`-staging'
+alias db-backup-production='heroku pgbackups:capture --remote production'
+alias db-backups='heroku pgbackups --remote production'
+
+alias levelup-get-production='curl -o ~/Downloads/latest.dump `heroku pgbackups:url --app levelup-production`'
+alias levelup-db-fix='killruby ; rake db:drop:all db:create:all ; pg_restore --verbose --clean --no-acl --no-owner -d levelup_development ~/Downloads/latest.dump -j 8 ; prepdb && rake levelup:dev:create_admin && rails runner CreditCard.delete_all'
 
 # Disable flow control commands (keeps C-s from freezing everything)
 stty start undef
