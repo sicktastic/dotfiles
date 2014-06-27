@@ -2,12 +2,12 @@ set nocompatible   " Disable vi-compatibility
 set t_Co=256
 
 colorscheme xoria256
+
 set guifont=menlo\ for\ powerline:h16
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
 set linespace=15
-
 set wrap
 set autoindent
 set showmode                    " always show what mode we're currently editing in
@@ -29,6 +29,36 @@ set visualbell           " don't beep
 set noerrorbells         " don't beep
 set autowrite  "Save on buffer switch
 set mouse=a
+
+" Fuzzyfinder
+nmap ,f :FufFileWithCurrentBufferDir<CR>
+nmap ,b :FufBuffer<CR>
+nmap ,t :FufTaggedFile<CR>
+
+let g:fuf_abbrevMap = {
+      \ "^ " : [ "**/", ],
+      \ }
+
+highlight Search cterm=underline
+
+" Split Window Resize
+nmap <C-v> :vertical resize +5<cr>
+" nmap <C-m> :vertical resize -5<cr>
+
+" Vim Split
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-H>
+
+" Note that remapping C-s requires flow control to be disabled
+" (e.g. in .bashrc or .zshrc)
+map <C-h> :nohl<cr>
+map <C-s> <esc>:w<CR>
+imap <C-s> <esc>:w<CR>
+map <C-t> <esc>:tabnew<CR>
+map <C-x> <C-w>c
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
+
 
 " Easy escaping to normal model
 imap jj <esc>
