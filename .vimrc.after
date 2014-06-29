@@ -63,6 +63,9 @@ map <C-p> :cp<CR>
 " Easy escaping to normal model
 imap jj <esc>
 
+" Find hidden files with controlP
+let g:ctrlp_show_hidden = 1
+
 " Powerline (Fancy thingy at bottom stuff)
 let g:Powerline_symbols = 'fancy'
 set laststatus=2   " Always show the statusline
