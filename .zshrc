@@ -13,13 +13,22 @@ ZSH_THEME="cloud"
 
 . ~/.aliases
 
+# My commom shortcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
-alias dev="cd ~/Sites/thriveministry.vagrant/"
+alias dev="cd my_current_working_project"
+alias hc="heroku create"
 
+# Vagrant 
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
 
+# Rails
+alias rs="rails s"
+alias rg="rails generate"
+alias rgc="rails generate controller"
+
+# Thoughtbot suggested
 alias ack='ag'
 alias amend="git commit --amend"
 alias asu="cd ~/code/rails/activesupport"
