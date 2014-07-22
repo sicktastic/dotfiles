@@ -23,6 +23,10 @@ alias hc="heroku create"
 # Vagrant 
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
 
+# MySQL Local
+alias mysqlstart="mysql.server start"
+alias mysqlstop="mysql.server stop"
+
 # Rails
 alias rs="rails s"
 alias rg="rails generate"
