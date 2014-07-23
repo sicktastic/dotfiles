@@ -32,9 +32,9 @@ set autowrite  "Save on buffer switch
 set mouse=a
 
 " Fuzzyfinder
-nmap ,f :FufFileWithCurrentBufferDir<CR>
-nmap ,b :FufBuffer<CR>
-nmap ,t :FufTaggedFile<CR>
+" nmap ,f :FufFileWithCurrentBufferDir<CR>
+" nmap ,b :FufBuffer<CR>
+" nmap ,t :FufTaggedFile<CR>
 
 let g:fuf_abbrevMap = {
       \ "^ " : [ "**/", ],
