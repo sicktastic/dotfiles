@@ -23,6 +23,8 @@ alias pingit="ping google.com"
 
 # Vagrant 
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
+alias vu="vagrant up"
+alias vp="vagrant provision"
 
 # MySQL Local
 alias mysqlstart="mysql.server start"
