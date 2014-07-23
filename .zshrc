@@ -19,6 +19,7 @@ alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
 alias dev="cd my_current_working_project"
 alias hc="heroku create"
+alias pingit="ping google.com"
 
 # Vagrant 
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
@@ -31,6 +32,7 @@ alias mysqlstop="mysql.server stop"
 alias rs="rails s"
 alias rg="rails generate"
 alias rgc="rails generate controller"
+alias rconsole="rails console --sandbox"
 
 # Thoughtbot suggested
 alias ack='ag'
