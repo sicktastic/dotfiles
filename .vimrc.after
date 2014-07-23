@@ -10,6 +10,7 @@ set go-=L " Removes left hand scroll bar
 set linespace=15
 set wrap
 set autoindent
+set smartindent
 set showmode                    " always show what mode we're currently editing in
 set tabstop=2                   " a tab is four spaces
 set smarttab
