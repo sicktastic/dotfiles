@@ -34,9 +34,12 @@ alias mysqlstop="mysql.server stop"
 alias rs="rails s"
 alias rg="rails generate"
 alias rgc="rails generate controller"
+alias rgs='rails generate scaffold'
+alias rgm='rails generate migration'
+alias rakedbm='rake db:migrate'
 alias rconsole="rails console --sandbox"
 
-# Thoughtbot suggested
+# Thoughtbot
 alias ack='ag'
 alias amend="git commit --amend"
 alias asu="cd ~/code/rails/activesupport"
