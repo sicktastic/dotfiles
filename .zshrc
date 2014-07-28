@@ -20,6 +20,7 @@ alias ds="cd ~/Sites"
 alias dev="cd my_current_working_project"
 alias hc="heroku create"
 alias pingit="ping google.com"
+alias shortcuts="vi ~/.zshrc"
 
 # Vagrant 
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
