@@ -22,6 +22,7 @@ alias hc="heroku create"
 alias pingit="ping google.com"
 alias shortcuts="vi ~/.zshrc"
 alias sourcezshrc="source ~/.zshrc"
+alias ci="composer install"
 
 # Vagrant 
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
