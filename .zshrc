@@ -23,9 +23,6 @@ alias pingit="ping google.com"
 alias shortcuts="vi ~/.zshrc"
 alias sourcezshrc="source ~/.zshrc"
 
-# Yo
-alias yoa="yo angular"
-
 # MySQL Local
 alias mysqlstart="mysql.server start"
 alias mysqlstop="mysql.server stop"
@@ -38,6 +35,12 @@ alias npmbootstrap='npm install bootstrap'
 alias npmi="npm init"
 alias npmgulp="sudo npm install -g gulp"
 alias npmgulpl="npm install --save-dev gulp"
+
+# Bower
+alias bowerbootstrap="bower install bootstrap"
+
+# Yo
+alias yoa="yo angular"
 
 # Vagrant 
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
