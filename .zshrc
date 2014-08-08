@@ -40,6 +40,8 @@ alias rgc="rails generate controller"
 alias rgs='rails generate scaffold'
 alias rgm='rails generate migration'
 alias rakedbm='rake db:migrate'
+alias rakestatus='rake db:migrate:status'
+alias rakerollback='rake db:rollback'
 alias rconsole="rails console --sandbox"
 
 # Thoughtbot
