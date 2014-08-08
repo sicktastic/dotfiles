@@ -35,7 +35,8 @@ alias ci="composer install"
 
 # NPM
 alias npmbootstrap='npm install bootstrap'
-alias ni="npm init"
+alias npmi="npm init"
+alias npmgulp="sudo npm install -g gulp"
 
 # Vagrant 
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
