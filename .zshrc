@@ -57,6 +57,9 @@ alias rakedbm='rake db:migrate'
 alias rakestatus='rake db:migrate:status'
 alias rakerollback='rake db:rollback'
 alias rconsole="rails console --sandbox"
+alias bu="bundle update"
+alias bi="bundle install"
+alias biwp="bundle install --without production"
 
 # Thoughtbot
 # alias ack='ag'
