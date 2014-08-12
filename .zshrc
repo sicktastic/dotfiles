@@ -8,27 +8,23 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="cloud"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias zshconfig="vim ~/.zshrc"
+# alias ohmyzsh="vim ~/.oh-my-zsh"
 
 . ~/.aliases
-
-# My commom shortcuts
+# Everday Stuff
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
-alias dev="cd my_current_working_project"
-alias hc="heroku create"
+alias thrive="cd ~/Sites/thriveministry"
+alias members="cd ~/Sites/thriveministry/members.thriveministry.org.frontend"
 alias pingit="ping google.com"
-alias shortcuts="vi ~/.zshrc"
+alias shortcuts='vi ~/.zshrc'
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias vimrc='vi ~/.vimrc'
+alias vimafter='vi ~/.vimrc.after'
+alias gitshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias sourcezshrc="source ~/.zshrc"
-
-# MySQL Local
-alias mysqlstart="mysql.server start"
-alias mysqlstop="mysql.server stop"
-
-# Composer
-alias ci="composer install"
 
 # NPM
 alias npmbootstrap='npm install bootstrap'
@@ -39,30 +35,44 @@ alias npmgulpl="npm install --save-dev gulp"
 # Bower
 alias bowerbootstrap="bower install bootstrap"
 
-# Yo
+# Yeoman
 alias yoa="yo angular"
 
-# Vagrant 
+# Vagrant
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
-alias vu="vagrant up"
-alias vp="vagrant provision"
+
+# MySQL
+alias mysqlstart="mysql.server start"
+alias mysqlstop="mysql.server stop"
+
+# Tmux Session Start
+alias tmx="tmux new -s"
+alias tmxa="tmux attach"
+alias tmxl="tmux ls"
+alias tmxc="vim ~/.tmux.conf"
 
 # Rails
-alias rs="rails s"
-alias rg="rails generate"
-alias rgc="rails generate controller"
-alias rdc="rails destroy controller"
+alias bu='bundle update'
+alias bi='bundle install'
+alias biwp='bundle install --without production'
+alias rn='rails new'
+alias rs='rails s'
+alias rg='rails generate'
+alias rd='rails destroy'
+alias rgc='rails generate controller'
+alias rdc='rails destroy controller'
 alias rgs='rails generate scaffold'
 alias rds='rails destroy scaffold'
 alias rgm='rails generate migration'
 alias rdm='rails destroy migration'
+alias rconsole='rails console --sandbox'
 alias rakedbm='rake db:migrate'
 alias rakestatus='rake db:migrate:status'
 alias rakerollback='rake db:rollback'
-alias rconsole="rails console --sandbox"
-alias bu="bundle update"
-alias bi="bundle install"
-alias biwp="bundle install --without production"
+
+# Heroku
+alias hpush='git push heroku'
+alias hc='heroku create'
 
 # Thoughtbot
 # alias ack='ag'
