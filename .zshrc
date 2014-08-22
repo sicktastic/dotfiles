@@ -73,7 +73,7 @@ alias installrspec='bin/rails generate rspec:install'
 alias brspec='bundle binstubs rspec-core'
 
 # Heroku
-alias hpush='git push heroku'
+alias hpush='git push heroku master'
 alias hc='heroku create'
 
 # Thoughtbot
