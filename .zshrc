@@ -69,7 +69,8 @@ alias rconsole='rails console --sandbox'
 alias rakedbm='rake db:migrate'
 alias rakestatus='rake db:migrate:status'
 alias rakerollback='rake db:rollback'
-alias installrspec='bin/rails generate rspec:install'
+alias binstallrspec='bin/rails generate rspec:install'
+alias installrspec='rails generate rspec:install'
 alias brspec='bundle binstubs rspec-core'
 
 # Heroku
