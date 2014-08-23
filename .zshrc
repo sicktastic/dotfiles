@@ -76,6 +76,7 @@ alias brspec='bundle binstubs rspec-core'
 # Heroku
 alias hpush='git push heroku master'
 alias hc='heroku create'
+alias hrakedbm='heroku run rake db:migrate'
 
 # Thoughtbot
 # alias ack='ag'
