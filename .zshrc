@@ -57,6 +57,7 @@ alias tmxc="vim ~/.tmux.conf"
 alias tmxn='tmuxinator new'
 alias tmxo='tmuxinator open'
 alias tmxs='tmuxinator start'
+alias tmxsthrive='tmuxinator start ThriveRails'
 
 # Rails
 alias bu='bundle update'
