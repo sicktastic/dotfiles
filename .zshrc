@@ -73,6 +73,9 @@ alias binstallrspec='bin/rails generate rspec:install'
 alias installrspec='rails generate rspec:install'
 alias brspec='bundle binstubs rspec-core'
 
+# Sass
+alias sw='sass --watch'
+
 # Heroku
 alias hpush='git push heroku master'
 alias hc='heroku create'
