@@ -52,6 +52,9 @@ alias tmxa="tmux attach"
 alias tmxl="tmux ls"
 alias tmxc="vim ~/.tmux.conf"
 
+# Tmuxinator
+alias tmxn='tmuxinator new'
+
 # Rails
 alias bu='bundle update'
 alias bi='bundle install'
