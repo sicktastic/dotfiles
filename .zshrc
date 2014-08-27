@@ -52,6 +52,7 @@ alias tmx="tmux new -s"
 alias tmxa="tmux attach"
 alias tmxl="tmux ls"
 alias tmxc="vim ~/.tmux.conf"
+alias tmxk='tmux kill-session -t'
 
 # Tmuxinator
 alias tmxn='tmuxinator new'
