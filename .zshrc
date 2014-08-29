@@ -90,6 +90,10 @@ alias hpush='git push heroku master'
 alias hc='heroku create'
 alias hrakedbm='heroku run rake db:migrate'
 
+# Sails
+alias sn='sails new'
+alias sl='sails lift'
+
 # Thoughtbot
 # alias ack='ag'
 # alias amend="git commit --amend"
