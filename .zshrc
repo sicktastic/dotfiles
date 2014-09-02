@@ -88,6 +88,7 @@ alias sw='sass --watch'
 # Heroku
 alias hpush='git push heroku master'
 alias hc='heroku create'
+alias hopen='heroku open'
 alias hrakedbm='heroku run rake db:migrate'
 
 # Sails
