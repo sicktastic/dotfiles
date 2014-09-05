@@ -63,6 +63,7 @@ map <C-p> :cp<CR>
 
 " Easy escaping to normal model
 imap jj <esc>
+imap jk <esc>
 
 " Find hidden files with controlP
 let g:ctrlp_show_hidden = 1
