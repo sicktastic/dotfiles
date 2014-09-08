@@ -91,6 +91,9 @@ alias hc='heroku create'
 alias hopen='heroku open'
 alias hrakedbm='heroku run rake db:migrate'
 
+# Thoughbot Bourbon Family
+alias bourbonrefills='rails generate refills:list'
+
 # Sails
 alias sn='sails new'
 alias sl='sails lift'
