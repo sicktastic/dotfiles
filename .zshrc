@@ -90,6 +90,7 @@ alias hpush='git push heroku master'
 alias hc='heroku create'
 alias hopen='heroku open'
 alias hrakedbm='heroku run rake db:migrate'
+alias hps='heroku ps'
 
 # Thoughbot Bourbon Family and Other
 alias bourbonrefills='rails generate refills:list'
