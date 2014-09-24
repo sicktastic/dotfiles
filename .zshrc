@@ -34,6 +34,9 @@ alias npmi="npm init"
 alias npmgulp="sudo npm install -g gulp"
 alias npmgulpl="npm install --save-dev gulp"
 
+# Foreman
+alias fs='foreman start'
+
 # Bower
 alias bowerbootstrap="bower install bootstrap"
 
@@ -117,7 +120,6 @@ alias sl='sails lift'
 # alias di='cd ~/code/discourse'
 # alias dr='cd ~/Dropbox'
 # alias drop='cd ~/Dropbox'
-# alias fs='foreman start'
 # alias grake='rspec --drb spec/ && cucumber --drb features/'
 # alias gurad='guard'
 # alias h='sync'
