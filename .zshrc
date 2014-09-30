@@ -27,7 +27,7 @@ alias vimafter='vi ~/.vimrc.after'
 alias gitshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias sourcezshrc='source ~/.zshrc'
 alias mydotfiles='cd ~/Sites/dotfiles'
-alias initialgit="g init && ga . && gc 'initial git' "
+alias initialgit="g init && ga . && gc 'initial git'"
 
 # NPM
 alias npmbootstrap='npm install bootstrap'
