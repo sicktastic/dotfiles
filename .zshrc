@@ -28,6 +28,7 @@ alias gitshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias sourcezshrc='source ~/.zshrc'
 alias mydotfiles='cd ~/Sites/dotfiles'
 alias initialgit="g init && ga . && gc 'initial git'"
+alias havingfun="osascript -e 'Set Volume 10' && say -v 'goodnews' it is time for lunch"
 
 # NPM
 alias npmbootstrap='npm install bootstrap'
