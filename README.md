@@ -8,11 +8,13 @@ My .vimrc .tmux.conf .zshrc
 janus
 https://github.com/carlhuda/janus
 
+Vundler
+https://github.com/gmarik/Vundle.vim
+
 tmuxinator
 https://github.com/tmuxinator/tmuxinator
 
 powerline
-
 sparkup
 
 
