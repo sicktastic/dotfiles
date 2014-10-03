@@ -1,32 +1,30 @@
-""
-"" Janus setup
-""
+set nocompatible              " be iMproved, required
+set t_Co=256
 
-" Define paths
-let g:janus_path = escape(fnamemodify(resolve(expand("<sfile>:p")), ":h"), ' ')
-let g:janus_vim_path = escape(fnamemodify(resolve(expand("<sfile>:p" . "vim")), ":h"), ' ')
-let g:janus_custom_path = expand("~/.janus")
-
-" Source janus's core
-exe 'source ' . g:janus_vim_path . '/core/before/plugin/janus.vim'
-
-" You should note that groups will be processed by Pathogen in reverse
-" order they were added.
-call janus#add_group("tools")
-call janus#add_group("langs")
-call janus#add_group("colors")
-
-let g:fuf_abbrevMap = {
-      \ "^ " : [ "**/", ],
-      \ }
-
+highlight LineNr ctermfg=gray ctermbg=white
 highlight Search cterm=underline
+
+set guifont=Monaco:h20
+set guifont=menlo\ for\ powerline:h16
+
+set guioptions-=T " Removes top toolbar
+set guioptions-=r " Removes right hand scroll bar
+
+filetype off                  " required
+filetype plugin indent on    " required
+syntax enable
+
+let mapleader = "\\"
+
+nmap <leader>n :NERDTree<cr>
+let NERDTreeHighlightCursorline=1
+let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
-nmap ,v :vertical resize -5<cr>
+nmap <C-m> :vertical resize -5<cr>
 
-" Vim Split 
+" Vim Split
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-H>
 
@@ -40,33 +38,71 @@ map <C-x> <C-w>c
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
-endif
+set autoindent                  " always set autoindenting on
+set autowrite                   "Save on buffer switch
+set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+set copyindent                  " copy the previous indentation on autoindenting
+set expandtab                   " expand tabs by default (overloadable per file type later)
+set go-=L " Removes left hand scroll bar
+set hlsearch
+set ignorecase                  " ignore case when searching
+set linespace=15
+set mouse=a
+set number                      " always show line numbers
+set noerrorbells         " don't beep
+set relativenumber
+set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
+set shiftwidth=2                " number of spaces to use for autoindenting
+set showmode                    " always show what mode we're currently editing in
+set smartcase                   " ignore case if search pattern is all lowercase,
+set smarttab
+set softtabstop=2               " when hitting <BS>, pretend like a tab is removed, even if spaces
+set tabstop=2                   " a tab is four spaces
+set tags=tags
+set timeout timeoutlen=200 ttimeoutlen=100
+set visualbell                  " don't beep
+set wrap
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'L9'
+Plugin 'file:///home/gmarik/path/to/plugin'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'user/L9', {'name': 'newL9'}
+Plugin 'git@github.com:kien/ctrlp.vim.git'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree.git'
 
-" Disable plugins prior to loading pathogen
-exe 'source ' . g:janus_vim_path . '/core/plugins.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
 
-""
-"" Pathogen setup
-""
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 
-" Load all groups, custom dir, and janus core
-call janus#load_pathogen()
+" Easy escaping to normal model
+imap jj <esc>
+imap jk <esc>
 
+" Quit with Q
+command -nargs=0 Quit :qa!
 
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
-endif
+" Find hidden files with controlP
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 2
+let g:ctrlp_by_filename = 1
+let g:ctrlp_max_files = 600
+let g:ctrlp_max_depth = 5
 
-
-" Disable plugins prior to loading pathogen
-exe 'source ' . g:janus_vim_path . '/core/plugins.vim'
-
-""
-"" Pathogen setup
-""
-
-" Load all groups, custom dir, and janus core
-call janus#load_pathogen()
+" Powerline (Fancy thingy at bottom stuff)
+let g:Powerline_symbols = 'fancy'
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
+" statusline)
