@@ -3,6 +3,8 @@ dotfiles
 
 My .vimrc .tmux.conf .zshrc
 
+Switching from Janus to Vundler (10/3/2014)
+
 ##### Extra plugins:
 
 janus
