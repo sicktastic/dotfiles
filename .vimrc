@@ -13,10 +13,10 @@ set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 
 filetype off                  " required
-filetype plugin indent on    " required
+filetype plugin indent on     " required
 syntax enable
 
-let mapleader = "\\"
+let mapleader = ","
 
 nmap <leader>n :NERDTree<cr>
 let NERDTreeHighlightCursorline=1
@@ -45,13 +45,13 @@ set autowrite                   "Save on buffer switch
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set copyindent                  " copy the previous indentation on autoindenting
 set expandtab                   " expand tabs by default (overloadable per file type later)
-set go-=L " Removes left hand scroll bar
+set go-=L                       " Removes left hand scroll bar
 set hlsearch
 set ignorecase                  " ignore case when searching
 set linespace=15
 set mouse=a
 set number                      " always show line numbers
-set noerrorbells         " don't beep
+set noerrorbells                " don't beep
 set relativenumber
 set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
 set shiftwidth=2                " number of spaces to use for autoindenting
