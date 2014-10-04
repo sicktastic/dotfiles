@@ -1,7 +1,9 @@
 set nocompatible              " be iMproved, required
 set t_Co=256
 
-highlight LineNr ctermfg=gray ctermbg=white
+colorschem xoria256
+
+highlight LineNr ctermfg=white ctermbg=black
 highlight Search cterm=underline
 
 set guifont=Monaco:h20
@@ -74,14 +76,24 @@ Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'git@github.com:kien/ctrlp.vim.git'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'git@github.com:jeetsukumaran/vim-buffergator.git'
+Plugin 'git@github.com:terryma/vim-multiple-cursors.git'
+Plugin 'git@github.com:ddollar/nerdcommenter.git'
+Plugin 'git@github.com:tpope/vim-unimpaired.git'
+Plugin 'git@github.com:scrooloose/syntastic.git'
+Plugin 'git@github.com:chrisbra/NrrwRgn.git'
+Plugin 'git@github.com:Lokaltog/vim-easymotion.git'
+Plugin 'git@github.com:bronson/vim-trailing-whitespace.git'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
+Bundle 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
