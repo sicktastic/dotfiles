@@ -7,17 +7,11 @@ Switching from Janus to Vundler (10/3/2014)
 
 ##### Extra plugins:
 
-janus
-https://github.com/carlhuda/janus
-
 Vundler
 https://github.com/gmarik/Vundle.vim
 
-tmuxinator
+Tmuxinator
 https://github.com/tmuxinator/tmuxinator
-
-powerline
-sparkup
 
 
 ##### Inspired by people from
