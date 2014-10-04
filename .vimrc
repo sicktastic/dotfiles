@@ -1,13 +1,15 @@
 set nocompatible              " be iMproved, required
-set t_Co=256
+
+" set term=xterm-256color
+" set t_Co=256
+
+" set guifont=Monaco:h20
+" set guifont=menlo\ for\ powerline:h16
 
 colorschem xoria256
 
 highlight LineNr ctermfg=white ctermbg=black
 highlight Search cterm=underline
-
-set guifont=Monaco:h20
-set guifont=menlo\ for\ powerline:h16
 
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
@@ -112,9 +114,11 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 5
 
+
 " Powerline (Fancy thingy at bottom stuff)
-let g:Powerline_symbols = 'fancy'
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
+let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
 " statusline)
