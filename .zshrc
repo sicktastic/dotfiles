@@ -1,40 +1,21 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR='vim'
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="cloud"
 
-# Example aliases
-# alias zshconfig="vim ~/.zshrc"
-# alias ohmyzsh="vim ~/.oh-my-zsh"
-
-. ~/.aliases
 # Everday Stuff
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
-alias thrive="cd ~/Sites/thriveministry"
-alias members="cd ~/Sites/thriveministry/members.thriveministry.org.frontend"
+alias gitshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
+alias havingfun="osascript -e 'Set Volume 10' && say -v 'good news' it is time for lunch"
+alias initialgit="g init && ga . && gc 'initial git'"
+alias mydotfiles='cd ~/Sites/dotfiles'
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias pingit="ping google.com"
 alias shortcuts='vi ~/.zshrc'
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias vimrc='vi ~/.vimrc'
-alias vimafter='vi ~/.vimrc.after'
-alias gitshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias sourcezshrc='source ~/.zshrc'
-alias mydotfiles='cd ~/Sites/dotfiles'
-alias initialgit="g init && ga . && gc 'initial git'"
-alias havingfun="osascript -e 'Set Volume 10' && say -v 'good news' it is time for lunch"
-
-# NPM
-alias npmbootstrap='npm install bootstrap'
-alias npmi="npm init"
-alias npmgulp="sudo npm install -g gulp"
-alias npmgulpl="npm install --save-dev gulp"
+alias vimrc='vi ~/.vimrc'
 
 # Foreman
 alias fs='foreman start'
@@ -42,22 +23,58 @@ alias fs='foreman start'
 # Bower
 alias bowerbootstrap="bower install bootstrap"
 
-# Yeoman
-alias yoa="yo angular"
-
-# Vagrant
-alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
+# Heroku
+alias hc='heroku create'
+alias hopen='heroku open'
+alias hps='heroku ps'
+alias hpush='git push heroku master'
+alias hrakedbm='heroku run rake db:migrate'
 
 # MySQL
 alias mysqlstart="mysql.server start"
 alias mysqlstop="mysql.server stop"
 
+# NPM
+alias npmbootstrap='npm install bootstrap'
+alias npmgulp="sudo npm install -g gulp"
+alias npmgulpl="npm install --save-dev gulp"
+alias npmi="npm init"
+
+# Rails
+alias bi='bundle install'
+alias binstallrspec='bin/rails generate rspec:install'
+alias biwp='bundle install --without production'
+alias brspec='bundle binstubs rspec-core'
+alias bu='bundle update'
+alias installrspec='rails generate rspec:install'
+alias rakedbm='rake db:migrate'
+alias rakestatus='rake db:migrate:status'
+alias rakerollback='rake db:rollback'
+alias rconsole='rails console --sandbox'
+alias rd='rails destroy'
+alias rdc='rails destroy controller'
+alias rdm='rails destroy migration'
+alias rds='rails destroy scaffold'
+alias rg='rails generate'
+alias rgc='rails generate controller'
+alias rgm='rails generate migration'
+alias rgs='rails generate scaffold'
+alias rn='rails new'
+alias rs='rails s'
+
+# Sass
+alias sw='sass --watch'
+
+# Sails
+alias sl='sails lift'
+alias sn='sails new'
+
 # Tmux Session Start
 alias tmx="tmux new -s"
-alias tmxa="tmux attach"
-alias tmxl="tmux ls"
 alias tmxc="vim ~/.tmux.conf"
+alias tmxa="tmux attach"
 alias tmxk='tmux kill-session -t'
+alias tmxl="tmux ls"
 
 # Tmuxinator
 alias tmxn='tmuxinator new'
@@ -65,45 +82,22 @@ alias tmxo='tmuxinator open'
 alias tmxs='tmuxinator start'
 alias tmxsthrive='tmuxinator start ThriveRails'
 
-# Rails
-alias bu='bundle update'
-alias bi='bundle install'
-alias biwp='bundle install --without production'
-alias rn='rails new'
-alias rs='rails s'
-alias rg='rails generate'
-alias rd='rails destroy'
-alias rgc='rails generate controller'
-alias rdc='rails destroy controller'
-alias rgs='rails generate scaffold'
-alias rds='rails destroy scaffold'
-alias rgm='rails generate migration'
-alias rdm='rails destroy migration'
-alias rconsole='rails console --sandbox'
-alias rakedbm='rake db:migrate'
-alias rakestatus='rake db:migrate:status'
-alias rakerollback='rake db:rollback'
-alias binstallrspec='bin/rails generate rspec:install'
-alias installrspec='rails generate rspec:install'
-alias brspec='bundle binstubs rspec-core'
+# Vagrant
+alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
+alias vd='vagrant destroy'
+alias vh='vagrant halt'
+alias vs='vagrant suspend'
+alias vstatus='vagrant status'
+alias vu='vagrant up'
 
-# Sass
-alias sw='sass --watch'
+# Yeoman
+alias yoa="yo angular"
 
-# Heroku
-alias hpush='git push heroku master'
-alias hc='heroku create'
-alias hopen='heroku open'
-alias hrakedbm='heroku run rake db:migrate'
-alias hps='heroku ps'
+######  THOUGHTBOT STUFF ######
 
 # Thoughbot Bourbon Family and Other
 alias bourbonrefills='rails generate refills:list'
 alias susapp='suspenders app --heroku true --github'
-
-# Sails
-alias sn='sails new'
-alias sl='sails lift'
 
 # Thoughtbot
 # alias ack='ag'
