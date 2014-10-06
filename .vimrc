@@ -1,3 +1,4 @@
+runtime macros/matchit.vim
 set nocompatible              " be iMproved, required
 
 " set term=xterm-256color
