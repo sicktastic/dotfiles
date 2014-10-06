@@ -54,11 +54,13 @@ set linespace=15
 set mouse=a
 set number                      " always show line numbers
 set noerrorbells                " don't beep
+set pastetoggle=<leader>p       " paste mode
 set relativenumber
 set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
 set shiftwidth=2                " number of spaces to use for autoindenting
 set showmode                    " always show what mode we're currently editing in
 set smartcase                   " ignore case if search pattern is all lowercase,
+set smartindent
 set smarttab
 set softtabstop=2               " when hitting <BS>, pretend like a tab is removed, even if spaces
 set tabstop=2                   " a tab is four spaces
@@ -85,12 +87,11 @@ Plugin 'git@github.com:tpope/vim-unimpaired.git'
 Plugin 'git@github.com:scrooloose/syntastic.git'
 Plugin 'git@github.com:chrisbra/NrrwRgn.git'
 Plugin 'git@github.com:Lokaltog/vim-easymotion.git'
-Plugin 'git@github.com:bronson/vim-trailing-whitespace.git'
+Plugin 'git@github.com:ervandew/supertab.git'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
@@ -113,7 +114,6 @@ let g:ctrlp_working_path_mode = 2
 let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 5
-
 
 " Powerline (Fancy thingy at bottom stuff)
 set laststatus=2   " Always show the statusline
