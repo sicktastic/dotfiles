@@ -16,6 +16,7 @@ alias pingit="ping google.com"
 alias shortcuts='vi ~/.zshrc'
 alias sourcezshrc='source ~/.zshrc'
 alias vimrc='vi ~/.vimrc'
+alias tellmeyoursecret='cat ~/.ssh/id_rsa.pub'
 
 # Foreman
 alias fs='foreman start'
