@@ -30,6 +30,7 @@ alias hopen='heroku open'
 alias hps='heroku ps'
 alias hpush='git push heroku master'
 alias hrakedbm='heroku run rake db:migrate'
+alias haddremote='heroku git:remote -a'
 
 # MySQL
 alias mysqlstart="mysql.server start"
