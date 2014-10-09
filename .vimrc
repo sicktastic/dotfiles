@@ -1,23 +1,19 @@
 runtime macros/matchit.vim
 set nocompatible              " be iMproved, required
 
-" set term=xterm-256color
-" set t_Co=256
-
-" set guifont=Monaco:h20
-" set guifont=menlo\ for\ powerline:h16
-
 colorschem xoria256
-
-highlight LineNr ctermfg=white ctermbg=black
-highlight Search cterm=underline
 
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 
 filetype off                  " required
 filetype plugin indent on     " required
+
 syntax enable
+
+hi Visual ctermfg=black ctermbg=yellow
+hi TabLine ctermfg=white ctermbg=black
+hi TabLineSel ctermfg=Red ctermbg=Yellow
 
 let mapleader = ","
 
