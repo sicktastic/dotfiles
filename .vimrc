@@ -1,7 +1,11 @@
 runtime macros/matchit.vim
 set nocompatible              " be iMproved, required
 
-colorschem xoria256
+" dark color
+" colorschem xoria256
+
+" light color
+" colorschem summerfruit256 
 
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
