@@ -26,6 +26,7 @@ alias bowerbootstrap="bower install bootstrap"
 
 # Heroku
 alias hc='heroku create'
+alias hconfig='heroku config'
 alias hopen='heroku open'
 alias hps='heroku ps'
 alias hpush='git push heroku master'
