@@ -12,8 +12,10 @@ set guioptions-=r " Removes right hand scroll bar
 
 filetype off                  " required
 filetype plugin indent on     " required
-
 syntax enable
+
+" trigger scss from css
+au BufNewFile,BufRead *.scss set ft=scss.css
 
 hi Visual ctermfg=black ctermbg=yellow
 hi TabLine ctermfg=white ctermbg=black
