@@ -18,11 +18,15 @@ alias sourcezshrc='source ~/.zshrc'
 alias vimrc='vi ~/.vimrc'
 alias tellmeyoursecret='cat ~/.ssh/id_rsa.pub'
 
-# Foreman
-alias fs='foreman start'
-
 # Bower
 alias bowerbootstrap="bower install bootstrap"
+
+# Composer
+alias coi='composer install'
+alias cou='composer update'
+
+# Foreman
+alias fs='foreman start'
 
 # Heroku
 alias hc='heroku create'
