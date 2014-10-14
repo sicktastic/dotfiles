@@ -46,11 +46,12 @@ map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
 set autoindent                  " always set autoindenting on
-set autowrite                   "Save on buffer switch
+set autowrite                   " Save on buffer switch
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set copyindent                  " copy the previous indentation on autoindenting
 set expandtab                   " expand tabs by default (overloadable per file type later)
 set go-=L                       " Removes left hand scroll bar
+set incsearch                   " highlight while searching
 set hlsearch
 set ignorecase                  " ignore case when searching
 set linespace=15
