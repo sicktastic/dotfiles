@@ -8,6 +8,7 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
 alias gitshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
+alias gitcache='git rm -r --cached .'
 alias havingfun="osascript -e 'Set Volume 10' && say -v 'good news' it is time for lunch"
 alias initialgit="g init && ga . && gc 'initial git'"
 alias mydotfiles='cd ~/Sites/dotfiles'
