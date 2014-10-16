@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-My .vimrc .tmux.conf .zshrc
+My .vimrc .tmux.conf .zshrc .irbrc
 
 Switching from Janus to Vundler (10/3/2014)
 
