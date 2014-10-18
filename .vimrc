@@ -18,8 +18,8 @@ syntax enable
 au BufNewFile,BufRead *.scss set ft=scss.css
 
 hi Visual ctermfg=black ctermbg=yellow
-hi TabLine ctermfg=white ctermbg=black
-hi TabLineSel ctermfg=Red ctermbg=Yellow
+" hi TabLine ctermfg=white ctermbg=black
+" hi TabLineSel ctermfg=Red ctermbg=Yellow
 
 let mapleader = ","
 
