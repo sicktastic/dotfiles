@@ -119,10 +119,12 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 5
 
-" Powerline (Fancy thingy at bottom stuff)
+" Powerline and Airline? (Fancy thingy at bottom stuff)
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
-let g:Powerline_symbols = 'fancy'
-let g:airline_powerline_fonts = 1
+" let g:Powerline_symbols = 'fancy'
+" let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
 " statusline)
