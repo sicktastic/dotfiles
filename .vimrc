@@ -65,11 +65,16 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
 
+" folding
+nnoremap <Space> za
+vnoremap <Space> za
+
 set autoindent                  " always set autoindenting on
 set autowrite                   " Save on buffer switch
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set copyindent                  " copy the previous indentation on autoindenting
 set expandtab                   " expand tabs by default (overloadable per file type later)
+set foldlevelstart=0
 set go-=L                       " Removes left hand scroll bar
 set incsearch                   " highlight while searching
 set hlsearch
