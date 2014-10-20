@@ -16,8 +16,10 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias pingit="ping google.com"
 alias shortcuts='vi ~/.zshrc'
 alias sourcezshrc='source ~/.zshrc'
-alias vimrc='vi ~/.vimrc'
 alias tellmeyoursecret='cat ~/.ssh/id_rsa.pub'
+alias uohmyzsh='upgrade_oh_my_zsh'
+alias vimrc='vi ~/.vimrc'
+
 
 # Bower
 alias bowerbootstrap="bower install bootstrap"
