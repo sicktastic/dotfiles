@@ -69,6 +69,12 @@ nmap <leader>bl :ls<CR>
 nnoremap <Space> za
 vnoremap <Space> za
 
+" Simple CSS bracket close
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>0
+inoremap {{     {
+inoremap {}     {}
+
 set autoindent                  " always set autoindenting on
 set autowrite                   " Save on buffer switch
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
