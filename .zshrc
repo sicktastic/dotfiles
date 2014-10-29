@@ -19,7 +19,8 @@ alias sourcezshrc='source ~/.zshrc'
 alias tellmeyoursecret='cat ~/.ssh/id_rsa.pub'
 alias uohmyzsh='upgrade_oh_my_zsh'
 alias vimrc='vi ~/.vimrc'
-alias whatismyip='ipconfig getifaddr en0'
+alias whatismynetwork='ipconfig getifaddr en0'
+alias whatismyip='curl ipecho.net/plain; echo'
 
 
 # Bower
