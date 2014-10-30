@@ -23,9 +23,11 @@ hi Visual ctermfg=black ctermbg=yellow
 
 let mapleader = ","
 
+" Nerdtree
 nmap <leader>n :NERDTree<cr>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
+let g:NERDTreeWinSize=20
 
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
@@ -60,7 +62,7 @@ nmap <leader>h :bprevious<CR>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
-nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>bv :bp <BAR> bd #<CR>
 
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
