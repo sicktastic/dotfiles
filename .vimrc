@@ -86,6 +86,10 @@ set incsearch                   " highlight while searching
 set hlsearch
 set ignorecase                  " ignore case when searching
 set linespace=15
+
+" Display whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
+
 set mouse=a
 set number                      " always show line numbers
 set noerrorbells                " don't beep
