@@ -3,6 +3,16 @@ export ZSH=$HOME/.oh-my-zsh
 export EDITOR='vim'
 ZSH_THEME="cloud"
 
+# Macbook Pro
+alias kendo="cd ~/Sites/kendo"
+alias projectworthmore="~/Sites/wordpress.development/project_worthmore"
+alias projectworthmoret="~/Sites/wordpress.development/project_worthmore/wp-content/themes/xone"
+alias puppylogs="cd ~/Sites/rails.development/puppylogs"
+alias sandbox="cd ~/Sites/sandbox"
+alias rubybox="cd ~/Sites/sandbox/rubybox"
+alias upcase="cd ~/Sites/rails.development/upcase"
+alias ywamforce="cd ~/Sites/rails.development/ywamforce"
+
 # Everday Stuff
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
