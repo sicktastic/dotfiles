@@ -1,5 +1,12 @@
+set nocompatible      " We're running Vim, not Vi!
+
+syntax on             " Enable syntax highlighting
+syntax enable
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
+
 runtime macros/matchit.vim
-set nocompatible              " be iMproved, required
 
 " dark color
 " colorschem xoria256
@@ -9,10 +16,6 @@ set nocompatible              " be iMproved, required
 
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
-
-filetype off                  " required
-filetype plugin indent on     " required
-syntax enable
 
 " trigger scss from css
 au BufNewFile,BufRead *.scss set ft=scss.css
@@ -129,6 +132,8 @@ Plugin 'git@github.com:scrooloose/syntastic.git'
 Plugin 'git@github.com:chrisbra/NrrwRgn.git'
 Plugin 'git@github.com:Lokaltog/vim-easymotion.git'
 Plugin 'git@github.com:ervandew/supertab.git'
+Plugin 'burnettk/vim-angular'
+Plugin 'vim-ruby/vim-ruby'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -154,7 +159,19 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
-let g:ctrlp_max_depth = 5
+let g:ctrlp_max_depth = 7
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 " Powerline and Airline? (Fancy thingy at bottom stuff)
 set laststatus=2   " Always show the statusline
