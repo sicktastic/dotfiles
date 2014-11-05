@@ -132,7 +132,7 @@ Plugin 'git@github.com:scrooloose/syntastic.git'
 Plugin 'git@github.com:chrisbra/NrrwRgn.git'
 Plugin 'git@github.com:Lokaltog/vim-easymotion.git'
 Plugin 'git@github.com:ervandew/supertab.git'
-Plugin git@github.com:Raimondi/delimitMate.git
+Plugin 'git@github.com:Raimondi/delimitMate.git'
 Plugin 'burnettk/vim-angular'
 Plugin 'vim-ruby/vim-ruby'
 
