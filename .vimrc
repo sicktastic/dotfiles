@@ -27,10 +27,10 @@ hi Visual ctermfg=black ctermbg=yellow
 let mapleader = ","
 
 " Nerdtree
-nmap <leader>n :NERDTree<cr>
-let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
-let g:NERDTreeWinSize=20
+" nmap <leader>n :NERDTree<cr>
+" let NERDTreeHighlightCursorline=1
+" let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
+" let g:NERDTreeWinSize=20
 
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
@@ -123,7 +123,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'git@github.com:kien/ctrlp.vim.git'
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdtree.git'
+" Plugin 'scrooloose/nerdtree.git'
 Plugin 'git@github.com:jeetsukumaran/vim-buffergator.git'
 Plugin 'git@github.com:terryma/vim-multiple-cursors.git'
 Plugin 'git@github.com:ddollar/nerdcommenter.git'
