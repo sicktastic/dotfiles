@@ -144,6 +144,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'mileszs/ack.vim'
+Bundle 'vim-scripts/Rename2.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
