@@ -140,7 +140,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle 'kana/vim-textobj-user.git'
-Bundle 'kana/vim-textobj-rubyblock.git'
+Bundle 'nelstrom/vim-textobj-rubyblock.git'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
