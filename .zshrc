@@ -259,6 +259,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="/Users/anthonylee/.rbenv/shims:/Users/anthonylee/go/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin"
+
+export PATH="$(brew --prefix)/bin:$PATH"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
