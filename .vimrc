@@ -135,6 +135,7 @@ Plugin 'git@github.com:ervandew/supertab.git'
 Plugin 'git@github.com:Raimondi/delimitMate.git'
 Plugin 'burnettk/vim-angular'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'thoughtbot/vim-rspec'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -186,3 +187,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
 " statusline)
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
