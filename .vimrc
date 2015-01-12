@@ -27,10 +27,10 @@ hi Visual ctermfg=black ctermbg=yellow
 let mapleader = ","
 
 " Nerdtree
-" nmap <leader>n :NERDTree<cr>
-" let NERDTreeHighlightCursorline=1
-" let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
-" let g:NERDTreeWinSize=20
+nmap <leader>n :NERDTree<cr>
+let NERDTreeHighlightCursorline=1
+let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
+let g:NERDTreeWinSize=20
 
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
@@ -51,7 +51,7 @@ map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
 " My preference with using buffers. See `:h hidden` for more details
-set hidden
+" set hidden
 
 " To open a new empty buffer
 " This replaces :tabnew which I used to bind to this mapping
@@ -65,7 +65,7 @@ nmap <leader>h :bprevious<CR>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
-nmap <leader>bv :bp <BAR> bd #<CR>
+nmap <leader>bq :bp <BAR> bd #<CR>
 
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
@@ -123,7 +123,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'git@github.com:kien/ctrlp.vim.git'
 Plugin 'bling/vim-airline'
-" Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree.git'
 Plugin 'git@github.com:jeetsukumaran/vim-buffergator.git'
 Plugin 'git@github.com:terryma/vim-multiple-cursors.git'
 Plugin 'git@github.com:ddollar/nerdcommenter.git'
@@ -137,6 +137,8 @@ Plugin 'burnettk/vim-angular'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'thoughtbot/vim-rspec'
 
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
@@ -160,11 +162,15 @@ imap jk <esc>
 command -nargs=0 Quit :qa!
 
 " Find hidden files with controlP
+let g:ctrlp_dotfiles = 1
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_working_path_mode = 2
-let g:ctrlp_by_filename = 1
-let g:ctrlp_max_files = 600
-let g:ctrlp_max_depth = 7
+let g:ctrlp_max_files = 0
+" let g:ctrlp_max_depth = 7
+" let g:ctrlp_working_path_mode = 2
+" let g:ctrlp_by_filename = 1
+
+" Control P and ctag
+nnoremap <leader>= :CtrlPTag<cr>
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -181,8 +187,8 @@ endif
 " Powerline and Airline? (Fancy thingy at bottom stuff)
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
-" let g:Powerline_symbols = 'fancy'
-" let g:airline_powerline_fonts = 1
+let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
