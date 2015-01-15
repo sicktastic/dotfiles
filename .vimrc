@@ -1,4 +1,4 @@
-set nocompatible      " We're running Vim, not Vi!
+set nocompatible                " We're running Vim, not Vi!
 
 colorschem summerfruit256 
 
