@@ -134,10 +134,10 @@ set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
 " statusline)
 
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>aa :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
