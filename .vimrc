@@ -42,6 +42,9 @@ filetype on                     " Enable filetype detection
 filetype indent on              " Enable filetype-specific indenting
 filetype plugin on              " Enable filetype-specific plugins
 
+" detects coffeescript
+au BufNewFile,BufRead *.coffee set filetype=coffee
+
 runtime macros/matchit.vim
 
 let g:SuperTabDefaultCompletionType = "context"
