@@ -136,6 +136,14 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
 " statusline)
 
+" Macvim
+if has("gui_running")
+   let s:uname = system("uname")
+   if s:uname == "Darwin\n"
+      set guifont=Inconsolata\ for\ Powerline:h15
+   endif
+endif
+
 " RSpec.vim mappings
 map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>aa :call RunCurrentSpecFile()<CR>
