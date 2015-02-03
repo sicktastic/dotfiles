@@ -93,6 +93,9 @@ alias sw='sass --watch'
 alias sl='sails lift'
 alias sn='sails new'
 
+# Testing
+alias ss='spring status'
+
 # Tmux Session Start
 alias tmx="tmux new -s"
 alias tmxc="vim ~/.tmux.conf"
