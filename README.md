@@ -9,7 +9,6 @@ Switching from Janus to Vundler (10/3/2014)
 
 Vundler
 https://github.com/gmarik/Vundle.vim
-
 Tmuxinator
 https://github.com/tmuxinator/tmuxinator
 
