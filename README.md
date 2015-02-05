@@ -1,8 +1,7 @@
 dotfiles
 ========
 
-My .vimrc .tmux.conf .zshrc .irbrc
-
+My .vimrc .tmux.conf .zshrc .irbrc<br />
 Switching from Janus to Vundler (10/3/2014)
 
 ##### Extra plugins:
