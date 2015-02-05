@@ -8,7 +8,7 @@ Switching from Janus to Vundler (10/3/2014)
 ##### Extra plugins:
 
 Vundler
-https://github.com/gmarik/Vundle.vim
+https://github.com/gmarik/Vundle.vim<br />
 Tmuxinator
 https://github.com/tmuxinator/tmuxinator
 
