@@ -1,6 +1,6 @@
-set nocompatible                " We're running Vim, not Vi!
+set nocompatible      " We're running Vim, not Vi!
 
-colorschem summerfruit256 
+colorschem summerfruit256
 
 let mapleader = ","
 
@@ -36,29 +36,86 @@ set timeout timeoutlen=200 ttimeoutlen=100
 set visualbell                  " don't beep
 set wrap
 
-syntax on                       " Enable syntax highlighting
-syntax enable
-filetype on                     " Enable filetype detection
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  syntax on
+endif
+
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
+
 filetype indent on              " Enable filetype-specific indenting
 filetype plugin on              " Enable filetype-specific plugins
 
+augroup vimrcEx
+  autocmd!
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it for commit messages, when the position is invalid, or when
+  " inside an event handler (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
+  " Set syntax highlighting for specific file types
+  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+  " Enable spellchecking for Markdown
+  autocmd FileType markdown setlocal spell
+
+  " Automatically wrap at 80 characters for Markdown
+  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+  " Automatically wrap at 72 characters and spell check git commit messages
+  autocmd FileType gitcommit setlocal textwidth=72
+  autocmd FileType gitcommit setlocal spell
+
+  " Allow stylesheets to autocomplete hyphenated words
+  autocmd FileType css,scss,sass setlocal iskeyword+=-
+augroup END
+
+hi Visual ctermfg=black ctermbg=yellow
+
 " detects coffeescript
 au BufNewFile,BufRead *.coffee set filetype=coffee
-
-runtime macros/matchit.vim
+au BufNewFile,BufRead *.scss set ft=scss.css
 
 let g:SuperTabDefaultCompletionType = "context"
 
-" trigger scss from css
-au BufNewFile,BufRead *.scss set ft=scss.css
+" Tab completion
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+set wildmode=list:longest,list:full
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-n>
 
-hi Visual ctermfg=black ctermbg=yellow
+" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
+let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+
+" Index ctags from any project, including those outside Rails
+map <Leader>ct :!ctags -R .<CR>
+
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
 
 " Nerdtree
 nmap <leader>n :NERDTree<cr>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
-let g:NERDTreeWinSize=20
+let g:NERDTreeWinSize=35
 
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
@@ -70,7 +127,7 @@ nnoremap <C-K> <C-W><C-H>
 
 " Note that remapping C-s requires flow control to be disabled
 " (e.g. in .bashrc or .zshrc)
-map <C-h> :nohl<cr>
+map <C-o> :nohl<cr>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 map <C-t> <esc>:tabnew<CR>
@@ -79,7 +136,7 @@ map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
 " This replaces :tabnew which I used to bind to this mapping
-nmap <leader>T :enew<cr>
+" nmap <leader>T :enew<cr>
 " Move to the next buffer
 nmap <leader>. :bnext<CR>
 " Move to the previous buffer
@@ -93,12 +150,6 @@ nmap <leader>bl :ls<CR>
 " folding
 nnoremap <Space> za
 vnoremap <Space> za
-
-" Simple CSS bracket close
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>0
-inoremap {{     {
-inoremap {}     {}
 
 " Easy escaping to normal model
 imap jj <esc>
@@ -126,16 +177,6 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" Powerline and Airline? (Fancy thingy at bottom stuff)
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
-let g:Powerline_symbols = 'fancy'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
-" statusline)
-
 " Macvim
 if has("gui_running")
    let s:uname = system("uname")
@@ -160,50 +201,23 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'L9'
-" Plugin 'file:///home/gmarik/path/to/plugin'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'user/L9', {'name': 'newL9'}
-Plugin 'git@github.com:kien/ctrlp.vim.git'
-Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'git@github.com:jeetsukumaran/vim-buffergator.git'
-Plugin 'git@github.com:terryma/vim-multiple-cursors.git'
-Plugin 'git@github.com:ddollar/nerdcommenter.git'
-Plugin 'git@github.com:tpope/vim-unimpaired.git'
-Plugin 'git@github.com:scrooloose/syntastic.git'
-Plugin 'git@github.com:chrisbra/NrrwRgn.git'
-Plugin 'git@github.com:Lokaltog/vim-easymotion.git'
-Plugin 'git@github.com:ervandew/supertab.git'
-Plugin 'git@github.com:Raimondi/delimitMate.git'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'vim-ruby/vim-ruby'
-
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-" Optional:
-Bundle "honza/vim-snippets"
-
-Bundle 'kana/vim-textobj-user.git'
-Bundle 'nelstrom/vim-textobj-rubyblock.git'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'mileszs/ack.vim'
-Bundle 'vim-scripts/Rename2.git'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-
 " Run test faster using spring
 let g:rspec_command = '!spring rspec {spec}'
+
+" Always use vertical diffs
+set diffopt+=vertical
+
+" Local config
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
+
+" Powerline and Airline? (Fancy thingy at bottom stuff)
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+" let g:Powerline_symbols = 'fancy'
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#fnamemod = ':t'
+" set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
+" statusline)

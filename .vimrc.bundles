@@ -1,0 +1,52 @@
+if &compatible
+  set nocompatible
+end
+
+filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+" Plugin 'file:///home/gmarik/path/to/plugin'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'git@github.com:kien/ctrlp.vim.git'
+" Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'git@github.com:jeetsukumaran/vim-buffergator.git'
+Plugin 'git@github.com:terryma/vim-multiple-cursors.git'
+Plugin 'git@github.com:ddollar/nerdcommenter.git'
+Plugin 'git@github.com:tpope/vim-unimpaired.git'
+Plugin 'git@github.com:scrooloose/syntastic.git'
+Plugin 'git@github.com:chrisbra/NrrwRgn.git'
+Plugin 'git@github.com:Lokaltog/vim-easymotion.git'
+Plugin 'git@github.com:ervandew/supertab.git'
+Plugin 'git@github.com:Raimondi/delimitMate.git'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-endwise'
+Plugin 'vim-ruby/vim-ruby'
+
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+" Optional:
+Bundle "honza/vim-snippets"
+
+Bundle 'kana/vim-textobj-user.git'
+Bundle 'nelstrom/vim-textobj-rubyblock.git'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'mileszs/ack.vim'
+Bundle 'vim-scripts/Rename2.git'
+Bundle 'christoomey/vim-system-copy'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype on
+
