@@ -101,6 +101,12 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
+" Tab Colors
+:hi TabLineFill ctermfg=White ctermbg=Yellow
+:hi TabLine ctermfg=Blue ctermbg=Yellow
+:hi TabLineSel ctermfg=Yellow ctermbg=Black
+:hi Title ctermfg=LightBlue ctermbg=Magenta
+
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
