@@ -985,6 +985,8 @@ snippet ::a
 	::after
 snippet ::b
 	::before
+
+
 # Thoughtbot Bourbon
 # Author: Anthony Lee
 
@@ -1130,3 +1132,17 @@ snippet btransition-l
 	@include transition-timing-function(${3:ease-in});
 	@include transition-delay(${4:0.5s});
 # Functions: http://bourbon.io/docs/#functions
+
+# My Customs
+snippet iphonep
+	@media (max-width: 480px) {
+	}
+snippet iphonel
+	@media (max-width: 767px) {
+	}
+snippet ipadp
+	@media (max-width: 768px) and (max-width: 991px) {
+	}
+snippet ipadl
+	@media (min-width: 992px) and (max-width: 1199px) {
+	}
