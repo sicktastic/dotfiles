@@ -1,4 +1,5 @@
 set nocompatible      " We're running Vim, not Vi!
+set t_ut=             " Clearing screen loads current bg color (tmux fix)
 
 colorschem summerfruit256
 
