@@ -1,5 +1,4 @@
 set nocompatible      " We're running Vim, not Vi!
-set t_ut=             " Clearing screen loads current bg color (tmux fix)
 
 colorschem summerfruit256
 
@@ -31,6 +30,7 @@ set smartcase                   " ignore case if search pattern is all lowercase
 set smartindent
 set smarttab
 set softtabstop=2               " when hitting <BS>, pretend like a tab is removed, even if spaces
+set t_ut=             " Clearing screen loads current bg color (tmux fix)
 set tabstop=2                   " a tab is four spaces
 set tags=tags
 set timeout timeoutlen=200 ttimeoutlen=100
