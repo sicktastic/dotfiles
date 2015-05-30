@@ -49,6 +49,7 @@ alias fs='foreman start'
 alias hrakedbm='heroku run rake db:migrate'
 alias herokumon='heroku maintenance:on'
 alias herokumoff='heroku maintenance:off'
+alias gph='git push heroku master'
 
 # MySQL
 alias mysqlstart="mysql.server start"
