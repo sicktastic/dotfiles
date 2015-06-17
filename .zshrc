@@ -119,7 +119,7 @@ alias tmxl="tmux ls"
 alias tmxn='tmuxinator new'
 alias tmxo='tmuxinator open'
 alias tmxs='tmuxinator start'
-alias tmxthrive='tmuxinator start ThriveRails'
+alias tmxthrive='tmuxinator start Thrive'
 
 # Vagrant
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
