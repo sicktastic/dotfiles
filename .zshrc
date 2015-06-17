@@ -23,6 +23,9 @@ alias tutorials="cd ~/Sites/tutorials"
 alias upcase="cd ~/Sites/rubyonrails.development/upcase"
 alias ywamsalesforce="cd ~/Sites/rubyonrails.development/ywam-salesforce"
 
+# iMac @ Work
+alias thrive="cd ~/Sites/thrive-rails"
+
 # Everday Stuff
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
@@ -116,7 +119,7 @@ alias tmxl="tmux ls"
 alias tmxn='tmuxinator new'
 alias tmxo='tmuxinator open'
 alias tmxs='tmuxinator start'
-alias tmxsthrive='tmuxinator start ThriveRails'
+alias tmxthrive='tmuxinator start ThriveRails'
 
 # Vagrant
 alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
