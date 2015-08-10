@@ -11,6 +11,9 @@ https://github.com/gmarik/Vundle.vim<br />
 Tmuxinator
 https://github.com/tmuxinator/tmuxinator
 
+Tmux pbcopy
+https://robots.thoughtbot.com/how-to-copy-and-paste-with-tmux-on-mac-os-x
+
 
 ##### Inspired by developers from
 
