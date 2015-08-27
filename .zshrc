@@ -66,6 +66,7 @@ alias hrakedbm='heroku run rake db:migrate'
 alias haddremote='heroku git:remote -a'
 alias herokumon='heroku maintenance:on'
 alias herokumoff='heroku maintenance:off'
+alias herokucheck='curl https://status.heroku.com/api/v3/current-status.json'
 
 # MySQL
 alias mysqlstart="mysql.server start"
