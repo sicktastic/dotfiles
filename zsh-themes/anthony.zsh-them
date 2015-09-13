@@ -20,10 +20,10 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}@%{$fg_bold[white]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
 # Do nothing if the branch is clean (no changes).
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✔"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%} ✔"
 
 # Add 3 cyan ✗s if this branch is diiirrrty! Dirty branch!
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%}✗✗✗"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%} ✗✗✗"
 
 # Put it all together!
 PROMPT="$JUNKFOOD_TIME_$JUNKFOOD_CURRENT_USER_ on $JUNKFOOD_MACHINE_$JUNKFOOD_LOCA_

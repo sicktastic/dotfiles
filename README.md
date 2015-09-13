@@ -11,8 +11,13 @@ https://github.com/gmarik/Vundle.vim<br />
 Tmuxinator
 https://github.com/tmuxinator/tmuxinator
 
+<<<<<<< HEAD
 ##### iTerm Theme
 Check out [wild-cherry](https://github.com/mashaal/wild-cherry)
+=======
+Tmux pbcopy
+https://robots.thoughtbot.com/how-to-copy-and-paste-with-tmux-on-mac-os-x
+>>>>>>> c6665b7cb4285055c206b3a9e58336de4c90b38d
 
 
 ##### Inspired by developers from
