@@ -17,6 +17,8 @@ iTerm Theme: [wild-cherry](https://github.com/mashaal/wild-cherry)
 
 ##### Inspired by developers from
 
+Thoughtbot [dotfiles](https://github.com/thoughtbot/dotfiles)
+
 Tmux pbcopy
 https://robots.thoughtbot.com/how-to-copy-and-paste-with-tmux-on-mac-os-x
 
