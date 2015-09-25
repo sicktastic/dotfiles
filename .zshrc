@@ -67,6 +67,8 @@ alias haddremote='heroku git:remote -a'
 alias herokumon='heroku maintenance:on'
 alias herokumoff='heroku maintenance:off'
 alias herokucheck='curl https://status.heroku.com/api/v3/current-status.json'
+alias herokuhobbypostgres='heroku addons:create heroku-postgresql:hobby-dev'
+alias herokuconnectdemo='heroku addons:create herokuconnect:demo'
 
 # MySQL
 alias mysqlstart="mysql.server start"
