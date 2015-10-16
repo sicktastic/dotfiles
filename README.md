@@ -1,6 +1,6 @@
-dotfiles
+My dotfiles
 ========
-These are my dotfiles.  It's not perfect and it is always evolving.  I use
+These are my dotfiles.  It's not perfect and it will continue to evolve.  I use
 iTerm, Tmux and Vim for my Rails development.  I use sublime for Salesforce
 development, and Xcode for iOS development.
 
