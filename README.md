@@ -2,6 +2,7 @@ dotfiles
 ========
 
 ##VIM
+![Vim](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/vim.png)
 
 ##iTerm
 ![iterm](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/iterm.png)
