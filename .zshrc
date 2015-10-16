@@ -59,6 +59,7 @@ alias cou='composer update'
 alias fs='foreman start'
 
 # Heroku
+alias ha='heroku accounts'
 alias hc='heroku create'
 alias hconfig='heroku config'
 alias hopen='heroku open'
