@@ -7,6 +7,7 @@ export EDITOR='vim'
 # ZSH_THEME="dallas"
 # ZSH_THEME="junkfood"
 # ZSH_THEME="ys"
+ZSH_THEME="wild-cherry"
 
 # Macbook Pro
 alias ajl="cd ~/Sites/rubyonrails.development/artandjustice"
