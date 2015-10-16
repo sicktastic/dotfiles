@@ -4,7 +4,7 @@ dotfiles
 ##VIM
 
 ##iTerm
-!(iterm)[https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/iterm.png]
+![iterm](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/iterm.png)
 
 My .vimrc .tmux.conf .zshrc .irbrc, etc.
 
