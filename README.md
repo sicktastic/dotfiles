@@ -10,6 +10,9 @@ development, and Xcode for iOS development.
 ##iTerm & Tmux
 ![iterm](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/iterm.png)
 
+##Sublime Text 3 and MavenMate
+![Sublime](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/sublime-text.png)
+
 My .vimrc .tmux.conf .zshrc .irbrc, etc.
 
 ---
