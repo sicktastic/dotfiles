@@ -1,5 +1,8 @@
 dotfiles
 ========
+These are my dotfiles.  It's not perfect and it is always evolving.  I use
+iTerm, Tmux and Vim for my Rails development.  I use sublime for Salesforce
+development, and Xcode for iOS development.
 
 ##VIM
 ![Vim](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/vim.png)
