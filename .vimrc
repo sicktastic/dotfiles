@@ -228,3 +228,5 @@ set encoding=utf-8 " Necessary to show Unicode glyphs
 " let g:airline#extensions#tabline#fnamemod = ':t'
 " set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
 " statusline)
+
+autocmd Filetype gitcommit setlocal spell textwidth=72
