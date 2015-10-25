@@ -23,6 +23,8 @@ Vundler: https://github.com/gmarik/Vundle.vim<br />
 
 Tmuxinator: https://github.com/tmuxinator/tmuxinator
 
+Tmate: http://tmate.io
+
 iTerm Theme: [wild-cherry](https://github.com/mashaal/wild-cherry)
 
 ---
