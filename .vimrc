@@ -230,3 +230,6 @@ set encoding=utf-8 " Necessary to show Unicode glyphs
 " statusline)
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+# Dash
+nmap <silent> <leader>d <Plug>DashSearch
