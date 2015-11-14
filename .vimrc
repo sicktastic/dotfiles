@@ -244,3 +244,17 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 
 # Dash
 nmap <silent> <leader>d <Plug>DashSearch
+
+" set the cursor to a vertical line in insert mode and a solid block
+" " in command mode
+let &t_SI = "\<esc>\<esc>\<esc>]50;CursorShape=1\x7\<esc>\\"
+let &t_EI = "\<esc>\<esc>\<esc>]50;CursorShape=0\x7\<esc>\\"
+
+" upon hitting escape to change modes,
+" send successive move-left and move-right
+" commands to immediately redraw the cursor
+inoremap <special> <Esc> <Esc>hl
+
+" don't blink the cursor
+set guicursor+=i:blinkwait0
+
