@@ -29,12 +29,16 @@ Plugin 'vim-ruby/vim-ruby'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 
+" Javascripts
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'git@github.com:othree/javascript-libraries-syntax.vim.git'
+
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
+
 " Optional:
 Bundle "honza/vim-snippets"
-
 Bundle 'kana/vim-textobj-user.git'
 Bundle 'nelstrom/vim-textobj-rubyblock.git'
 Bundle 'tpope/vim-surround'
