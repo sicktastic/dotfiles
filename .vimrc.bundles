@@ -10,7 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 " Plugin 'file:///home/gmarik/path/to/plugin'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'git@github.com:kien/ctrlp.vim.git'
-" Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'git@github.com:jeetsukumaran/vim-buffergator.git'
 Plugin 'git@github.com:terryma/vim-multiple-cursors.git'
@@ -22,20 +22,20 @@ Plugin 'git@github.com:Lokaltog/vim-easymotion.git'
 Plugin 'git@github.com:ervandew/supertab.git'
 Plugin 'git@github.com:Raimondi/delimitMate.git'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'git@github.com:rizzatti/dash.vim.git'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
 
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
 
 " Javascripts
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'git@github.com:othree/javascript-libraries-syntax.vim.git'
-
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
 
 " Optional:
 Bundle "honza/vim-snippets"
@@ -53,4 +53,3 @@ Bundle 'christoomey/vim-system-copy'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype on
-
