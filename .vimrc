@@ -264,3 +264,5 @@ inoremap <special> <Esc> <Esc>hl
 " don't blink the cursor
 set guicursor+=i:blinkwait0
 
+" javascript library
+let g:used_javascript_libs = 'react,flux,angular,jquery'
