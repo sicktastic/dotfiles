@@ -2,31 +2,19 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR='vim'
 
-# ZSH_THEME="anthony"
-# ZSH_THEME="cloud"
-# ZSH_THEME="dallas"
-# ZSH_THEME="junkfood"
-# ZSH_THEME="ys"
 ZSH_THEME="wild-cherry"
 
-# Macbook Pro
+# Working Directories
 alias ajl="cd ~/Sites/rubyonrails.development/artandjustice"
 alias gatech="cd ~/Documents/gatech"
-alias gatechteam="cd ~/Documents/gatech/6300Spring15Team64/"
 alias js="cd ~/Sites/javascript.development/"
 alias kendo="cd ~/Sites/kendo"
-alias puppylogs="cd ~/Sites/rubyonrails.development/puppylogs"
 alias rrd="cd ~/Sites/rubyonrails.development/"
 alias rubybox="cd ~/Sites/sandbox/rubybox"
 alias sandbox="cd ~/Sites/sandbox"
 alias swiftprojects="cd ~/Documents/swift"
 alias thrive="cd ~/Sites/rubyonrails.development/thriveministry"
-alias tutorials="cd ~/Sites/tutorials"
 alias upcase="cd ~/Sites/rubyonrails.development/upcase"
-alias ywamsalesforce="cd ~/Sites/rubyonrails.development/ywam-salesforce"
-
-# iMac @ Work
-alias thrive="cd ~/Sites/thrive-rails"
 
 # Everday Stuff
 alias dl="cd ~/Downloads"
@@ -45,15 +33,12 @@ alias sourcezshrc='source ~/.zshrc'
 alias tellmeyoursecret='cat ~/.ssh/id_rsa.pub'
 alias uohmyzsh='upgrade_oh_my_zsh'
 alias vimrc='vi ~/.vimrc'
+alias vimrcbundles='vim ~/.vimrc.bundles'
 alias whatismynetwork='ipconfig getifaddr en0'
 alias whatismyip='curl ipecho.net/plain; echo'
 
 # Bower
 alias bowerbootstrap="bower install bootstrap"
-
-# Composer
-alias coi='composer install'
-alias cou='composer update'
 
 # Foreman
 alias fs='foreman start'
@@ -82,6 +67,7 @@ alias npmbootstrap='npm install bootstrap'
 alias npmgulp="sudo npm install -g gulp"
 alias npmgulpl="npm install --save-dev gulp"
 alias npmi="npm init"
+alias npmreact="npm insall -save react"
 
 # Rails
 alias bi='bundle install'
@@ -109,10 +95,6 @@ alias rs='rails s'
 
 # Sass
 alias sw='sass --watch'
-
-# Sails
-alias sl='sails lift'
-alias sn='sails new'
 
 # Tmate
 alias tmateshare="tmate show-messages"
