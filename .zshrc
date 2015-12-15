@@ -92,6 +92,7 @@ alias rgm='rails generate migration'
 alias rgs='rails generate scaffold'
 alias rn='rails new'
 alias rs='rails s'
+alias taillogs='tail -f log/development.log'
 
 # Sass
 alias sw='sass --watch'
