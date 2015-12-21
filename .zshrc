@@ -45,9 +45,11 @@ alias fs='foreman start'
 
 # Heroku
 alias ha='heroku accounts'
+alias haccountset='heroku accounts:set'
 alias hc='heroku create'
 alias hconfig='heroku config'
 alias hlocal='heroku local'
+alias hlogin='heroku login'
 alias hmaster='git push heroku master'
 alias hopen='heroku open'
 alias hps='heroku ps'
