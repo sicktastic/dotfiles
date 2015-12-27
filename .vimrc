@@ -1,3 +1,4 @@
+runtime macros/matchit.vim
 set nocompatible      " We're running Vim, not Vi!
 
 colorschem summerfruit256
