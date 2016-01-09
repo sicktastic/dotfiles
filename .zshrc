@@ -17,6 +17,7 @@ alias thrive="cd ~/Sites/rubyonrails.development/thriveministry"
 alias upcase="cd ~/Sites/rubyonrails.development/upcase"
 
 # Everday Stuff
+alias copymysshkey='pbcopy < ~/.ssh/id_rsa.pub'
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
