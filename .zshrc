@@ -32,6 +32,7 @@ alias pingit="ping google.com"
 alias shortcuts='vi ~/.zshrc'
 alias sourcezshrc='source ~/.zshrc'
 alias tellmeyoursecret='cat ~/.ssh/id_rsa.pub'
+alias thrivedatabasepull='heroku pg:pull DATABASE_URL thriveministry_development --app thriveministry'
 alias uohmyzsh='upgrade_oh_my_zsh'
 alias vimrc='vi ~/.vimrc'
 alias vimrcbundles='vim ~/.vimrc.bundles'
