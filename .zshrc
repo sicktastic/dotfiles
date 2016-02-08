@@ -40,12 +40,6 @@ alias vimrcbundles='vim ~/.vimrc.bundles'
 alias whatismynetwork='ipconfig getifaddr en0'
 alias whatismyip='curl ipecho.net/plain; echo'
 
-# Bower
-alias bowerbootstrap="bower install bootstrap"
-
-# Foreman
-alias fs='foreman start'
-
 # Heroku
 alias ha='heroku accounts'
 alias haccountset='heroku accounts:set'
@@ -69,10 +63,6 @@ alias hmof='heroku maintenance:off'
 alias herokucheck='curl https://status.heroku.com/api/v3/current-status.json'
 alias hhobbypostgres='heroku addons:create heroku-postgresql:hobby-dev'
 alias hconnectdemo='heroku addons:create herokuconnect:demo'
-
-# MySQL
-alias mysqlstart="mysql.server start"
-alias mysqlstop="mysql.server stop"
 
 # NPM
 alias npmbootstrap='npm install bootstrap'
@@ -126,17 +116,6 @@ alias tmxo='tmuxinator open'
 alias tmxs='tmuxinator start'
 alias tmxthrive='tmuxinator start Thrive'
 
-# Vagrant
-alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
-alias vd='vagrant destroy'
-alias vh='vagrant halt'
-alias vs='vagrant suspend'
-alias vstatus='vagrant status'
-alias vu='vagrant up'
-
-# Yeoman
-alias yoa="yo angular"
-
 # User configuration
 plugins=(git)
 stty start undef
@@ -149,7 +128,6 @@ export PATH="/Users/anthonylee/.rbenv/shims:/Users/anthonylee/.rbenv/bin:/usr/lo
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$(brew --prefix)/bin:$PATH"
-
 
 export NVM_DIR="/Users/anthonylee/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
