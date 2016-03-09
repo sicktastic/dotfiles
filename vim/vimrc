@@ -1,7 +1,4 @@
-runtime macros/matchit.vim
 set nocompatible      " We're running Vim, not Vi!
-
-colorschem summerfruit256
 
 let mapleader = ","
 
@@ -18,7 +15,6 @@ set incsearch                   " highlight while searching
 set hlsearch
 set ignorecase                  " ignore case when searching
 set linespace=15
-set list listchars=tab:»·,trail:·,nbsp:·
 set mouse=a
 set number                      " always show line numbers
 set noerrorbells                " don't beep
@@ -31,10 +27,10 @@ set smartcase                   " ignore case if search pattern is all lowercase
 set smartindent
 set smarttab
 set softtabstop=2               " when hitting <BS>, pretend like a tab is removed, even if spaces
-set t_ut=             " Clearing screen loads current bg color (tmux fix)
 set tabstop=2                   " a tab is four spaces
 set tags=tags
 set timeout timeoutlen=200 ttimeoutlen=100
+set t_ut=
 set visualbell                  " don't beep
 set wrap
 
@@ -63,11 +59,11 @@ augroup vimrcEx
     \ endif
 
   " Set syntax highlighting for specific file types
-  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
+  " autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+  " autocmd BufRead,BufNewFile *.md set filetype=markdown
 
   " Enable spellchecking for Markdown
-  autocmd FileType markdown setlocal spell
+  " autocmd FileType markdown setlocal spell
 
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
@@ -103,11 +99,9 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
-" Tab Colors
-:hi TabLineFill ctermfg=White ctermbg=Yellow
-:hi TabLine ctermfg=Blue ctermbg=Yellow
-:hi TabLineSel ctermfg=Yellow ctermbg=Black
-:hi Title ctermfg=LightBlue ctermbg=Magenta
+" Tab colors
+hi TabLineFill ctermfg=White ctermbg=Yellow
+hi TabLine ctermfg=Blue ctermbg=Yellow
 
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
@@ -118,6 +112,8 @@ map <Leader>ct :!ctags -R .<CR>
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
+"Dash
+nmap <silent> <leader>d <Plug>DashSearch
 
 " Nerdtree
 nmap <leader>n :NERDTree<cr>
@@ -127,7 +123,6 @@ let g:NERDTreeWinSize=35
 
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
-nmap <C-m> :vertical resize -5<cr>
 
 " Vim Split
 nnoremap <C-J> <C-W><C-J>
@@ -167,11 +162,14 @@ imap jk <esc>
 command -nargs=0 Quit :qa!
 
 " Find hidden files with controlP
-let g:ctrlp_dotfiles = 1
+let g:ctrlp_dotfiles = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files = 0
+
 " Control P and ctag
 nnoremap <leader>= :CtrlPTag<cr>
+
+let g:ackprg = 'ag --vimgrep'
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -214,6 +212,7 @@ nnoremap <C-l> <C-w>l
 
 " Run test faster using spring
 let g:rspec_command = '!spring rspec {spec}'
+" let g:rspec_command = 'Dispatch rspec {spec}'
 
 " Always use vertical diffs
 set diffopt+=vertical
@@ -223,28 +222,20 @@ if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
 
+" Copy gist
+let g:gist_clip_command = 'pbcopy'
+
 " Powerline and Airline? (Fancy thingy at bottom stuff)
 set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
+set encoding=utf-8 " Necessary to show Unicode glyphs 
 let g:airline_extensions = 1
 let g:airline_theme='bubblegum'
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)"
 
-" let g:Powerline_symbols = 'fancy'
-" let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#fnamemod = ':t'
-" set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
-" statusline)
-
-autocmd Filetype gitcommit setlocal spell textwidth=72
-
-# Dash
-nmap <silent> <leader>d <Plug>DashSearch
 
 " set the cursor to a vertical line in insert mode and a solid block
 " " in command mode
@@ -255,7 +246,6 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
-
 
 " upon hitting escape to change modes,
 " send successive move-left and move-right
