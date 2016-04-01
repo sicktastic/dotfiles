@@ -257,3 +257,10 @@ set guicursor+=i:blinkwait0
 
 " javascript library
 let g:used_javascript_libs = 'react,flux,angular,jquery'
+
+" Vim split mouse resize in Tmux
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
