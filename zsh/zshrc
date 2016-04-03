@@ -99,6 +99,11 @@ alias rn='rails new'
 alias rs='rails s'
 alias taillogs='tail -f log/development.log'
 
+# Redis
+alias redis='redis-cli'
+alias rediss='redis-server'
+alias redislatency='redis-cli --latency-history localhost'
+
 # Sass
 alias sw='sass --watch'
 
