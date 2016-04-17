@@ -100,6 +100,9 @@ alias npmgulp="sudo npm install -g gulp"
 alias npmgulpl="npm install --save-dev gulp"
 alias npmi="npm init"
 
+# Pry
+alias pryrails="pry -r ./config/environment"
+
 # Rails
 alias bi='bundle install'
 alias binstallrspec='bin/rails generate rspec:install'
