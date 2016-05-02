@@ -14,25 +14,51 @@ set guioptions-=r               " Removes right hand scroll bar
 set incsearch                   " highlight while searching
 set hlsearch
 set ignorecase                  " ignore case when searching
+set laststatus=2                " Always display the status line"
 set linespace=15
 set mouse=a
 set number                      " always show line numbers
+set nobackup
 set noerrorbells                " don't beep
+set nojoinspaces                " Use one space, not two, after punctuation.
+set nowritebackup
 set pastetoggle=<leader>p       " paste mode
 set relativenumber
+set ruler                       " show the cursor position all the time"
 set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
 set shiftwidth=2                " number of spaces to use for autoindenting
+set showcmd                     " display incomplete commands"
 set showmode                    " always show what mode we're currently editing in
 set smartcase                   " ignore case if search pattern is all lowercase,
 set smartindent
 set smarttab
 set softtabstop=2               " when hitting <BS>, pretend like a tab is removed, even if spaces
+set splitbelow
+set splitright
 set tabstop=2                   " a tab is four spaces
 set tags=tags
+set textwidth=80
 set timeout timeoutlen=200 ttimeoutlen=100
 set t_ut=
 set visualbell                  " don't beep
 set wrap
+
+" Quick vimrc stuff
+nmap <leader>vr :sp $MYVIMRC<cr>
+nmap <leader>so :w <cr> <bar> :source $MYVIMRC<cr>
+
+" Quick save in nomral mode
+nmap <C-s> <esc>:w<cr>
+
+" Easy escaping to normal model from insert mode
+imap jj <esc>
+imap jk <esc>
+
+" Quick save in insert mode
+imap <C-s> <esc>:w<cr>
+              
+" Clear highlight
+map <C-o> :nohl<cr>
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -40,12 +66,18 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+" Organize all plugins in bundles
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-filetype indent on              " Enable filetype-specific indenting
-filetype plugin on              " Enable filetype-specific plugins
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
+
+" Quick quit when you are looking at help
+autocmd Filetype help nnoremap <buffer> q :q<CR>
 
 augroup vimrcEx
   autocmd!
@@ -59,30 +91,22 @@ augroup vimrcEx
     \ endif
 
   " Set syntax highlighting for specific file types
-  " autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-  " autocmd BufRead,BufNewFile *.md set filetype=markdown
-
-  " Enable spellchecking for Markdown
-  " autocmd FileType markdown setlocal spell
-
-  " Automatically wrap at 80 characters for Markdown
-  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-
-  " Automatically wrap at 72 characters and spell check git commit messages
-  autocmd FileType gitcommit setlocal textwidth=72
-  autocmd FileType gitcommit setlocal spell
-
-  " Allow stylesheets to autocomplete hyphenated words
-  autocmd FileType css,scss,sass setlocal iskeyword+=-
+  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
 augroup END
 
-hi Visual ctermfg=black ctermbg=yellow
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
 
-" detects coffeescript
-au BufNewFile,BufRead *.coffee set filetype=coffee
-au BufNewFile,BufRead *.scss set ft=scss.css
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
 
-let g:SuperTabDefaultCompletionType = "context"
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -99,27 +123,105 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
-" Tab colors
-hi TabLineFill ctermfg=White ctermbg=Yellow
-hi TabLine ctermfg=Blue ctermbg=Yellow
-
-" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-
-" Index ctags from any project, including those outside Rails
-map <Leader>ct :!ctags -R .<CR>
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
-"Dash
-nmap <silent> <leader>d <Plug>DashSearch
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+" vim-test mappings
+nnoremap <silent> <Leader>t :TestFile<CR>
+nnoremap <silent> <Leader>s :TestNearest<CR>
+nnoremap <silent> <Leader>l :TestLast<CR>
+nnoremap <silent> <Leader>a :TestSuite<CR>
+nnoremap <silent> <leader>gt :TestVisit<CR>
+
+" Run commands that require an interactive shell
+nnoremap <Leader>r :RunInInteractiveShell<space>
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
+
+" configure syntastic syntax checking to check on open as well as save
+let g:syntastic_check_on_open=1
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {"regex": "possibly useless use of a variable in void context"}
+
+" Set spellfile to location that is guaranteed to exist, can be symlinked to
+" Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
+set spellfile=$HOME/.vim-spell-en.utf-8.add
+
+" Autocomplete with dictionary words when spell check is on
+set complete+=kspell
+
+" Always use vertical diffs
+set diffopt+=vertical
+
+" Local config
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
+
+" set the cursor to a vertical line in insert mode and a solid block
+" " in command mode
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+" Vim split mouse resize in Tmux
+if has("mouse_sgr")
+  set ttymouse=sgr
+else
+  set ttymouse=xterm2
+end
+
+" Run test faster using spring
+let g:rspec_command = '!spring rspec {spec}'
+
+set grepprg=ag
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+if exists("g:ctrlp_user_command")
+  unlet g:ctrlp_user_command
+endif
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/assets/*,*/vendor/*,*/\.git/*
+
+" Index ctags from any project, including those outside Rails
+map <Leader>ct :!ctags -R .<CR>
 
 " Nerdtree
 nmap <leader>n :NERDTree<cr>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
-let g:NERDTreeWinSize=35
+let g:NERDTreeWinSize=40
 
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
@@ -127,16 +229,6 @@ nmap <C-v> :vertical resize +5<cr>
 " Vim Split
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-H>
-
-" Note that remapping C-s requires flow control to be disabled
-" (e.g. in .bashrc or .zshrc)
-map <C-o> :nohl<cr>
-map <C-s> <esc>:w<CR>
-imap <C-s> <esc>:w<CR>
-map <C-t> <esc>:tabnew<CR>
-map <C-x> <C-w>c
-map <C-n> :cn<CR>
-map <C-p> :cp<CR>
 
 " This replaces :tabnew which I used to bind to this mapping
 " nmap <leader>T :enew<cr>
@@ -153,114 +245,3 @@ nmap <leader>bl :ls<CR>
 " folding
 nnoremap <Space> za
 vnoremap <Space> za
-
-" Easy escaping to normal model
-imap jj <esc>
-imap jk <esc>
-
-" Quit with Q
-command -nargs=0 Quit :qa!
-
-" Find hidden files with controlP
-let g:ctrlp_dotfiles = 0
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_max_files = 0
-
-" Control P and ctag
-nnoremap <leader>= :CtrlPTag<cr>
-
-let g:ackprg = 'ag --vimgrep'
-
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
-
-" bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-" Macvim
-if has("gui_running")
-   let s:uname = system("uname")
-   if s:uname == "Darwin\n"
-      set guifont=Inconsolata\ for\ Powerline:h15
-   endif
-endif
-
-" RSpec.vim mappings
-map <Leader>a :call RunAllSpecs()<CR>
-map <Leader>aa :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-
-" Open new split panes to right and bottom, which feels more natural
-set splitbelow
-set splitright
-
-" Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-
-" Run test faster using spring
-let g:rspec_command = '!spring rspec {spec}'
-" let g:rspec_command = 'Dispatch rspec {spec}'
-
-" Always use vertical diffs
-set diffopt+=vertical
-
-" Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
-endif
-
-" Copy gist
-let g:gist_clip_command = 'pbcopy'
-
-" Powerline and Airline? (Fancy thingy at bottom stuff)
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs 
-let g:airline_extensions = 1
-let g:airline_theme='bubblegum'
-let g:Powerline_symbols = 'fancy'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)"
-
-
-" set the cursor to a vertical line in insert mode and a solid block
-" " in command mode
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
-
-" upon hitting escape to change modes,
-" send successive move-left and move-right
-" commands to immediately redraw the cursor
-inoremap <special> <Esc> <Esc>hl
-
-" don't blink the cursor
-set guicursor+=i:blinkwait0
-
-" javascript library
-let g:used_javascript_libs = 'react,flux,angular,jquery'
-
-" Vim split mouse resize in Tmux
-if has("mouse_sgr")
-    set ttymouse=sgr
-else
-    set ttymouse=xterm2
-end
