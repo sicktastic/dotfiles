@@ -10,7 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 " Plugin 'file:///home/gmarik/path/to/plugin'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'git@github.com:kien/ctrlp.vim.git'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'git@github.com:jeetsukumaran/vim-buffergator.git'
 Plugin 'git@github.com:terryma/vim-multiple-cursors.git'
@@ -34,8 +34,13 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 
 " Javascripts
+
+" ReactJS
+Plugin 'pangloss/vim-javascript' 
+Plugin 'mxw/vim-jsx'
+" JS
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'git@github.com:othree/javascript-libraries-syntax.vim.git'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " Optional:
 Bundle "honza/vim-snippets"
@@ -48,6 +53,7 @@ Bundle 'tpope/vim-rake'
 Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/Rename2.git'
 Bundle 'christoomey/vim-system-copy'
+Plugin 'Valloric/YouCompleteMe'
 
 
 " All of your Plugins must be added before the following line

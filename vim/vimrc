@@ -1,5 +1,8 @@
 set nocompatible      " We're running Vim, not Vi!
 
+filetype indent on              " Enable filetype-specific indenting
+filetype plugin on              " Enable filetype-specific plugins
+
 let mapleader = ","
 
 set autoindent                  " always set autoindenting on
@@ -43,9 +46,13 @@ set t_ut=
 set visualbell                  " don't beep
 set wrap
 
+hi Visual ctermfg=black ctermbg=Yellow
+hi TabLineFill ctermfg=White ctermbg=Yellow
+hi TabLine ctermfg=Blue ctermbg=Yellow
+
 " Quick vimrc stuff
 nmap <leader>vr :sp $MYVIMRC<cr>
-nmap <leader>so :w <cr> <bar> :source $MYVIMRC<cr>
+nmap <leader>so :source $MYVIMRC<cr>
 
 " Quick save in nomral mode
 nmap <C-s> <esc>:w<cr>
@@ -132,12 +139,6 @@ nnoremap <C-l> <C-w>l
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
-" Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
 " vim-test mappings
 nnoremap <silent> <Leader>t :TestFile<CR>
 nnoremap <silent> <Leader>s :TestNearest<CR>
@@ -194,9 +195,6 @@ let g:rspec_command = '!spring rspec {spec}'
 
 set grepprg=ag
 
-" bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
@@ -226,10 +224,6 @@ let g:NERDTreeWinSize=40
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
 
-" Vim Split
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-H>
-
 " This replaces :tabnew which I used to bind to this mapping
 " nmap <leader>T :enew<cr>
 " Move to the next buffer
@@ -245,3 +239,9 @@ nmap <leader>bl :ls<CR>
 " folding
 nnoremap <Space> za
 vnoremap <Space> za
+
+" RSpec.vim mappings
+map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>aa :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
