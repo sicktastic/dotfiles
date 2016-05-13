@@ -40,7 +40,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 " JS
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'git@github.com:nathanaelkane/vim-indent-guides.git'
 
 " Optional:
 Bundle "honza/vim-snippets"
@@ -53,8 +53,7 @@ Bundle 'tpope/vim-rake'
 Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/Rename2.git'
 Bundle 'christoomey/vim-system-copy'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'marijnh/tern_for_vim'
+Plugin 'git@github.com:ternjs/tern_for_vim.git'
 
 
 " All of your Plugins must be added before the following line

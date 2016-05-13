@@ -24,6 +24,7 @@ alias vimstars="cd ~/Sites/rubyonrails.development/vimstars"
 alias ywamsalesforce="cd ~/Sites/rubyonrails.development/ywam-salesforce"
 
 # Everday Stuff
+alias ag='ag --path-to-agignore ~/.agignore'
 alias copymysshkey='pbcopy < ~/.ssh/id_rsa.pub'
 alias dl="cd ~/Downloads"
 alias dotfiles="cd ~/Sites/dotfiles/"

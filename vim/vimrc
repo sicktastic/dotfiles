@@ -51,8 +51,8 @@ hi TabLineFill ctermfg=White ctermbg=Yellow
 hi TabLine ctermfg=Blue ctermbg=Yellow
 
 " Quick vimrc stuff
-nmap <leader>vr :sp $MYVIMRC<cr>
-nmap <leader>so :source $MYVIMRC<cr>
+nmap <leader>vr :sp $MYVIMRC<CR>
+nmap <leader>so :source $MYVIMRC<CR>
 
 " Quick save in nomral mode
 nmap <C-s> <esc>:w<cr>
@@ -247,3 +247,10 @@ map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>aa :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
+
+" Javascript
+let g:javascript_enable_domhtmlcss = 1
+let g:javascript_ignore_javaScriptdoc = 1
+
+" ReactJS
+let g:jsx_ext_required = 0
