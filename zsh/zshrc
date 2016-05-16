@@ -134,6 +134,7 @@ alias rg='rails generate'
 alias rgc='rails generate controller'
 alias rgm='rails generate migration'
 alias rgs='rails generate scaffold'
+alias rgrc="rails generate react:component"
 alias rn='rails new'
 alias rs='rails s'
 alias sidekiq='bundle exec sidekiq'
