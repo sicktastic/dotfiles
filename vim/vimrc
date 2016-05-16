@@ -1,4 +1,5 @@
 set nocompatible      " We're running Vim, not Vi!
+syntax on
 
 filetype indent on              " Enable filetype-specific indenting
 filetype plugin on              " Enable filetype-specific plugins
@@ -51,23 +52,21 @@ hi TabLineFill ctermfg=White ctermbg=Yellow
 hi TabLine ctermfg=Blue ctermbg=Yellow
 
 " Quick vimrc stuff
-nmap <leader>vr :sp $MYVIMRC<CR>
-nmap <leader>so :source $MYVIMRC<CR>
+map <leader>vr :vsp $MYVIMRC<CR>
+map <leader>so :source $MYVIMRC<CR>
 
 " Quick save in nomral mode
-nmap <C-s> <esc>:w<cr>
+nmap <C-s> <esc>:w<CR>
 
 " Easy escaping to normal model from insert mode
 imap jj <esc>
 imap jk <esc>
 
 " Quick save in insert mode
-imap <C-s> <esc>:w<cr>
+imap <C-s> <esc>:w<CR>
               
 " Clear highlight
 map <C-o> :nohl<cr>
-nmap <leader>vr :sp $MYVIMRC
-nmap <leader>so :source $MYVIMRC
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -253,4 +252,4 @@ let g:javascript_enable_domhtmlcss = 1
 let g:javascript_ignore_javaScriptdoc = 1
 
 " ReactJS
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 1

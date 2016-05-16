@@ -3,47 +3,41 @@ if &compatible
 end
 
 filetype off
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-" Plugin 'file:///home/gmarik/path/to/plugin'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'git@github.com:kien/ctrlp.vim.git'
-" Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'git@github.com:jeetsukumaran/vim-buffergator.git'
-Plugin 'git@github.com:terryma/vim-multiple-cursors.git'
-Plugin 'git@github.com:ddollar/nerdcommenter.git'
-Plugin 'git@github.com:tpope/vim-unimpaired.git'
-Plugin 'git@github.com:scrooloose/syntastic.git'
-Plugin 'git@github.com:chrisbra/NrrwRgn.git'
-Plugin 'git@github.com:Lokaltog/vim-easymotion.git'
-Plugin 'git@github.com:ervandew/supertab.git'
-Plugin 'git@github.com:Raimondi/delimitMate.git'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'git@github.com:rizzatti/dash.vim.git'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-endwise'
-Plugin 'vim-ruby/vim-ruby'
+Bundle 'gmarik/Vundle.vim'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'git@github.com:kien/ctrlp.vim.git'
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'git@github.com:jeetsukumaran/vim-buffergator.git'
+Bundle 'git@github.com:terryma/vim-multiple-cursors.git'
+Bundle 'git@github.com:ddollar/nerdcommenter.git'
+Bundle 'git@github.com:tpope/vim-unimpaired.git'
+Bundle 'git@github.com:scrooloose/syntastic.git'
+Bundle 'git@github.com:chrisbra/NrrwRgn.git'
+Bundle 'git@github.com:Lokaltog/vim-easymotion.git'
+Bundle 'git@github.com:ervandew/supertab.git'
+Bundle 'git@github.com:Raimondi/delimitMate.git'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'git@github.com:rizzatti/dash.vim.git'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'tpope/vim-endwise'
+Bundle 'vim-ruby/vim-ruby'
 
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
 
-" Javascripts
+Bundle 'pangloss/vim-javascript' 
+Bundle "justinj/vim-react-snippets"
+Bundle "bentayloruk/vim-react-es6-snippets"
+Bundle 'mxw/vim-jsx'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 
-" ReactJS
-Plugin 'pangloss/vim-javascript' 
-Plugin 'mxw/vim-jsx'
-" JS
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'git@github.com:nathanaelkane/vim-indent-guides.git'
-
-" Optional:
-Bundle "honza/vim-snippets"
+Bundle 'honza/vim-snippets'
 Bundle 'kana/vim-textobj-user.git'
 Bundle 'nelstrom/vim-textobj-rubyblock.git'
 Bundle 'tpope/vim-surround'
@@ -53,9 +47,9 @@ Bundle 'tpope/vim-rake'
 Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/Rename2.git'
 Bundle 'christoomey/vim-system-copy'
-Plugin 'git@github.com:ternjs/tern_for_vim.git'
+Bundle 'git@github.com:ternjs/tern_for_vim.git'
 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype on
+filetype plugin on
