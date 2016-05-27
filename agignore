@@ -32,3 +32,6 @@ bin/stubs
 # Ignore local JS-related files
 node_modules/
 bower_components/
+
+# This file is copied from:
+# https://github.com/gabebw/dotfiles/blob/master/agignore
