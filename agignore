@@ -1,0 +1,34 @@
+log/*.log
+# ctags file
+/tags
+log/
+tmp/
+doc/
+coverage/
+public/assets/
+bin/stubs
+# For Middleman
+/build/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.tiff
+*.bmp
+*.svg
+/bin/stubs
+# ag --hidden finds files with a leading dot, which includes
+# the .git directory for the current repo. So tell ag to ignore it.
+.git/
+# Ignore .keep files
+.keep
+
+# Ignore SQL files in spec/fixtures
+/spec/fixtures/*.sql
+
+# Ignore vim backups in dotfiles
+/vim/backups
+
+# Ignore local JS-related files
+node_modules/
+bower_components/
