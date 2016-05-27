@@ -102,6 +102,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
+  autocmd BufRead,BufNewFile *.jsx set ft=html.javascript
 augroup END
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
