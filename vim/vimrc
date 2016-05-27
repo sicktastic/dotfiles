@@ -211,7 +211,8 @@ endif
 if exists("g:ctrlp_user_command")
   unlet g:ctrlp_user_command
 endif
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/assets/*,*/vendor/*,*/\.git/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/assets/*,*/vendor/*,*/\.git/*,*/node_modules/*
+
 
 " Index ctags from any project, including those outside Rails
 map <Leader>ct :!ctags -R .<CR>
@@ -220,7 +221,7 @@ map <Leader>ct :!ctags -R .<CR>
 nmap <leader>n :NERDTree<cr>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
-let g:NERDTreeWinSize=40
+let g:NERDTreeWinSize=75
 
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
