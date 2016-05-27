@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR='vim'
 
-ZSH_THEME="anthony"
+ZSH_THEME="wild-cherry"
 
 # Macbook Pro
 alias anthonyleeio="cd ~/Sites/antwonlee.github.io"
