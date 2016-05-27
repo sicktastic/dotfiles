@@ -222,7 +222,7 @@ map <Leader>ct :!ctags -R .<CR>
 nmap <leader>n :NERDTree<cr>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
-let g:NERDTreeWinSize=75
+let g:NERDTreeWinSize=40
 
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
