@@ -33,6 +33,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'pangloss/vim-javascript' 
 Bundle "justinj/vim-react-snippets"
 Bundle "bentayloruk/vim-react-es6-snippets"
+Plugin 'isRuslan/vim-es6'
 Bundle 'mxw/vim-jsx'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'

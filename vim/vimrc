@@ -101,7 +101,6 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
-  autocmd BufRead,BufNewFile *.jsx set filetype=javascript.html
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
 augroup END
 
@@ -254,4 +253,8 @@ let g:javascript_enable_domhtmlcss = 1
 let g:javascript_ignore_javaScriptdoc = 1
 
 " ReactJS
-let g:jsx_ext_required = 1
+let g:jsx_ext_required = 0
+
+let g:snipMate = {}
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases.javascript = 'html'
