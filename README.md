@@ -14,6 +14,7 @@ development, and Xcode for iOS development.
 ![Sublime](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/sublime-text.png)
 
 My .vimrc .tmux.conf .zshrc .irbrc, etc.
+`ln -s ~/code/dotfiles/vim/vimrc ~/.vimrc`
 
 ---
 
