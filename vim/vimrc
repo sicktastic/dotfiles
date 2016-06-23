@@ -258,3 +258,5 @@ let g:jsx_ext_required = 0
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases.javascript = 'html'
+
+" let g:elm_format_autosave = 1
