@@ -31,6 +31,7 @@ alias dotfiles="cd ~/Sites/dotfiles/"
 alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
 alias gcommit="git commit"
+alias gfix="git commit --amend"
 alias gpush="git push"
 alias gitshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias gitcache='git rm -r --cached .'
