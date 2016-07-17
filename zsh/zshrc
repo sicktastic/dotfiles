@@ -17,7 +17,7 @@ alias ror="cd ~/Sites/rubyonrails.development/"
 alias rubybox="cd ~/Sites/sandbox/rubybox"
 alias sandbox="cd ~/Sites/sandbox"
 alias swiftprojects="cd ~/Documents/swift"
-alias thrive="cd ~/Sites/thriveministry"
+alias thrive="cd ~/Sites/thrive/thriveministry"
 alias tutorials="cd ~/Sites/tutorials"
 alias upcase="cd ~/Sites/upcase.trails"
 alias vimstars="cd ~/Sites/rubyonrails.development/vimstars"
@@ -55,16 +55,6 @@ alias vimrc='vi ~/.vimrc'
 alias vimrcbundles='vi ~/.vimrc.bundles'
 alias whatismynetwork='ipconfig getifaddr en0'
 alias whatismyip='curl ipecho.net/plain; echo'
-
-# Bower
-alias bowerbootstrap="bower install bootstrap"
-
-# Composer
-alias coi='composer install'
-alias cou='composer update'
-
-# Foreman
-alias fs='foreman start'
 
 # Heroku
 alias ha='heroku accounts'
@@ -106,6 +96,9 @@ alias npmgulp="sudo npm install -g gulp"
 alias npmgulpl="npm install --save-dev gulp"
 alias npmi="npm init"
 
+# Elixir and Phoenix
+alias mixnew="mix phoenix.new"
+
 # Pry
 alias pryrails="pry -r ./config/environment"
 
@@ -146,13 +139,6 @@ alias taillogs='tail -f log/development.log'
 alias redis='redis-cli'
 alias rediss='redis-server'
 
-# Sass
-alias sw='sass --watch'
-
-# Sails
-alias sl='sails lift'
-alias sn='sails new'
-
 # Tmux Session Start
 alias tmx="tmux new -s"
 alias tmxc="vim ~/.tmux.conf"
@@ -165,17 +151,6 @@ alias tmxn='tmuxinator new'
 alias tmxo='tmuxinator open'
 alias tmxs='tmuxinator start'
 alias tmxthrive='tmuxinator start Thrive'
-
-# Vagrant
-alias vaprobash="curl -L http://bit.ly/vaprobash > Vagrantfile"
-alias vd='vagrant destroy'
-alias vh='vagrant halt'
-alias vs='vagrant suspend'
-alias vstatus='vagrant status'
-alias vu='vagrant up'
-
-# Yeoman
-alias yoa="yo angular"
 
 # User configuration
 plugins=(git)
