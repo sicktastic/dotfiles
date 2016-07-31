@@ -98,6 +98,7 @@ alias npmi="npm init"
 
 # Elixir and Phoenix
 alias mixnew="mix phoenix.new"
+alias mixdatabase='mix ecto.create && mix ecto.migrate'
 
 # Pry
 alias pryrails="pry -r ./config/environment"

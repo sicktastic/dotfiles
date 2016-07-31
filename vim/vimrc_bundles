@@ -30,8 +30,6 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 
-Bundle 'ElmCast/elm-vim'
-
 Bundle 'pangloss/vim-javascript' 
 Bundle "justinj/vim-react-snippets"
 Bundle "bentayloruk/vim-react-es6-snippets"
@@ -51,6 +49,10 @@ Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/Rename2.git'
 Bundle 'christoomey/vim-system-copy'
 Bundle 'git@github.com:ternjs/tern_for_vim.git'
+
+Bundle 'ElmCast/elm-vim'
+
+Plugin 'elixir-lang/vim-elixir'
 
 
 " All of your Plugins must be added before the following line
