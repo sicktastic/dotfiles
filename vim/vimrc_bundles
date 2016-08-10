@@ -18,19 +18,14 @@ Bundle 'git@github.com:chrisbra/NrrwRgn.git'
 Bundle 'git@github.com:Lokaltog/vim-easymotion.git'
 Bundle 'git@github.com:ervandew/supertab.git'
 Bundle 'git@github.com:Raimondi/delimitMate.git'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'git@github.com:rizzatti/dash.vim.git'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 
 Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
-
-Bundle 'ElmCast/elm-vim'
 
 Bundle 'pangloss/vim-javascript' 
 Bundle "justinj/vim-react-snippets"

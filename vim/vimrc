@@ -1,6 +1,5 @@
 set nocompatible      " We're running Vim, not Vi!
 syntax on
-
 filetype indent on              " Enable filetype-specific indenting
 filetype plugin on              " Enable filetype-specific plugins
 
@@ -213,6 +212,14 @@ if exists("g:ctrlp_user_command")
 endif
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/assets/*,*/vendor/*,*/\.git/*,*/node_modules/*
 
+if has("gui_running")
+  syntax on
+  set hlsearch
+  colorscheme jellybeans
+  set bs=2
+  set ai
+  set ruler
+endif
 
 " Index ctags from any project, including those outside Rails
 map <Leader>ct :!ctags -R .<CR>
@@ -243,10 +250,10 @@ nnoremap <Space> za
 vnoremap <Space> za
 
 " RSpec.vim mappings
-map <Leader>a :call RunAllSpecs()<CR>
-map <Leader>aa :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
+map <leader>a :call RunAllSpecs()<cr>
+map <leader>aa :call RunCurrentSpecFile()<cr>
+map <leader>s :call RunNearestSpec()<cr>
+map <leader>l :call RunLastSpec()<cr>
 
 " Javascript
 let g:javascript_enable_domhtmlcss = 1
