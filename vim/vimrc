@@ -90,18 +90,17 @@ autocmd Filetype help nnoremap <buffer> q :q<CR>
 augroup vimrcEx
   autocmd!
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it for commit messages, when the position is invalid, or when
-  " inside an event handler (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
+  " File Type Settings
+  autocmd filetype qf setlocal wrap
 
-  " Set syntax highlighting for specific file types
-  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
-  autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
+  " Help System Speedups
+  autocmd filetype help nnoremap <buffer><cr> <c-]>
+  autocmd filetype help nnoremap <buffer><bs> <c-T>
+  autocmd filetype help nnoremap <buffer>q :q<CR>
+  autocmd filetype help set nonumber
+
+  autocmd! BufReadPost,BufWritePost * Neomake
+
 augroup END
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
@@ -272,3 +271,19 @@ let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
+
+" Disable inherited syntastic (NEOVIM)
+let g:syntastic_mode_map = {
+  \ "mode": "passive",
+  \ "active_filetypes": [],
+  \ "passive_filetypes": [] }
+
+let g:neomake_serialize = 1
+let g:neomake_serialize_abort_on_error = 1
+let g:neomake_elixir_enabled_makers = ['mix']
+let g:neomake_elixir_mix_maker = {
+  \ 'args': ['compile'],
+  \ 'errorformat':
+  \ '** %s %f:%l: %m,' .
+  \ '%f:%l: warning: %m'
+  \ }

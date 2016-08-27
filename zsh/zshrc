@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR='vim'
 
-ZSH_THEME="Honukai"
+ZSH_THEME="wild-cherry"
 
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
