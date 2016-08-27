@@ -99,7 +99,7 @@ augroup vimrcEx
   autocmd filetype help nnoremap <buffer>q :q<CR>
   autocmd filetype help set nonumber
 
-  autocmd! BufReadPost,BufWritePost * Neomake
+  " autocmd! BufReadPost,BufWritePost * Neomake
 
 augroup END
 
@@ -287,3 +287,9 @@ let g:neomake_elixir_mix_maker = {
   \ '** %s %f:%l: %m,' .
   \ '%f:%l: warning: %m'
   \ }
+
+" Airline
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
