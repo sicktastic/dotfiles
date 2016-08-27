@@ -2,7 +2,11 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR='vim'
 
-ZSH_THEME="wild-cherry"
+ZSH_THEME="Honukai"
+
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
 
 # Macbook Pro
 alias anthonyleeio="cd ~/Sites/antwonlee.github.io"
@@ -114,6 +118,8 @@ alias bu='bundle update'
 alias checkgems='bundle-audit update'
 alias installrspec='rails generate rspec:install'
 alias rakecompile='RAILS_ENV=production bundle exec rake assets:precompile'
+alias rakeclean='rake assets:clean'
+alias rakehardclean='rake assets:clobber'
 alias rcompile='RAILS_ENV=production bundle exec rake assets:precompile'
 alias rreset='rake db:migrate:reset'
 alias rmigrate='rake db:migrate'
