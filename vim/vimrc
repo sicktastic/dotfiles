@@ -181,11 +181,16 @@ else
 endif
 
 " Vim split mouse resize in Tmux
-if has("mouse_sgr")
-  set ttymouse=sgr
-else
+" if has("mouse_sgr")
+"   set ttymouse=sgr
+" else
+"   set ttymouse=xterm2
+" end
+
+" Using NVIM
+if !has('nvim')
   set ttymouse=xterm2
-end
+endif
 
 " Run test faster using spring
 let g:rspec_command = '!spring rspec {spec}'

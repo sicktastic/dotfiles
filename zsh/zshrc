@@ -2,7 +2,11 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR='vim'
 
-ZSH_THEME="wild-cherry"
+ZSH_THEME="Honukai"
+
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
 
 # Macbook Pro
 alias anthonyleeio="cd ~/Sites/antwonlee.github.io"
