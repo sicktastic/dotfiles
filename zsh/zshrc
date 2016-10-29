@@ -108,6 +108,9 @@ alias mixserver="mix phoenix.server"
 # Pry
 alias pryrails="pry -r ./config/environment"
 
+# Pythong
+alias python='python3'
+
 # Rails
 alias bi='bundle install'
 alias binstallrspec='bin/rails generate rspec:install'

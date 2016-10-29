@@ -54,6 +54,8 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'jalvesaq/Nvim-R'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin on

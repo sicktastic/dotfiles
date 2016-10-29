@@ -41,7 +41,7 @@ set splitbelow
 set splitright
 set tabstop=2                   " a tab is four spaces
 set tags=tags
-set textwidth=80
+" set textwidth=80
 set timeout timeoutlen=200 ttimeoutlen=100
 set t_ut=
 set visualbell                  " don't beep
