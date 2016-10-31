@@ -4,34 +4,20 @@ export EDITOR='vim'
 
 ZSH_THEME="wild-cherry"
 
-if type nvim > /dev/null 2>&1; then
-  alias vim='nvim'
-fi
-
 # Macbook Pro
 alias anthonyleeio="cd ~/Sites/antwonlee.github.io"
 alias ajl="cd ~/Sites/artandjustice/artandjustice"
 alias dotfiles="cd ~/Sites/dotfiles"
 alias gatech="cd ~/Documents/gatech"
-alias gatechteam="cd ~/Documents/gatech/6300Spring15Team64/"
 alias js="cd ~/Sites/javascript.development/"
-alias kendo="cd ~/Sites/kendo"
 alias playground="cd ~/Sites/playground"
 alias ror="cd ~/Sites/rubyonrails.development/"
-alias rubybox="cd ~/Sites/sandbox/rubybox"
-alias sandbox="cd ~/Sites/sandbox"
-alias swiftprojects="cd ~/Documents/swift"
-alias thrive="cd ~/Sites/thrive/thriveministry"
-alias tutorials="cd ~/Sites/tutorials"
 alias upcase="cd ~/Sites/upcase.trails"
-alias vimstars="cd ~/Sites/rubyonrails.development/vimstars"
-alias ywamsalesforce="cd ~/Sites/rubyonrails.development/ywam-salesforce"
 
 # Everday Stuff
 alias ag='ag --path-to-agignore ~/.agignore'
 alias copymysshkey='pbcopy < ~/.ssh/id_rsa.pub'
 alias dl="cd ~/Downloads"
-alias dotfiles="cd ~/Sites/dotfiles/"
 alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
 alias gcommit="git commit"
@@ -45,7 +31,6 @@ alias havingfun="osascript -e 'Set Volume 10' && say -v 'good news' it is time f
 alias thrivedbdev='heroku pg:pull DATABASE_URL thriveministry_development --app thriveministry'
 alias thrivedbtest='heroku pg:pull DATABASE_URL thriveministry_test --app thriveministry'
 alias initialgit="g init && ga . && gc 'initial git'"
-alias mydotfiles='cd ~/Sites/dotfiles'
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias mytheme="vim ~/.oh-my-zsh/themes"
 alias pingit="ping google.com"
@@ -89,10 +74,6 @@ alias hstaging='git push staging master'
 
 # Jekyll
 alias jserve='jekyll serve'
-
-# MySQL
-alias mysqlstart="mysql.server start"
-alias mysqlstop="mysql.server stop"
 
 # NPM
 alias npmbootstrap='npm install bootstrap'

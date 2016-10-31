@@ -1,18 +1,29 @@
-set nocompatible      " We're running Vim, not Vi!
+"""""""""""""""""""""""""""""""
+"   _. ._ _|_ |_   _  ._      "
+"  (_| | | |_ | | (_) | | \/  "
+"                         /   "
+"""""""""""""""""""""""""""""""
 
+" Encoding ----------------------------------------------------------------------------
+set nocompatible
+set encoding=utf8
+
+" Leader Key --------------------------------------------------------------------------
+let mapleader = ","
+
+" Files -------------------------------------------------------------------------------
 syntax on
 filetype indent on              " Enable filetype-specific indenting
 filetype plugin on              " Enable filetype-specific plugins
 
-let mapleader = ","
-
+" Configs ----------------------------------------------------------------------------
 set autoindent                  " always set autoindenting on
 set autowrite                   " Save on buffer switch
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
-set copyindent                  " copy the previous indentation on autoindenting
 set expandtab                   " expand tabs by default (overloadable per file type later)
 set foldlevelstart=0
 set go-=L                       " Removes left hand scroll bar
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 set guioptions-=T               " Removes top toolbar
 set guioptions-=r               " Removes right hand scroll bar
 set incsearch                   " highlight while searching
@@ -41,35 +52,45 @@ set splitbelow
 set splitright
 set tabstop=2                   " a tab is four spaces
 set tags=tags
-" set textwidth=80
+set textwidth=80
 set timeout timeoutlen=200 ttimeoutlen=100
 set t_ut=
 set visualbell                  " don't beep
 set wrap
 
+" Highlights -------------------------------------------------------------------------
 hi Visual ctermfg=black ctermbg=Yellow
 hi TabLineFill ctermfg=White ctermbg=Yellow
 hi TabLine ctermfg=Blue ctermbg=Yellow
 
-" Quick vimrc stuff
+" Quick Keys -------------------------------------------------------------------------
+
+" Quick $MYVIMRC
 map <leader>vr :vsp $MYVIMRC<CR>
 map <leader>so :source $MYVIMRC<CR>
 
 " Quick save in nomral mode
 nmap <C-s> <esc>:w<CR>
 
-" Easy escaping to normal model from insert mode
+" Quick escape
 imap jj <esc>
 imap jk <esc>
 
-" Quick save in insert mode
+" Quick save during INSERT mode
 imap <C-s> <esc>:w<CR>
               
-" Clear highlight
+" Quick clear highlight
 map <C-o> :nohl<cr>
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Configs from Thoughtbot ------------------------------------------------------------
+
+" Switch syntax highlighting on, when the terminal has colors, Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
@@ -130,11 +151,6 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
-" Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -177,18 +193,6 @@ if exists('$TMUX')
 else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
-
-" Vim split mouse resize in Tmux
-" if has("mouse_sgr")
-"   set ttymouse=sgr
-" else
-"   set ttymouse=xterm2
-" end
-
-" Using NVIM
-if !has('nvim')
-  set ttymouse=xterm2
 endif
 
 " Run test faster using spring
@@ -256,11 +260,11 @@ map <leader>aa :call RunCurrentSpecFile()<cr>
 map <leader>s :call RunNearestSpec()<cr>
 map <leader>l :call RunLastSpec()<cr>
 
-" Javascript
+" Javascript --------------------------------------------------------------------------
 let g:javascript_enable_domhtmlcss = 1
 let g:javascript_ignore_javaScriptdoc = 1
 
-" ReactJS
+" React JS-----------------------------------------------------------------------------
 let g:jsx_ext_required = 0
 
 let g:snipMate = {}
@@ -272,24 +276,5 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
-" Disable inherited syntastic (NEOVIM)
-let g:syntastic_mode_map = {
-  \ "mode": "passive",
-  \ "active_filetypes": [],
-  \ "passive_filetypes": [] }
-
-let g:neomake_serialize = 1
-let g:neomake_serialize_abort_on_error = 1
-let g:neomake_elixir_enabled_makers = ['mix']
-let g:neomake_elixir_mix_maker = {
-  \ 'args': ['compile'],
-  \ 'errorformat':
-  \ '** %s %f:%l: %m,' .
-  \ '%f:%l: warning: %m'
-  \ }
-
-" Airline
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+" Airline -----------------------------------------------------------------------------
+let g:airline_powerline_fonts = 1

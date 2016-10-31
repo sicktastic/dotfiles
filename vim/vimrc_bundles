@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Bundle 'gmarik/Vundle.vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'git@github.com:kien/ctrlp.vim.git'
+Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'git@github.com:jeetsukumaran/vim-buffergator.git'
 Bundle 'git@github.com:terryma/vim-multiple-cursors.git'
@@ -21,12 +21,10 @@ Bundle 'git@github.com:Raimondi/delimitMate.git'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
-
 Bundle 'mattn/webapi-vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
-
 Bundle 'pangloss/vim-javascript' 
 Bundle "justinj/vim-react-snippets"
 Bundle "bentayloruk/vim-react-es6-snippets"
@@ -34,7 +32,6 @@ Plugin 'isRuslan/vim-es6'
 Bundle 'mxw/vim-jsx'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
-
 Bundle 'honza/vim-snippets'
 Bundle 'kana/vim-textobj-user.git'
 Bundle 'nelstrom/vim-textobj-rubyblock.git'
@@ -46,15 +43,12 @@ Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/Rename2.git'
 Bundle 'christoomey/vim-system-copy'
 Bundle 'git@github.com:ternjs/tern_for_vim.git'
-
 Bundle 'ElmCast/elm-vim'
-
 Plugin 'elixir-lang/vim-elixir'
-
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
 Plugin 'jalvesaq/Nvim-R'
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
