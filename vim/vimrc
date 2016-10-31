@@ -23,7 +23,7 @@ set backspace=indent,eol,start  " allow backspacing over everything in insert mo
 set expandtab                   " expand tabs by default (overloadable per file type later)
 set foldlevelstart=0
 set go-=L                       " Removes left hand scroll bar
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 set guioptions-=T               " Removes top toolbar
 set guioptions-=r               " Removes right hand scroll bar
 set incsearch                   " highlight while searching
@@ -278,3 +278,8 @@ let g:multi_cursor_quit_key='<Esc>'
 
 " Airline -----------------------------------------------------------------------------
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_splits = 0
+
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
