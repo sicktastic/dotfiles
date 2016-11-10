@@ -20,6 +20,7 @@ alias copymysshkey='pbcopy < ~/.ssh/id_rsa.pub'
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
+alias gc="git commit -m"
 alias gcommit="git commit"
 alias gfix="git commit --amend"
 alias gpush="git push"
