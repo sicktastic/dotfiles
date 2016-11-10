@@ -20,6 +20,7 @@ alias copymysshkey='pbcopy < ~/.ssh/id_rsa.pub'
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
+alias gc="git commit -m"
 alias gcommit="git commit"
 alias gfix="git commit --amend"
 alias gpush="git push"
@@ -85,6 +86,7 @@ alias npmi="npm init"
 alias mixdatabase='mix ecto.create && mix ecto.migrate'
 alias mixnew="mix phoenix.new"
 alias mixserver="mix phoenix.server"
+alias mixdigest='mix phoenix.digest'
 
 # Pry
 alias pryrails="pry -r ./config/environment"
