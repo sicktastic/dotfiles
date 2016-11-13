@@ -49,6 +49,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jalvesaq/Nvim-R'
 Plugin 'ryanoasis/vim-devicons'
+Bundle 'git@github.com:chrisbra/Colorizer.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
