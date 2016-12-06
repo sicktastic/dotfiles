@@ -4,6 +4,8 @@
 "                         /   "
 """""""""""""""""""""""""""""""
 
+colorscheme summerfruit256
+
 " Encoding ----------------------------------------------------------------------------
 set nocompatible
 set encoding=utf8
@@ -23,7 +25,7 @@ set backspace=indent,eol,start  " allow backspacing over everything in insert mo
 set expandtab                   " expand tabs by default (overloadable per file type later)
 set foldlevelstart=0
 set go-=L                       " Removes left hand scroll bar
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Types:h11
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Types:h14
 set guioptions-=T               " Removes top toolbar
 set guioptions-=r               " Removes right hand scroll bar
 set incsearch                   " highlight while searching
