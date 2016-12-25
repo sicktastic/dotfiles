@@ -4,7 +4,7 @@
 "                         /   "
 """""""""""""""""""""""""""""""
 
-colorscheme summerfruit256
+" colorscheme summerfruit256
 
 " Encoding ----------------------------------------------------------------------------
 set nocompatible

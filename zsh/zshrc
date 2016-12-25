@@ -12,6 +12,7 @@ alias js="cd ~/Sites/javascript.development/"
 alias playground="cd ~/Sites/playground"
 alias ror="cd ~/Sites/rubyonrails.development/"
 alias upcase="cd ~/Sites/upcase.trails"
+alias ml="cd ~/Sites/machine-learning/"
 
 # Everday Stuff
 alias ag='ag --path-to-agignore ~/.agignore'
