@@ -81,6 +81,7 @@ alias jserve='jekyll serve'
 
 # NPM
 alias npmis='npm install --save'
+alias npmisd='npm install --save-dev'
 alias npmbootstrap='npm install bootstrap'
 alias npmgulp="sudo npm install -g gulp"
 alias npmgulpl="npm install --save-dev gulp"
