@@ -80,6 +80,7 @@ alias hstaging='git push staging master'
 alias jserve='jekyll serve'
 
 # NPM
+alias npmis='npm install --save'
 alias npmbootstrap='npm install bootstrap'
 alias npmgulp="sudo npm install -g gulp"
 alias npmgulpl="npm install --save-dev gulp"
