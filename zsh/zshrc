@@ -46,6 +46,9 @@ alias vimrcbundles='vi ~/.vimrc.bundles'
 alias whatismynetwork='ipconfig getifaddr en0'
 alias whatismyip='curl ipecho.net/plain; echo'
 
+# Docker
+alias dockermachines='docker-machine ls'
+
 # Heroku
 alias ha='heroku accounts'
 alias haccountset='heroku accounts:set'
