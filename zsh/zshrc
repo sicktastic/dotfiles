@@ -11,6 +11,7 @@ alias gatech="cd ~/Documents/gatech"
 alias js="cd ~/Sites/javascript.development/"
 alias playground="cd ~/Sites/playground"
 alias ror="cd ~/Sites/rubyonrails.development/"
+alias thrive="cd ~/Sites/thrive.development/thriveministry"
 alias upcase="cd ~/Sites/upcase.trails"
 alias ml="cd ~/Sites/machine-learning/"
 
@@ -95,6 +96,9 @@ alias mixdatabase='mix ecto.create && mix ecto.migrate'
 alias mixnew="mix phoenix.new"
 alias mixserver="mix phoenix.server"
 alias mixdigest='mix phoenix.digest'
+
+# Jupyter
+alias jnotebook='jupyter notebook'
 
 # Pry
 alias pryrails="pry -r ./config/environment"
