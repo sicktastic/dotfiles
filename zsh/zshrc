@@ -47,6 +47,9 @@ alias vimrcbundles='vi ~/.vimrc.bundles'
 alias whatismynetwork='ipconfig getifaddr en0'
 alias whatismyip='curl ipecho.net/plain; echo'
 
+# Bash
+alias findstring='grep -rnw' 
+
 # Docker
 alias dockermachines='docker-machine ls'
 
