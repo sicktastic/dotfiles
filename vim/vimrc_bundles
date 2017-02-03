@@ -52,6 +52,7 @@ Plugin 'ryanoasis/vim-devicons'
 Bundle 'git@github.com:chrisbra/Colorizer.git'
 Plugin 'git@github.com:chrisbra/csv.vim.git'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'posva/vim-vue'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -23,6 +23,7 @@ alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
 alias gc="git commit -m"
 alias gcommit="git commit"
+alias grebaselast="git rebase -i HEAD~"
 alias gfix="git commit --amend"
 alias gpush="git push"
 alias gitshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
