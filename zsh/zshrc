@@ -5,15 +5,16 @@ ZSH_THEME="wild-cherry"
 
 # Macbook Pro
 alias anthonyleeio="cd ~/Sites/antwonlee.github.io"
-alias ajl="cd ~/Sites/artandjustice/artandjustice"
+alias ajl="cd ~/Sites/artandjustice.development/artandjustice"
 alias dotfiles="cd ~/Sites/dotfiles"
 alias gatech="cd ~/Documents/gatech"
 alias js="cd ~/Sites/javascript.development/"
 alias playground="cd ~/Sites/playground"
 alias ror="cd ~/Sites/rubyonrails.development/"
+alias luna="cd ~/Sites/rubyonrails.development/lunamisoo"
 alias thrive="cd ~/Sites/thrive.development/thriveministry"
+alias membercare="cd ~/Sites/thrive.development/membercare"
 alias upcase="cd ~/Sites/upcase.trails"
-alias ml="cd ~/Sites/machine-learning/"
 
 # Everday Stuff
 alias ag='ag --path-to-agignore ~/.agignore'
@@ -83,6 +84,8 @@ alias hpush='git push heroku master'
 alias hps='heroku ps'
 alias hredis='heroku redis:info'
 alias hstaging='git push staging master'
+alias productionhmon='heroku maintenance:on --app'
+alias productionhmoff='heroku maintenance:off --app'
 
 # Jekyll
 alias jserve='jekyll serve'
@@ -97,9 +100,10 @@ alias npmi="npm init"
 
 # Elixir and Phoenix
 alias mixdatabase='mix ecto.create && mix ecto.migrate'
-alias mixnew="mix phoenix.new"
-alias mixserver="mix phoenix.server"
+alias mixnew='mix phoenix.new'
+alias mixserver='mix phoenix.server'
 alias mixdigest='mix phoenix.digest'
+alias iexmix='iex -S mix'
 
 # Jupyter
 alias jnotebook='jupyter notebook'
@@ -178,3 +182,5 @@ export PATH="$GOPATH/bin:$PATH"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 
 export PATH=~/npm-global/bin:$PATH
+export PATH="/usr/local/opt/qt@5.7/bin:$PATH"
+source /Users/anthonylee/Sites/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
