@@ -60,8 +60,6 @@ set wrap
 
 " Highlights -------------------------------------------------------------------------
 hi Visual ctermfg=black ctermbg=Yellow
-hi TabLineFill ctermfg=White ctermbg=Yellow
-hi TabLine ctermfg=Blue ctermbg=Yellow
 
 " Quick Keys -------------------------------------------------------------------------
 
@@ -281,6 +279,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_splits = 0
+let g:airline_theme='bubblegum'
 
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 
