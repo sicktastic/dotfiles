@@ -4,8 +4,6 @@
 "                         /   "
 """""""""""""""""""""""""""""""
 
-" colorscheme summerfruit256
-
 " Encoding ----------------------------------------------------------------------------
 set nocompatible
 set encoding=utf8
