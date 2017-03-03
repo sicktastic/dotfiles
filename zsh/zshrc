@@ -16,6 +16,9 @@ alias thrive="cd ~/Sites/thrive.development/thriveministry"
 alias membercare="cd ~/Sites/thrive.development/membercare"
 alias upcase="cd ~/Sites/upcase.trails"
 
+# iMac
+alias fixssh='eval $(ssh-agent) & ssh-add'
+
 # Everday Stuff
 alias ag='ag --path-to-agignore ~/.agignore'
 alias copymysshkey='pbcopy < ~/.ssh/id_rsa.pub'
