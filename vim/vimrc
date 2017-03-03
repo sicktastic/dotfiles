@@ -18,7 +18,10 @@ syntax on
 filetype indent on              " Enable filetype-specific indenting
 filetype plugin on              " Enable filetype-specific plugins
 
-" Configs ----------------------------------------------------------------------------
+" Syntax Auto Command -----------------------------------------------------------------
+autocmd BufNewFile,BufRead *.html.eex set filetype=html.ex.exs
+
+" Configs -----------------------------------------------------------------------------
 set autoindent                  " always set autoindenting on
 set autowrite                   " Save on buffer switch
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
@@ -260,6 +263,19 @@ map <leader>aa :call RunCurrentSpecFile()<cr>
 map <leader>s :call RunNearestSpec()<cr>
 map <leader>l :call RunLastSpec()<cr>
 
+" Airline -----------------------------------------------------------------------------
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline_theme='bubblegum'
+
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+
+" Color -------------------------------------------------------------------------------
+let g:colorizer_auto_filetype='css,html,scss'
+let g:colorizer_skip_comments = 1
+
 " Javascript --------------------------------------------------------------------------
 let g:javascript_enable_domhtmlcss = 1
 let g:javascript_ignore_javaScriptdoc = 1
@@ -275,20 +291,3 @@ let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
-
-" Airline -----------------------------------------------------------------------------
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_splits = 0
-let g:airline_theme='bubblegum'
-
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-
-" Syntax-------------------------------------------------------------------------------
-autocmd BufNewFile,BufRead *.html.eex set filetype=html.ex.exs
-
-
-" Color--------------------------------------------------------------------------------
-let g:colorizer_auto_filetype='css,html,scss'
-let g:colorizer_skip_comments = 1
