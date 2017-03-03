@@ -46,6 +46,7 @@ alias u='..'
 alias uohmyzsh='upgrade_oh_my_zsh'
 alias vimrc='vi ~/.vimrc'
 alias vimrcbundles='vi ~/.vimrc.bundles'
+alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 alias whatismynetwork='ipconfig getifaddr en0'
 alias whatismyip='curl ipecho.net/plain; echo'
 

@@ -8,7 +8,7 @@ call vundle#begin()
 Bundle 'gmarik/Vundle.vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'scrooloose/nerdtree.git'
+" Bundle 'scrooloose/nerdtree.git'
 Bundle 'git@github.com:jeetsukumaran/vim-buffergator.git'
 Bundle 'git@github.com:terryma/vim-multiple-cursors.git'
 Bundle 'git@github.com:ddollar/nerdcommenter.git'
