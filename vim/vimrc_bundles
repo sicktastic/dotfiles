@@ -54,6 +54,7 @@ Plugin 'git@github.com:chrisbra/csv.vim.git'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'posva/vim-vue'
 Plugin 'rizzatti/dash.vim'
+Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
