@@ -63,7 +63,7 @@ hi Visual ctermfg=black ctermbg=Yellow
 
 " Quick Keys -------------------------------------------------------------------------
 
-" Quick $MYVIMRC
+" Quick $MYVIMRC and Sourcing
 map <leader>vr :vsp $MYVIMRC<CR>
 map <leader>so :source $MYVIMRC<CR>
 
