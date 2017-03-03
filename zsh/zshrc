@@ -39,14 +39,15 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias mytheme="vim ~/.oh-my-zsh/themes"
 alias pingit="ping google.com"
 alias shortcuts='vi ~/.zshrc'
+alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 alias sourcezshrc='source ~/.zshrc'
 alias sourcevimrc='source ~/.vimrc'
+alias starthttp='python -m http.server'
 alias tellmeyoursecret='cat ~/.ssh/id_rsa.pub'
 alias u='..'
 alias uohmyzsh='upgrade_oh_my_zsh'
 alias vimrc='vi ~/.vimrc'
 alias vimrcbundles='vi ~/.vimrc.bundles'
-alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 alias whatismynetwork='ipconfig getifaddr en0'
 alias whatismyip='curl ipecho.net/plain; echo'
 
