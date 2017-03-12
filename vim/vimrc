@@ -270,7 +270,6 @@ let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_splits = 0
 let g:airline_theme='bubblegum'
 
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 
 " Color -------------------------------------------------------------------------------
 let g:colorizer_auto_filetype='css,html,scss'
@@ -291,3 +290,9 @@ let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
+
+" Python ------------------------------------------------------------------------------
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+let python_highlight_all = 1
+" Default syntax to Python 3
+" let g:pymode_python = 'python3'

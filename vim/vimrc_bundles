@@ -55,6 +55,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'posva/vim-vue'
 Plugin 'rizzatti/dash.vim'
 Plugin 'chriskempson/base16-vim'
+Plugin 'hdima/python-syntax'
+Plugin 'python-mode/python-mode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
