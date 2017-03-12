@@ -294,5 +294,3 @@ let g:multi_cursor_quit_key='<Esc>'
 " Python ------------------------------------------------------------------------------
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 let python_highlight_all = 1
-" Default syntax to Python 3
-" let g:pymode_python = 'python3'
