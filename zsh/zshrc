@@ -62,6 +62,10 @@ alias findstring='grep -rnw'
 alias dockermachines='docker-machine ls'
 
 # Heroku
+
+alias herokuthrive='heroku apps --org thriveministry'
+alias herokulunamisoo='heroku apps --org lunamisoo'
+
 alias ha='heroku accounts'
 alias haccountset='heroku accounts:set'
 alias haddremote='heroku git:remote -a'
