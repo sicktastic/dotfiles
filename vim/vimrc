@@ -72,6 +72,8 @@ hi Visual ctermfg=black ctermbg=Yellow
 map <leader>vr :vsp $MYVIMRC<CR>
 map <leader>so :source $MYVIMRC<CR>
 
+map <leader>of :!open %<CR>
+
 " Quick save in nomral mode
 nmap <C-s> <esc>:w<CR>
 
@@ -278,6 +280,7 @@ let g:colorizer_skip_comments = 1
 " Javascript --------------------------------------------------------------------------
 let g:javascript_enable_domhtmlcss = 1
 let g:javascript_ignore_javaScriptdoc = 1
+let g:javascript_plugin_jsdoc = 1
 
 " React JS-----------------------------------------------------------------------------
 let g:jsx_ext_required = 0
