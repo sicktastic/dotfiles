@@ -4,7 +4,7 @@ export EDITOR='vim'
 ZSH_THEME="wild-cherry"
 
 # Macbook Pro
-alias anthonyleeio="cd ~/Sites/antwonlee.github.io"
+alias anthonyleeio="cd ~/Sites/github.pages/antwonlee.github.io"
 alias ajl="cd ~/Sites/artandjustice.development/artandjustice"
 alias dotfiles="cd ~/Sites/dotfiles"
 alias gatech="cd ~/Documents/gatech"
