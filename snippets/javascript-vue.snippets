@@ -1,6 +1,13 @@
+snippet vinstance
+	var ${1} = new Vue({
+		el: '${2}'
+	})
 snippet vnew
 	new Vue({
-		el: '${1}'
+		el: '${1}',
+		data: {
+			${2}: ${3}
+		}
 	})
 snippet vdata
 	data: {
