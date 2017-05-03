@@ -1,3 +1,8 @@
+# User configuration
+plugins=(git)
+stty start undef
+stty stop undef
+
 # Path to your oh-my-zsh installation.
 export EDITOR='vim'
 
@@ -42,6 +47,7 @@ alias initialgit="g init && ga . && gc 'initial git'"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias mytheme="vim ~/.oh-my-zsh/themes"
 alias pingit="ping google.com"
+alias refresh='source ~/.zshrc'
 alias shortcuts='vi ~/.zshrc'
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 alias sourcezshrc='source ~/.zshrc'
@@ -173,10 +179,6 @@ alias tmxo='tmuxinator open'
 alias tmxs='tmuxinator start'
 alias tmxthrive='tmuxinator start Thrive'
 
-# User configuration
-plugins=(git)
-stty start undef
-stty stop undef
 
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh

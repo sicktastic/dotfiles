@@ -234,12 +234,6 @@ endif
 " Index ctags from any project, including those outside Rails
 map <Leader>ct :!ctags -R .<CR>
 
-" Nerdtree
-" nmap <leader>n :NERDTree<cr>
-" let NERDTreeHighlightCursorline=1
-" let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
-" let g:NERDTreeWinSize=40
-
 " Split Window Resize
 nmap <C-v> :vertical resize +5<cr>
 
@@ -266,11 +260,11 @@ map <leader>s :call RunNearestSpec()<cr>
 map <leader>l :call RunLastSpec()<cr>
 
 " Airline -----------------------------------------------------------------------------
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_splits = 0
-let g:airline_theme='bubblegum'
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#show_buffers = 0
+" let g:airline#extensions#tabline#show_splits = 0
+" let g:airline_theme='bubblegum'
 
 
 " Color -------------------------------------------------------------------------------
