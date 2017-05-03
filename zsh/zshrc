@@ -25,7 +25,7 @@ alias upcase="cd ~/Sites/upcase.trails"
 alias fixssh='eval $(ssh-agent) & ssh-add'
 
 # Everday Stuff
-alias ag='ag --path-to-agignore ~/.agignore'
+alias ag='ag --path-to-ignore ~/.agignore'
 alias copymysshkey='pbcopy < ~/.ssh/id_rsa.pub'
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
@@ -48,6 +48,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias mytheme="vim ~/.oh-my-zsh/themes"
 alias pingit="ping google.com"
 alias refresh='source ~/.zshrc'
+alias searchfile='ack -g'
 alias shortcuts='vi ~/.zshrc'
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 alias sourcezshrc='source ~/.zshrc'
