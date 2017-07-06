@@ -20,6 +20,7 @@ alias luna="cd ~/Sites/rubyonrails.development/lunamisoo"
 alias thrive="cd ~/Sites/thrive.development/thriveministry"
 alias membercare="cd ~/Sites/thrive.development/membercare"
 alias upcase="cd ~/Sites/upcase.trails"
+alias pluralsight="cd ~/Pluralsight"
 
 # iMac
 alias fixssh='eval $(ssh-agent) & ssh-add'

@@ -73,6 +73,7 @@ map <leader>vr :vsp $MYVIMRC<CR>
 map <leader>so :source $MYVIMRC<CR>
 
 map <leader>of :!open %<CR>
+map <leader>op :!python open %<CR>
 
 " Quick save in nomral mode
 nmap <C-s> <esc>:w<CR>
@@ -225,7 +226,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/assets/*,*/vendor/*,*/\.git/*,
 if has("gui_running")
   syntax on
   set hlsearch
-  colorscheme jellybeans
+  colorscheme summerfruit256
   set bs=2
   set ai
   set ruler
