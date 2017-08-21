@@ -73,7 +73,7 @@ map <leader>vr :vsp $MYVIMRC<CR>
 map <leader>so :source $MYVIMRC<CR>
 
 map <leader>of :!open %<CR>
-map <leader>op :!python open %<CR>
+map <leader>op :!python %<CR>
 
 " Quick save in nomral mode
 nmap <C-s> <esc>:w<CR>

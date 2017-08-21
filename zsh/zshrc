@@ -9,18 +9,18 @@ export EDITOR='vim'
 ZSH_THEME="wild-cherry"
 
 # Macbook Pro
-alias anthonyleeio="cd ~/Sites/github.pages/antwonlee.github.io"
 alias ajl="cd ~/Sites/artandjustice.development/artandjustice"
+alias anthonyleeio="cd ~/Sites/github.pages/antwonlee.github.io"
 alias dotfiles="cd ~/Sites/dotfiles"
 alias gatech="cd ~/Documents/gatech"
 alias js="cd ~/Sites/javascript.development/"
-alias playground="cd ~/Sites/playground"
-alias ror="cd ~/Sites/rubyonrails.development/"
 alias luna="cd ~/Sites/rubyonrails.development/lunamisoo"
-alias thrive="cd ~/Sites/thrive.development/thriveministry"
-alias membercare="cd ~/Sites/thrive.development/membercare"
-alias upcase="cd ~/Sites/upcase.trails"
+alias ml="cd ~/Sites/machinelearning.development/"
+alias playground="cd ~/Sites/playground"
 alias pluralsight="cd ~/Pluralsight"
+alias ror="cd ~/Sites/rubyonrails.development/"
+alias thrive="cd ~/Sites/thrive.development/thriveministry"
+alias upcase="cd ~/Sites/upcase.trails"
 
 # iMac
 alias fixssh='eval $(ssh-agent) & ssh-add'
@@ -186,11 +186,6 @@ export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color
 
-export PATH="$(brew --prefix)/bin:$PATH"
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
@@ -202,3 +197,8 @@ source /Users/anthonylee/Sites/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-h
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
+
+export PATH="$(brew --prefix)/bin:$PATH"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
