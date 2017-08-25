@@ -184,6 +184,7 @@ alias tmxthrive='tmuxinator start Thrive'
 # Vagrant for Georgia Tech
 alias vup='vagrant up'
 alias vhalt='vagrant halt'
+alias vssh='vagrant ssh'
 
 # Exports
 export ZSH=$HOME/.oh-my-zsh
