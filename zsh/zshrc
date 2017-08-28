@@ -71,7 +71,7 @@ alias dockermachines='docker-machine ls'
 
 # Heroku
 
-alias addherokuremote = 'heroku git:remote -a'
+alias addherokuremote='heroku git:remote -a'
 alias herokuthrive='heroku apps --org thriveministry'
 alias herokulunamisoo='heroku apps --org lunamisoo'
 alias ha='heroku accounts'
