@@ -186,6 +186,9 @@ alias vup='vagrant up'
 alias vhalt='vagrant halt'
 alias vssh='vagrant ssh'
 
+# Yarn
+alias yga='yarn global add'
+
 # Exports
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
