@@ -165,7 +165,8 @@ alias sidekiq='bundle exec sidekiq'
 alias taillogs='tail -f log/development.log'
 
 # React Native
-alias rnios='react-native run-ios'
+alias rnativeios='react-native run-ios'
+alias rnative='react-native'
 
 # Redis
 alias redis='redis-cli'
