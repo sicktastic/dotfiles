@@ -164,6 +164,9 @@ alias rs='rails s'
 alias sidekiq='bundle exec sidekiq'
 alias taillogs='tail -f log/development.log'
 
+# React
+alias cra='create-react-app'
+
 # React Native
 alias rnativeios='react-native run-ios'
 alias rnative='react-native'
