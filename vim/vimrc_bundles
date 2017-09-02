@@ -5,44 +5,83 @@ end
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Bundle 'gmarik/Vundle.vim'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'git@github.com:ddollar/nerdcommenter.git'
-Bundle 'git@github.com:scrooloose/syntastic.git'
-Bundle 'git@github.com:Lokaltog/vim-easymotion.git'
-Bundle 'git@github.com:ervandew/supertab.git'
-Bundle 'git@github.com:Raimondi/delimitMate.git'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'pangloss/vim-javascript' 
-Bundle "justinj/vim-react-snippets"
-Bundle "bentayloruk/vim-react-es6-snippets"
+" Installer
+Plugin 'gmarik/Vundle.vim'
+
+" Code HTML faster
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" Fuzzy
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Comment
+Plugin 'git@github.com:ddollar/nerdcommenter.git'
+
+" Syntax Checking
+Plugin 'git@github.com:scrooloose/syntastic.git'
+
+" Tab in insert mode to be smarter
+Plugin 'git@github.com:ervandew/supertab.git'
+
+" Auto closer
+Plugin 'git@github.com:jiangmiao/auto-pairs.git'
+
+" Snippets
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'git@github.com:garbas/vim-snipmate.git'
+Plugin 'git@github.com:honza/vim-snippets.git'
+
+" Ruby
+Plugin 'vim-ruby/vim-ruby'
+
+" Rails and Rspec
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'thoughtbot/vim-rspec'
+
+" Javascript
+Plugin 'pangloss/vim-javascript' 
 Plugin 'isRuslan/vim-es6'
-Bundle 'mxw/vim-jsx'
-Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
-Bundle 'honza/vim-snippets'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'mileszs/ack.vim'
-Bundle 'vim-scripts/Rename2.git'
-Bundle 'christoomey/vim-system-copy'
-Bundle 'git@github.com:ternjs/tern_for_vim.git'
+Plugin 'mxw/vim-jsx'
+Plugin 'posva/vim-vue'
+Plugin 'git@github.com:ternjs/tern_for_vim.git'
+
+" Python
+Plugin 'hdima/python-syntax'
+
+" Scala
+Plugin 'derekwyatt/vim-scala'
+
+" Elixir
 Plugin 'elixir-lang/vim-elixir'
+
+" Visually displaying indent levels
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" tpope (Good stuff)
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+
+" Search
+Plugin 'mileszs/ack.vim'
+
+" Renaming files
+Plugin 'vim-scripts/Rename2.git'
+
+" Copy and Past
+Plugin 'christoomey/vim-system-copy'
+
+" Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+" Displays icons for each language and technology
 Plugin 'ryanoasis/vim-devicons'
-Bundle 'git@github.com:chrisbra/Colorizer.git'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'posva/vim-vue'
-Plugin 'rizzatti/dash.vim'
+
+" Style
+Plugin 'git@github.com:chrisbra/Colorizer.git'
 Plugin 'chriskempson/base16-vim'
-Plugin 'hdima/python-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
