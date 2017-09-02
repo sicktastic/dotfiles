@@ -72,7 +72,7 @@ hi Visual ctermfg=black ctermbg=Yellow
 map <leader>vr :vsp $MYVIMRC<CR>
 map <leader>so :source $MYVIMRC<CR>
 
-map <leader>of :!open %<CR>
+map <leader>of :!open j%<CR>
 map <leader>op :!python %<CR>
 
 " Quick save in nomral mode
