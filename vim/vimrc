@@ -35,6 +35,7 @@ set incsearch                   " highlight while searching
 set hlsearch
 set ignorecase                  " ignore case when searching
 set laststatus=2                " Always display the status line"
+set lazyredraw
 set linespace=15
 set mouse=a
 set number                      " always show line numbers
@@ -121,16 +122,16 @@ autocmd Filetype help nnoremap <buffer> q :q<CR>
 augroup vimrcEx
   autocmd!
 
-  " File Type Settings
   autocmd filetype qf setlocal wrap
+  autocmd BufReadPost quickfix map <buffer> <leader>qq :cclose<cr>|map  <buffer> <c-p> <up>|map <buffer> <c-n> <down>
+  autocmd FileType unite call s:unite_settings()
+  autocmd BufLeave \[unite\]* if "nofile" ==# &buftype | setlocal bufhidden=wipe | endif
 
   " Help System Speedups
   autocmd filetype help nnoremap <buffer><cr> <c-]>
   autocmd filetype help nnoremap <buffer><bs> <c-T>
   autocmd filetype help nnoremap <buffer>q :q<CR>
   autocmd filetype help set nonumber
-
-  " autocmd! BufReadPost,BufWritePost * Neomake
 
 augroup END
 
