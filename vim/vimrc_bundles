@@ -62,6 +62,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 " tpope (Good stuff)
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
+Plugin 'git@github.com:tpope/vim-unimpaired.git'
 
 " Search
 Plugin 'mileszs/ack.vim'
