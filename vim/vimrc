@@ -28,7 +28,7 @@ set backspace=indent,eol,start  " allow backspacing over everything in insert mo
 set expandtab                   " expand tabs by default (overloadable per file type later)
 set foldlevelstart=0
 set go-=L                       " Removes left hand scroll bar
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Types:h14
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Types:h14
 set guioptions-=T               " Removes top toolbar
 set guioptions-=r               " Removes right hand scroll bar
 set incsearch                   " highlight while searching
@@ -94,10 +94,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-
-" Quick line bubblien
-nmap <C-Up> ddkP
-nmap <C-Down> ddp
 
 " Configs from Thoughtbot ------------------------------------------------------------
 
