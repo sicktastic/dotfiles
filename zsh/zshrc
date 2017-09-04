@@ -23,7 +23,7 @@ alias thrive="cd ~/Sites/thrive.development/thriveministry"
 alias upcase="cd ~/Sites/upcase.trails"
 
 # iMac
-alias alongside="cd ~/Sites/alongsid"
+alias alongside="cd ~/Sites/alongside"
 alias fixssh='eval $(ssh-agent) & ssh-add'
 alias thriveimac="cd ~/Sites/thriveministry"
 
