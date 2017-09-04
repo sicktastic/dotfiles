@@ -44,7 +44,7 @@ ln -s ~/Site/dotfiles/vim/vimrc ~/.vimrc
 
 | Tool    |      Description |
 |----------|:-------------:|
-| [Vundler](https://github.com/gmarik/Vundle.vim) | Installing Plugins |
+| [vim-plug](https://github.com/junegunn/vim-plug) | Installing Plugins |
 | [base16](https://github.com/chriskempson/base16-vim) | Installing Themes |
 | [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | Color syntax on zsh commands |
 
