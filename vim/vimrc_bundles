@@ -2,88 +2,85 @@ if &compatible
   set nocompatible
 end
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" Installer
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
+
+Plug 'gmarik/Vundle.vim'
 
 " Code HTML faster
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Fuzzy
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Comment
-Plugin 'git@github.com:ddollar/nerdcommenter.git'
+Plug 'git@github.com:ddollar/nerdcommenter.git'
 
 " Syntax Checking
-Plugin 'git@github.com:scrooloose/syntastic.git'
+Plug 'git@github.com:scrooloose/syntastic.git'
 
 " Tab in insert mode to be smarter
-Plugin 'git@github.com:ervandew/supertab.git'
+Plug 'git@github.com:ervandew/supertab.git'
 
 " Auto closer
-Plugin 'git@github.com:jiangmiao/auto-pairs.git'
+Plug 'git@github.com:jiangmiao/auto-pairs.git'
 
 " Snippets
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'git@github.com:garbas/vim-snipmate.git'
-Plugin 'git@github.com:honza/vim-snippets.git'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'git@github.com:garbas/vim-snipmate.git'
+Plug 'git@github.com:honza/vim-snippets.git'
 
 " Ruby
-Plugin 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby'
 
 " Rails and Rspec
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'thoughtbot/vim-rspec'
 
 " Javascript
-Plugin 'pangloss/vim-javascript' 
-Plugin 'isRuslan/vim-es6'
-Plugin 'mxw/vim-jsx'
-Plugin 'posva/vim-vue'
-Plugin 'git@github.com:ternjs/tern_for_vim.git'
+Plug 'pangloss/vim-javascript' 
+Plug 'isRuslan/vim-es6'
+Plug 'mxw/vim-jsx'
+Plug 'posva/vim-vue'
+Plug 'git@github.com:ternjs/tern_for_vim.git'
 
 " Python
-Plugin 'hdima/python-syntax'
+Plug 'hdima/python-syntax'
 
 " Scala
-Plugin 'derekwyatt/vim-scala'
+Plug 'derekwyatt/vim-scala'
 
 " Elixir
-Plugin 'elixir-lang/vim-elixir'
+Plug 'elixir-lang/vim-elixir'
 
 " Visually displaying indent levels
-Plugin 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " tpope (Good stuff)
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'git@github.com:tpope/vim-unimpaired.git'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'git@github.com:tpope/vim-unimpaired.git'
 
 " Search
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " Renaming files
-Plugin 'vim-scripts/Rename2.git'
+Plug 'vim-scripts/Rename2.git'
 
 " Copy and Past
-Plugin 'christoomey/vim-system-copy'
+Plug 'christoomey/vim-system-copy'
 
 " Airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Displays icons for each language and technology
-Plugin 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 " Style
-Plugin 'git@github.com:chrisbra/Colorizer.git'
-Plugin 'chriskempson/base16-vim'
+Plug 'git@github.com:chrisbra/Colorizer.git'
+Plug 'chriskempson/base16-vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin on
+" Initialize plugin system
+call plug#end()
