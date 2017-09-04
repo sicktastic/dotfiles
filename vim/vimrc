@@ -78,7 +78,7 @@
 
   " Quick way to open frequent command
   map <leader>of :!open j%<CR>
-  map <leader>op :!python %<CR>
+  map <leader>op :!python3 %<CR>
 
   " Quick save in nomral mode
   nmap <C-s> <esc>:w<CR>
