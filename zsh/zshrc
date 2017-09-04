@@ -23,7 +23,9 @@ alias thrive="cd ~/Sites/thrive.development/thriveministry"
 alias upcase="cd ~/Sites/upcase.trails"
 
 # iMac
+alias alongside="cd ~/Sites/alongsid"
 alias fixssh='eval $(ssh-agent) & ssh-add'
+alias thriveimac="cd ~/Sites/thriveministry"
 
 # Everday Stuff
 alias ag='ag --path-to-ignore ~/.agignore'
