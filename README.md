@@ -13,7 +13,7 @@ I use sublime for Salesforce development, and Xcode for iOS development.
 ![Vim](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/vim_base16.png)
 
 ##iTerm & Tmux
-![iterm](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/iterm_base16.png)
+![iterm](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/iterm_base16_2.png)
 
 ##Sublime Text 3 and MavenMate
 ![Sublime](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/sublime-text.png)
