@@ -132,6 +132,9 @@ alias jnotebook='jupyter notebook'
 # Pry
 alias pryrails="pry -r ./config/environment"
 
+# Python
+alias p3='python3'
+
 # Rails
 alias bi='bundle install'
 alias binstallrspec='bin/rails generate rspec:install'
