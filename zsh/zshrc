@@ -44,6 +44,7 @@ alias grebaselast="git rebase -i HEAD~"
 alias grename="git branch -m"
 alias gshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias havingfun="osascript -e 'Set Volume 10' && say -v 'good news' it is time for lunch"
+alias repo="hub browse"
 alias thrivedbdev='heroku pg:pull DATABASE_URL thriveministry_development --app thriveministry'
 alias thrivedbtest='heroku pg:pull DATABASE_URL thriveministry_test --app thriveministry'
 alias initialgit="g init && ga . && gc 'initial git'"
