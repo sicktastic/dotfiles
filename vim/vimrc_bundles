@@ -37,6 +37,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'thoughtbot/vim-rspec'
+Plug 'janko-m/vim-test'
 
 " Javascript
 Plug 'pangloss/vim-javascript' 

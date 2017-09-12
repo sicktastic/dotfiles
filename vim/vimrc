@@ -260,11 +260,12 @@
 " Ruby, Ruby on Rails, Rspec ----------------------------------------------------------
   map <leader>a :call RunAllSpecs()<cr>
   map <leader>aa :call RunCurrentSpecFile()<cr>
+  map <leader>t :call RunCurrentSpecFile()<cr>
   map <leader>s :call RunNearestSpec()<cr>
   map <leader>l :call RunLastSpec()<cr>
 
   " vim-test mappings
-  nnoremap <silent> <Leader>t :TestFile<CR>
+  " nnoremap <silent> <Leader>t :TestFile<CR>
   nnoremap <silent> <Leader>s :TestNearest<CR>
   nnoremap <silent> <Leader>l :TestLast<CR>
   nnoremap <silent> <Leader>a :TestSuite<CR>
