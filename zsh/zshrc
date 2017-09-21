@@ -69,6 +69,11 @@ alias whatismyip='curl ipecho.net/plain; echo'
 # Bash
 alias findstring='grep -rnw' 
 
+# csvkit
+alias csvcount='csvstat --count'
+alias csvshowallcolumns='csvcut -n'
+alias csvshowcolumns='csvcut -c'
+
 # Docker
 alias dockermachines='docker-machine ls'
 
