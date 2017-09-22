@@ -239,3 +239,4 @@ export PATH="$(brew --prefix)/bin:$PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+eval "$(pyenv init -)"
