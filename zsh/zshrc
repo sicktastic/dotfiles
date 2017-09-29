@@ -201,6 +201,9 @@ alias rnative='react-native'
 alias redis='redis-cli'
 alias rediss='redis-server'
 
+# Salesforce DX
+alias sf="sfdx"
+
 # Tmux Session Start
 alias tmx="tmux new -s"
 alias tmxc="vim ~/.tmux.conf"
