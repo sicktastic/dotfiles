@@ -8,6 +8,9 @@ export EDITOR='vim'
 
 ZSH_THEME="wild-cherry"
 
+# Graduate School
+alias csphotography="cd ~/Sites/gatech/cs6475/Assignments"
+
 # Macbook Pro
 alias ajl="cd ~/Sites/artandjustice.development/artandjustice"
 alias anthonyleeio="cd ~/Sites/github.pages/antwonlee.github.io"
