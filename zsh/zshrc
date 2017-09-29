@@ -203,6 +203,7 @@ alias rediss='redis-server'
 
 # Salesforce DX
 alias sf="sfdx"
+alias sfcreateproject="sfdx force:project:create -n"
 
 # Tmux Session Start
 alias tmx="tmux new -s"
