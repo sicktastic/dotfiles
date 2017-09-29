@@ -202,6 +202,7 @@ alias redis='redis-cli'
 alias rediss='redis-server'
 
 # Salesforce DX
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ; }
 alias sf="sfdx"
 alias sfcreateproject="sfdx force:project:create -n"
 
@@ -249,3 +250,4 @@ export PATH="$(brew --prefix)/bin:$PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
