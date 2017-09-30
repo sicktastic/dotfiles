@@ -4,9 +4,8 @@ My dotfiles
 ```
 These are my dotfiles.  It's not perfect and it will continue to evolve.
 
-I use iTerm, Tmux and Vim for my Rails development.
+I use iTerm, Tmux and Vim for most of my software development, and I use Visual Studio Code for Salesforce development.
 
-I use sublime for Salesforce development, and Xcode for iOS development.
 ```
 
 ##Vim
@@ -15,8 +14,8 @@ I use sublime for Salesforce development, and Xcode for iOS development.
 ##iTerm & Tmux
 ![iterm](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/iterm_base16_2.png)
 
-##Sublime Text 3 and MavenMate
-![Sublime](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/sublime-text.png)
+##Visual Studio Code
+![VisualStudioCode](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/visual-studio-code.png)
 
 --
 
