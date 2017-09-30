@@ -15,7 +15,7 @@ I use iTerm, Tmux and Vim for most of my software development, and I use Visual 
 ![iterm](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/iterm_base16_2.png)
 
 ##Visual Studio Code
-![VisualStudioCodeEditor](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/vsc.png)
+![VisualStudioCodeEditor](https://raw.githubusercontent.com/antwonlee/dotfiles/master/images/vsc.jpg)
 
 --
 
