@@ -234,14 +234,15 @@ export TERM=xterm-256color
 
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
-export GOPATH=$HOME/go
-export PATH="$GOPATH/bin:$PATH"
-export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+# export GOPATH=$HOME/go
+# export PATH="$GOPATH/bin:$PATH"
+# export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 
-export PATH=~/npm-global/bin:$PATH
-export PATH="/usr/local/opt/qt@5.7/bin:$PATH"
+export PATH=~/anaconda3/bin:$PATH
 
-export PATH=~/miniconda/bin:$PATH
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 source /Users/anthonylee/Sites/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

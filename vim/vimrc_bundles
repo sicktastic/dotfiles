@@ -16,7 +16,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'git@github.com:ddollar/nerdcommenter.git'
 
 " Syntax Checking
-Plug 'git@github.com:scrooloose/syntastic.git'
+" Plug 'git@github.com:scrooloose/syntastic.git'
 
 " Tab in insert mode to be smarter
 Plug 'git@github.com:ervandew/supertab.git'

@@ -15,12 +15,9 @@
   let mapleader = ","
 
 " Files -------------------------------------------------------------------------------
-  syntax on
+  " syntax on
   filetype indent on              " Enable filetype-specific indenting
   filetype plugin on              " Enable filetype-specific plugins
-
-" Syntax Auto Command -----------------------------------------------------------------
-  autocmd BufNewFile,BufRead *.html.eex set filetype=html.ex.exs
 
 " Configs -----------------------------------------------------------------------------
   set autoindent                  " always set autoindenting on
@@ -29,7 +26,6 @@
   set expandtab                   " expand tabs by default (overloadable per file type later)
   set foldlevelstart=0
   set go-=L                       " Removes left hand scroll bar
-  " set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Types:h14
   set guioptions-=T               " Removes top toolbar
   set guioptions-=r               " Removes right hand scroll bar
   set incsearch                   " highlight while searching
@@ -57,9 +53,10 @@
   set softtabstop=2               " when hitting <BS>, pretend like a tab is removed, even if spaces
   set splitbelow
   set splitright
+  set synmaxcol=200
   set tabstop=2                   " a tab is four spaces
   set tags=tags
-  " set textwidth=80
+  set textwidth=80
   set timeout timeoutlen=200 ttimeoutlen=100
   set t_ut=
   set visualbell                  " don't beep
@@ -121,6 +118,7 @@
   augroup vimrcEx
     autocmd!
 
+    autocmd BufNewFile,BufRead *.html.eex set filetype=html.ex.exs
     autocmd filetype qf setlocal wrap
     autocmd BufReadPost quickfix map <buffer> <leader>qq :cclose<cr>|map  <buffer> <c-p> <up>|map <buffer> <c-n> <down>
     autocmd FileType unite call s:unite_settings()
@@ -163,12 +161,6 @@
 
   " Treat <li> and <p> tags like the block tags they are
   let g:html_indent_tags = 'li\|p'
-
-  " configure syntastic syntax checking to check on open as well as save
-  let g:syntastic_check_on_open=1
-  let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-  let g:syntastic_eruby_ruby_quiet_messages =
-      \ {"regex": "possibly useless use of a variable in void context"}
 
   " Autocomplete with dictionary words when spell check is on
   set complete+=kspell
@@ -213,7 +205,6 @@
   if has("gui_running")
     syntax on
     set hlsearch
-    colorscheme summerfruit256
     set bs=2
     set ai
     set ruler
