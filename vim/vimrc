@@ -173,16 +173,6 @@
     source ~/.vimrc.local
   endif
 
-  " set the cursor to a vertical line in insert mode and a solid block
-  " " in command mode
-  if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-  else
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-  endif
-
   set grepprg=ag
 
   " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
@@ -243,10 +233,19 @@
   let g:colorizer_auto_filetype='css,html,scss'
   let g:colorizer_skip_comments = 1
 
+  " if filereadable(expand("~/.vimrc_background"))
+  "   let base16colorspace=256
+  "   source ~/.vimrc_background
+  " endif
+
 " Javascript --------------------------------------------------------------------------
+  let g:javascript_plugin_flow = 1
   let g:javascript_enable_domhtmlcss = 1
   let g:javascript_ignore_javaScriptdoc = 1
   let g:javascript_plugin_jsdoc = 1
+
+" React JS-----------------------------------------------------------------------------
+  let g:jsx_ext_required = 0
 
 " Ruby, Ruby on Rails, Rspec ----------------------------------------------------------
   map <leader>a :call RunAllSpecs()<cr>
@@ -254,6 +253,10 @@
   map <leader>t :call RunCurrentSpecFile()<cr>
   map <leader>s :call RunNearestSpec()<cr>
   map <leader>l :call RunLastSpec()<cr>
+
+" Python ------------------------------------------------------------------------------
+  set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+  let python_highlight_all = 1
 
   " vim-test mappings
   " nnoremap <silent> <Leader>t :TestFile<CR>
@@ -268,8 +271,7 @@
   " Run test faster using spring
   let g:rspec_command = '!spring rspec {spec}'
 
-" React JS-----------------------------------------------------------------------------
-  let g:jsx_ext_required = 0
+" Other-------------------------------------------------------------------------------
 
   let g:snipMate = {}
   let g:snipMate.scope_aliases = {}
@@ -279,7 +281,3 @@
   let g:multi_cursor_prev_key='<C-p>'
   let g:multi_cursor_skip_key='<C-x>'
   let g:multi_cursor_quit_key='<Esc>'
-
-" Python ------------------------------------------------------------------------------
-  set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-  let python_highlight_all = 1
