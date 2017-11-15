@@ -44,7 +44,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'isRuslan/vim-es6'
 Plug 'mxw/vim-jsx'
 Plug 'posva/vim-vue'
-Plug 'git@github.com:ternjs/tern_for_vim.git'
+Plug 'https://github.com/ternjs/tern_for_vim.git'
 
 " Python
 Plug 'hdima/python-syntax'
