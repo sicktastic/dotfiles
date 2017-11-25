@@ -8,7 +8,8 @@ stty stop undef
 # Path to your oh-my-zsh installation.
 export EDITOR='vim'
 
-ZSH_THEME="wild-cherry"
+# ZSH_THEME="wild-cherry"
+ZSH_THEME="refined"
 
 # Graduate School
 alias csphotography="cd ~/Sites/gatech/cs6475/Assignments"
@@ -52,6 +53,7 @@ alias greset="git reset --hard HEAD~1"
 alias gresettoremote="git reset --hard origin/master"
 alias gshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias havingfun="osascript -e 'Set Volume 10' && say -v 'good news' it is time for lunch"
+alias list="ls -a"
 alias repo="hub browse"
 alias thrivedbdev='heroku pg:pull DATABASE_URL thriveministry_development --app thriveministry'
 alias thrivedbtest='heroku pg:pull DATABASE_URL thriveministry_test --app thriveministry'
@@ -260,6 +262,9 @@ export PATH="$(brew --prefix)/bin:$PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# NPM, Yarn
+export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
 # Pyenv
 export PYENV_ROOT=/usr/local/opt/pyenv
