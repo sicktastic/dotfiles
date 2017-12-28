@@ -88,7 +88,6 @@ alias csvshowcolumns='csvcut -c'
 alias dockermachines='docker-machine ls'
 
 # Heroku
-
 alias addherokuremote='heroku git:remote -a'
 alias herokuthrive='heroku apps --org thriveministry'
 alias herokulunamisoo='heroku apps --org lunamisoo'
@@ -122,6 +121,9 @@ alias hredis='heroku redis:info'
 alias hstaging='git push staging master'
 alias productionhmon='heroku maintenance:on --app'
 alias productionhmoff='heroku maintenance:off --app'
+
+# Hugo
+alias hugoserver='hugo server -D'
 
 # Jekyll
 alias jserve='jekyll serve'
