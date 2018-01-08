@@ -122,6 +122,9 @@ alias hstaging='git push staging master'
 alias productionhmon='heroku maintenance:on --app'
 alias productionhmoff='heroku maintenance:off --app'
 
+# Gatsby
+alias gsby='gatsby'
+
 # Hugo
 alias hugoserver='hugo server -D'
 
