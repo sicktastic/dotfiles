@@ -64,6 +64,7 @@ alias pingit="ping google.com"
 alias refresh='source ~/.zshrc'
 alias searchfile='ack -g'
 alias shortcuts='vi ~/.zshrc'
+alias settings='vi ~/.zshrc'
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 alias sourcezshrc='source ~/.zshrc'
 alias sourcevimrc='source ~/.vimrc'
@@ -85,7 +86,8 @@ alias csvshowallcolumns='csvcut -n'
 alias csvshowcolumns='csvcut -c'
 
 # Docker
-alias dockermachines='docker-machine ls'
+alias dm="docker"
+alias dmls="docker-machine ls"
 
 # Heroku
 alias addherokuremote='heroku git:remote -a'
