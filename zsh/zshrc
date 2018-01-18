@@ -86,7 +86,6 @@ alias csvshowallcolumns='csvcut -n'
 alias csvshowcolumns='csvcut -c'
 
 # Docker
-alias dm="docker"
 alias dmls="docker-machine ls"
 
 # Heroku
