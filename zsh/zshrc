@@ -88,8 +88,8 @@ alias csvshowcolumns='csvcut -c'
 # Docker
 alias dm='docker-machine'
 alias dmls='docker-machine ls'
-alias dockerps='docker ps --format=$FORMAT'
-alias dockerrecent='docker ps -l --format=$FORMAT'
+alias dockerpsall='docker ps -a --format=$FORMAT'
+alias dockerpsrecent='docker ps -l --format=$FORMAT'
 
 # Heroku
 alias addherokuremote='heroku git:remote -a'
