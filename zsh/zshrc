@@ -124,6 +124,7 @@ alias productionhmoff='heroku maintenance:off --app'
 
 # Gatsby
 alias gsby='gatsby'
+alias gsbyd='gatsby develop'
 
 # Hugo
 alias hugoserver='hugo server -D'
