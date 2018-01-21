@@ -64,6 +64,7 @@ alias pingit="ping google.com"
 alias refresh='source ~/.zshrc'
 alias searchfile='ack -g'
 alias shortcuts='vi ~/.zshrc'
+alias settings='vi ~/.zshrc'
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 alias sourcezshrc='source ~/.zshrc'
 alias sourcevimrc='source ~/.vimrc'
@@ -85,7 +86,10 @@ alias csvshowallcolumns='csvcut -n'
 alias csvshowcolumns='csvcut -c'
 
 # Docker
-alias dockermachines='docker-machine ls'
+alias dm='docker-machine'
+alias dmls='docker-machine ls'
+alias dockerpsall='docker ps -a --format=$FORMAT'
+alias dockerpsrecent='docker ps -l --format=$FORMAT'
 
 # Heroku
 alias addherokuremote='heroku git:remote -a'
@@ -271,3 +275,7 @@ export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 # Pyenv
 export PYENV_ROOT=/usr/local/opt/pyenv
 eval "$(pyenv init -)"
+
+# Docker
+# Vertical Format
+export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
