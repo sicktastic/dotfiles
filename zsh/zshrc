@@ -90,6 +90,7 @@ alias dm='docker-machine'
 alias dmls='docker-machine ls'
 alias dockerpsall='docker ps -a --format=$FORMAT'
 alias dockerpsrecent='docker ps -l --format=$FORMAT'
+alias dockerrunml4t='docker run -it -v "$(pwd)":/app cs7646'
 
 # Heroku
 alias addherokuremote='heroku git:remote -a'
