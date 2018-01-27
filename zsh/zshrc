@@ -13,6 +13,7 @@ ZSH_THEME="refined"
 
 # Graduate School
 alias csphotography="cd ~/Sites/gatech/cs6475/Assignments"
+alias connecttoml="ssh -X alee354@buffet02.cc.gatech.edu"
 
 # Macbook Pro
 alias ajl="cd ~/Sites/artandjustice.development/artandjustice"
