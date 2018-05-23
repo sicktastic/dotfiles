@@ -15,7 +15,8 @@
   let mapleader = ","
 
 " Files -------------------------------------------------------------------------------
-  " syntax on
+  set ft= syn=
+  syntax off
   filetype indent on              " Enable filetype-specific indenting
   filetype plugin on              " Enable filetype-specific plugins
 
@@ -56,7 +57,7 @@
   set synmaxcol=200
   set tabstop=2                   " a tab is four spaces
   set tags=tags
-  set textwidth=80
+  " set textwidth=80
   set timeout timeoutlen=200 ttimeoutlen=100
   set t_ut=
   set visualbell                  " don't beep
@@ -64,6 +65,7 @@
 
 " Highlights -------------------------------------------------------------------------
   hi Visual ctermfg=black ctermbg=Yellow
+  hi StatusLine ctermbg=magenta ctermfg=cyan
 
   " Quick clear highlight
   map <C-o> :nohl<cr>
@@ -233,11 +235,11 @@
   vnoremap <Space> za
 
 " Airline -----------------------------------------------------------------------------
-  let g:airline_powerline_fonts = 1
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#tabline#show_buffers = 0
-  let g:airline#extensions#tabline#show_splits = 0
-  let g:airline_theme='bubblegum'
+  " let g:airline_powerline_fonts = 1
+  " let g:airline#extensions#tabline#enabled = 1
+  " let g:airline#extensions#tabline#show_buffers = 0
+  " let g:airline#extensions#tabline#show_splits = 0
+  " let g:airline_theme='bubblegum'
 
 " Color -------------------------------------------------------------------------------
   let g:colorizer_auto_filetype='css,html,scss'

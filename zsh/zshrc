@@ -9,7 +9,7 @@ stty stop undef
 export EDITOR='vim'
 
 # ZSH_THEME="wild-cherry"
-ZSH_THEME="refined"
+ ZSH_THEME="refined"
 
 # Graduate School
 alias csphotography="cd ~/Sites/gatech/cs6475/Assignments"
@@ -210,6 +210,7 @@ alias rn='rails new'
 alias rs='rails s'
 alias sidekiq='bundle exec sidekiq'
 alias taillogs='tail -f log/development.log'
+alias taillogssalesforce='tail -f log/restforce.log'
 
 # React
 alias cra="create-react-app"
@@ -276,9 +277,13 @@ eval "$(rbenv init -)"
 export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
 # Pyenv
-export PYENV_ROOT=/usr/local/opt/pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+# export PYENV_ROOT=/usr/local/opt/pyenv
 eval "$(pyenv init -)"
 
 # Docker
 # Vertical Format
 export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+
+export PATH="/usr/local/opt/openssl/bin:$PATH"

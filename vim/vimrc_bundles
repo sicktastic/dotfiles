@@ -73,8 +73,8 @@ Plug 'git@github.com:vim-scripts/Rename2.git'
 Plug 'christoomey/vim-system-copy'
 
 " Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 " Displays icons for each language and technology
 Plug 'ryanoasis/vim-devicons'
