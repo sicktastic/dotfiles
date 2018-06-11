@@ -38,6 +38,8 @@ alias thriveimac="cd ~/Sites/thriveministry"
 # Everday Stuff
 alias ag='ag --path-to-ignore ~/.agignore'
 alias copymysshkey='pbcopy < ~/.ssh/id_rsa.pub'
+alias deletebranch="git branch -d"
+alias deleteremotebranch="git push -u origin"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
@@ -56,6 +58,7 @@ alias gresettoremote="git reset --hard origin/master"
 alias gshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias havingfun="osascript -e 'Set Volume 10' && say -v 'good news' it is time for lunch"
 alias list="ls -a"
+alias newbranch="git checkout -b"
 alias repo="hub browse"
 alias thrivedbdev='heroku pg:pull DATABASE_URL thriveministry_development --app thriveministry'
 alias thrivedbtest='heroku pg:pull DATABASE_URL thriveministry_test --app thriveministry'
