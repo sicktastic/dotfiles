@@ -260,10 +260,10 @@ export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 export PATH="$(brew --prefix)/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-# export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
-# export PATH="$HOME/.npm-packages/bin:$PATH"
-# export GOROOT=/usr/local/opt/go/libexec
-# export GOPATH=$HOME/.go
+export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
+export PATH="$HOME/.npm-packages/bin:$PATH"
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/.go
 export PYENV_ROOT=/usr/local/opt/pyenv
 export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
 eval "$(rbenv init -)"
