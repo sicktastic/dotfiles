@@ -222,6 +222,7 @@ alias createreact="create-react-app"
 # React Native
 alias rnativeios="react-native run-ios"
 alias rnative="react-native"
+alias createreactnative="create-react-native-app"
 
 # Redis
 alias redis='redis-cli'
