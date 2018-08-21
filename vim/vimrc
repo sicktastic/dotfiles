@@ -44,6 +44,7 @@
   set pastetoggle=<leader>p       " paste mode
   set relativenumber
   set ruler                       " show the cursor position all the time"
+  set regexpengine=1
   set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
   set shiftwidth=2                " number of spaces to use for autoindenting
   set showcmd                     " display incomplete commands"
