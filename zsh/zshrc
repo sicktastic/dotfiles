@@ -48,6 +48,7 @@ alias gcache='git rm -r --cached .'
 alias gclean='git remote prune origin'
 alias gcommit="git commit"
 alias gfix="git commit --amend"
+alias gfixignore="git rm -r --cached . && git add ."
 alias gitignorevim="git ls-files | grep '\.swp$' | xargs git rm"
 alias gprune='git remote prune origin'
 alias gpush="git push"
@@ -271,3 +272,4 @@ eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 source $ZSH/oh-my-zsh.sh
 source /Users/anthonylee/Sites/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh

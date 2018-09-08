@@ -25,7 +25,7 @@ Plug 'git@github.com:ervandew/supertab.git'
 Plug 'git@github.com:jiangmiao/auto-pairs.git'
 
 " Multi Cursor
-Plug 'git@github.com:terryma/vim-multiple-cursors.git'
+" Plug 'git@github.com:terryma/vim-multiple-cursors.git'
 
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
