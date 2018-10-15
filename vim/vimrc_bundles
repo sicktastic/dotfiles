@@ -58,6 +58,10 @@ Plug 'derekwyatt/vim-scala'
 " Elixir
 Plug 'elixir-lang/vim-elixir'
 
+" Phoenix
+Plug 'c-brenn/phoenix.vim'
+Plug 'tpope/vim-projectionist'
+
 " Visually displaying indent levels
 Plug 'nathanaelkane/vim-indent-guides'
 
