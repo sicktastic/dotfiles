@@ -48,6 +48,7 @@ alias gcache='git rm -r --cached .'
 alias gclean='git remote prune origin'
 alias gcommit="git commit"
 alias gfix="git commit --amend"
+alias gfixignore="git rm -r --cached . && git add ."
 alias gitignorevim="git ls-files | grep '\.swp$' | xargs git rm"
 alias gprune='git remote prune origin'
 alias gpush="git push"
