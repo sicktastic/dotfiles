@@ -175,16 +175,6 @@
     source ~/.vimrc.local
   endif
 
-  " set the cursor to a vertical line in insert mode and a solid block
-  " " in command mode
-  " if exists('$TMUX')
-  "   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  "   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-  " else
-  "   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  "   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-  " endif
-
   set grepprg=ag
 
   " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
@@ -222,7 +212,7 @@
   map <Leader>ct :!ctags -R .<CR>
 
   " Split Window Resize
-  nmap <C-v> :vertical resize +5<cr>
+  nmap <C-v> :vertical resize +1<cr>
 
   " This replaces :tabnew which I used to bind to this mapping
   " nmap <leader>T :enew<cr>
@@ -295,7 +285,7 @@
   let g:snipMate.scope_aliases = {}
   let g:snipMate.scope_aliases.javascript = 'html'
 
-  let g:multi_cursor_next_key='<C-n>'
-  let g:multi_cursor_prev_key='<C-p>'
-  let g:multi_cursor_skip_key='<C-x>'
-  let g:multi_cursor_quit_key='<Esc>'
+  " let g:multi_cursor_next_key='<C-n>'
+  " let g:multi_cursor_prev_key='<C-p>'
+  " let g:multi_cursor_skip_key='<C-x>'
+  " let g:multi_cursor_quit_key='<Esc>'
