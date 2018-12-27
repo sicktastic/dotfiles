@@ -41,6 +41,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'thoughtbot/vim-rspec'
 Plug 'janko-m/vim-test'
+Plug 'git@github.com:tpope/vim-dispatch.git'
 
 " Javascript
 Plug 'pangloss/vim-javascript' 
@@ -89,6 +90,9 @@ Plug 'ryanoasis/vim-devicons'
 " Style
 Plug 'git@github.com:chrisbra/Colorizer.git'
 Plug 'chriskempson/base16-vim'
+
+" Tmux
+Plug 'christoomey/vim-tmux-navigator'
 
 " Initialize plugin system
 call plug#end()
