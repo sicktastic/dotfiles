@@ -34,6 +34,7 @@ alias upcase="cd ~/Sites/upcase.trails"
 alias alongside="cd ~/Sites/alongside"
 alias fixssh='eval $(ssh-agent) & ssh-add'
 alias thriveimac="cd ~/Sites/thriveministry"
+alias fixdump='git checkout -- dump.rdb'
 
 # Everday Stuff
 alias ag='ag --path-to-ignore ~/.agignore'
