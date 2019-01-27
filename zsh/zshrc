@@ -259,19 +259,27 @@ alias yga='yarn global add'
 
 # Exports
 export ZSH=$HOME/.oh-my-zsh
+
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/.go
+
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 export PATH="$(brew --prefix)/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
+
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 export PATH="$HOME/.npm-packages/bin:$PATH"
-export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME/.go
+
 export PYENV_ROOT=/usr/local/opt/pyenv
+
 export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
+
 source $ZSH/oh-my-zsh.sh
 source /Users/anthonylee/Sites/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
