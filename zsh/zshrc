@@ -272,6 +272,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 export PATH="$HOME/.npm-packages/bin:$PATH"
+export PATH=~/.npm-global/bin:$PATH
 
 export PYENV_ROOT=/usr/local/opt/pyenv
 
@@ -283,3 +284,4 @@ eval "$(pyenv init -)"
 source $ZSH/oh-my-zsh.sh
 source /Users/anthonylee/Sites/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
