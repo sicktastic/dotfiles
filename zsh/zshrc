@@ -53,6 +53,7 @@ alias gfixignore="git rm -r --cached . && git add ."
 alias gitignorevim="git ls-files | grep '\.swp$' | xargs git rm"
 alias gprune='git remote prune origin'
 alias gpush="git push"
+alias gpp="git push production"
 alias grebaselast="git rebase -i HEAD~"
 alias grename="git branch -m"
 alias greset="git reset --hard HEAD~1"
