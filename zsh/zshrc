@@ -140,6 +140,9 @@ alias productionhmoff='heroku maintenance:off --app'
 alias gsby='gatsby'
 alias gsbyd='gatsby develop'
 
+# GIT
+# git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
+
 # Hugo
 alias hugoserver='hugo server -D'
 
