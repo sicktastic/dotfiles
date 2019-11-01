@@ -58,6 +58,7 @@ alias grebaselast="git rebase -i HEAD~"
 alias grename="git branch -m"
 alias greset="git reset --hard HEAD~1"
 alias gresettoremote="git reset --hard origin/master"
+alias gitbranchrm="git push -u origin"
 alias gshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias havingfun="osascript -e 'Set Volume 10' && say -v 'good news' it is time for lunch"
 alias list="ls -a"
