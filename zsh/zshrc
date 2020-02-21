@@ -58,6 +58,7 @@ alias grebaselast="git rebase -i HEAD~"
 alias grename="git branch -m"
 alias greset="git reset --hard HEAD~1"
 alias gresettoremote="git reset --hard origin/master"
+alias gitbranchrm="git push -u origin"
 alias gshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias havingfun="osascript -e 'Set Volume 10' && say -v 'good news' it is time for lunch"
 alias list="ls -a"
@@ -81,6 +82,7 @@ alias sourcevimrc='source ~/.vimrc'
 alias starthttp='python3 -m http.server'
 alias tellmeyoursecret='cat ~/.ssh/id_rsa.pub'
 alias u='..'
+alias updateboth='git push && cap production deploy'
 alias uohmyzsh='upgrade_oh_my_zsh'
 alias vimrc='vi ~/.vimrc'
 alias vimrcbundles='vi ~/.vimrc.bundles'
@@ -142,6 +144,9 @@ alias productionhmoff='heroku maintenance:off --app'
 alias gsby='gatsby'
 alias gsbyd='gatsby develop'
 
+# GIT
+# git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
+
 # Hugo
 alias hugoserver='hugo server -D'
 
@@ -175,6 +180,9 @@ alias p3='python3'
 alias djangocreate="django-admin startproject"
 
 # Rails
+alias cdeploy='cap production deploy'
+alias cconsole='cap production rails:console'
+
 alias bi='bundle install'
 alias binstallrspec='bin/rails generate rspec:install'
 alias biwp='bundle install --without production'
@@ -299,5 +307,4 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
-
 [ -f "/Users/anthonylee/.shopify-app-cli/shopify.sh" ] && source "/Users/anthonylee/.shopify-app-cli/shopify.sh"
