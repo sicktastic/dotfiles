@@ -80,6 +80,7 @@ alias sourcevimrc='source ~/.vimrc'
 alias starthttp='python3 -m http.server'
 alias tellmeyoursecret='cat ~/.ssh/id_rsa.pub'
 alias u='..'
+alias updateboth='git push && cap production deploy'
 alias uohmyzsh='upgrade_oh_my_zsh'
 alias vimrc='vi ~/.vimrc'
 alias vimrcbundles='vi ~/.vimrc.bundles'
@@ -177,6 +178,9 @@ alias p3='python3'
 alias djangocreate="django-admin startproject"
 
 # Rails
+alias cdeploy='cap production deploy'
+alias cconsole='cap production rails:console'
+
 alias bi='bundle install'
 alias binstallrspec='bin/rails generate rspec:install'
 alias biwp='bundle install --without production'
