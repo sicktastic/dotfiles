@@ -62,6 +62,8 @@ alias gshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias havingfun="osascript -e 'Set Volume 10' && say -v 'good news' it is time for lunch"
 alias list="ls -a"
 alias newbranch="git checkout -b"
+alias noredbdev='heroku pg:pull DATABASE_URL nonprofitremote_development --app nonprofitremote-production'
+alias noredbtest='heroku pg:pull DATABASE_URL nonprofitremote_test --app nonprofitremote-production'
 alias repo="hub browse"
 alias thrivedbdev='heroku pg:pull DATABASE_URL thriveministry_development --app thriveministry-production'
 alias thrivedbtest='heroku pg:pull DATABASE_URL thriveministry_test --app thriveministry-production'
@@ -260,6 +262,7 @@ alias yga='yarn global add'
 
 # Exports
 export ZSH=$HOME/.oh-my-zsh
+export PATH="/usr/local/bin:$PATH"
 
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export GOROOT=/usr/local/opt/go/libexec
@@ -296,3 +299,5 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+[ -f "/Users/anthonylee/.shopify-app-cli/shopify.sh" ] && source "/Users/anthonylee/.shopify-app-cli/shopify.sh"
