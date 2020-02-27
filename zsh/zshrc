@@ -308,3 +308,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
 [ -f "/Users/anthonylee/.shopify-app-cli/shopify.sh" ] && source "/Users/anthonylee/.shopify-app-cli/shopify.sh"
+
+
+# Flutter
+export PATH="$PATH:`pwd`/flutter/bin"
