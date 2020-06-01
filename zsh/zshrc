@@ -68,6 +68,8 @@ alias noredbtest='heroku pg:pull DATABASE_URL nonprofitremote_test --app nonprof
 alias repo="hub browse"
 alias thrivedbdev='heroku pg:pull DATABASE_URL thriveministry_development --app thriveministry-production'
 alias thrivedbtest='heroku pg:pull DATABASE_URL thriveministry_test --app thriveministry-production'
+alias thrivehubdbdev='heroku pg:pull DATABASE_URL thriveministry_hub_development --app thriveministry-hub-production'
+alias thrivehubdbtest='heroku pg:pull DATABASE_URL thriveministry_hub_test --app thriveministry-hub-production'
 alias initialgit="g init && ga . && gc 'initial git'"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias mytheme="vim ~/.oh-my-zsh/themes"
@@ -312,3 +314,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Flutter
 export PATH="$PATH:`pwd`/flutter/bin"
+export PATH="$PATH:/Users/anthonylee/Sites/flutter/flutter/bin"
+
+export NVM_DIR="/Users/anthonylee/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
