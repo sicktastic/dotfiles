@@ -312,3 +312,4 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Flutter
 export PATH="$PATH:`pwd`/flutter/bin"
+export PATH="$PATH:/Users/anthonylee/Sites/flutter/flutter/bin"
