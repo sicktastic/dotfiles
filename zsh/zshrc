@@ -170,6 +170,9 @@ alias mixserver='mix phoenix.server'
 alias mixdigest='mix phoenix.digest'
 alias iexmix='iex -S mix'
 
+# NEXTJS
+alias next='npx next'
+
 # Jupyter
 alias jnotebook='jupyter notebook'
 
