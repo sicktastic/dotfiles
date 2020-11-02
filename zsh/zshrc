@@ -317,3 +317,5 @@ export PATH="$PATH:`pwd`/flutter/bin"
 export PATH="$PATH:/Users/anthonylee/Sites/flutter/flutter/bin"
 export NVM_DIR="/Users/anthonylee/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
