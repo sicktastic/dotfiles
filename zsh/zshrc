@@ -11,6 +11,9 @@ export EDITOR='vim'
 # ZSH_THEME="wild-cherry"
  ZSH_THEME="refined"
 
+# AUDIO
+alias  changeaudio="SwitchAudioSource"
+
 # Graduate School
 alias csphotography="cd ~/Sites/gatech/cs6475/Assignments"
 alias connecttoml="ssh -X alee354@buffet02.cc.gatech.edu"
@@ -60,6 +63,7 @@ alias greset="git reset --hard HEAD~1"
 alias gresettoremote="git reset --hard origin/master"
 alias gitbranchrm="git push -u origin"
 alias gshortcuts='vi ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
+alias gwippush="git add . && git commit -m 'WIP' && git push"
 alias havingfun="osascript -e 'Set Volume 10' && say -v 'good news' it is time for lunch"
 alias list="ls -a"
 alias newbranch="git checkout -b"
@@ -90,6 +94,7 @@ alias vimrc='vi ~/.vimrc'
 alias vimrcbundles='vi ~/.vimrc.bundles'
 alias whatismynetwork='ipconfig getifaddr en0'
 alias whatismyip='curl ipecho.net/plain; echo'
+alias youtube="cd ~/Sites/youtube"
 
 # Bash
 alias findstring='grep -rnw' 
@@ -105,6 +110,9 @@ alias dmls='docker-machine ls'
 alias dockerpsall='docker ps -a --format=$FORMAT'
 alias dockerpsrecent='docker ps -l --format=$FORMAT'
 alias dockerrunml4t='docker run -it -v "$(pwd)":/app cs7646'
+alias dockerdeletecontainers='docker rm -vf $(docker ps -a -q)'
+alias dockerdeleteimages='docker rmi -f $(docker images -a -q)'
+alias dockerrestart='dockerdeletecontainers && dockerdeleteimages && make && make up'
 
 # Heroku
 alias addherokuremote='heroku git:remote -a'
@@ -178,6 +186,7 @@ alias iexmix='iex -S mix'
 
 # NEXTJS
 alias next='npx next'
+alias createnextapp='npx create-next-app'
 
 # Jupyter
 alias jnotebook='jupyter notebook'
