@@ -53,7 +53,7 @@ Plug 'janko-m/vim-test'
 Plug 'git@github.com:tpope/vim-dispatch.git'
 
 " Tailwind
-Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
+" Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 
 " Javascript
 Plug 'pangloss/vim-javascript' 
@@ -66,7 +66,7 @@ Plug 'posva/vim-vue'
 Plug 'hdima/python-syntax'
 
 " Scala
-Plug 'derekwyatt/vim-scala'
+" Plug 'derekwyatt/vim-scala'
 
 " Elixir
 Plug 'elixir-lang/vim-elixir'
