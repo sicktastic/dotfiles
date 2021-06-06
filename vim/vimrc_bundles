@@ -48,6 +48,12 @@ Plug 'pangloss/vim-javascript'
 Plug 'isRuslan/vim-es6'
 Plug 'mxw/vim-jsx'
 Plug 'posva/vim-vue'
+
+" https://thoughtbot.com/blog/modern-typescript-and-react-development-in-vim
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
 " Plug 'https://github.com/ternjs/tern_for_vim.git'
 
 " Python
