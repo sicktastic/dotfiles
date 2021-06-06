@@ -33,6 +33,15 @@ Plug 'tomtom/tlib_vim'
 Plug 'git@github.com:garbas/vim-snipmate.git'
 Plug 'git@github.com:honza/vim-snippets.git'
 
+" COC
+Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
+
+" Use release branch (recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Or build from source code by using yarn: https://yarnpkg.com
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 
@@ -42,6 +51,9 @@ Plug 'tpope/vim-rake'
 Plug 'thoughtbot/vim-rspec'
 Plug 'janko-m/vim-test'
 Plug 'git@github.com:tpope/vim-dispatch.git'
+
+" Tailwind
+" Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 
 " Javascript
 Plug 'pangloss/vim-javascript' 
@@ -60,7 +72,7 @@ Plug 'jparise/vim-graphql'
 Plug 'hdima/python-syntax'
 
 " Scala
-Plug 'derekwyatt/vim-scala'
+" Plug 'derekwyatt/vim-scala'
 
 " Elixir
 Plug 'elixir-lang/vim-elixir'
@@ -99,6 +111,7 @@ Plug 'chriskempson/base16-vim'
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
+
 
 " Initialize plugin system
 call plug#end()
