@@ -6,17 +6,23 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'gmarik/Vundle.vim'
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
+
 " Code HTML faster
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-" Fuzzy
-Plug 'ctrlpvim/ctrlp.vim'
 
 " Comment
 Plug 'git@github.com:ddollar/nerdcommenter.git'
 
-" Syntax Checking
-" Plug 'git@github.com:scrooloose/syntastic.git'
+" Prettier
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'branch': 'release/0.x'
+  \ }
+
+Plug 'sbdchd/neoformat'
 
 " Tab in insert mode to be smarter
 Plug 'git@github.com:ervandew/supertab.git'
@@ -24,23 +30,11 @@ Plug 'git@github.com:ervandew/supertab.git'
 " Auto closer
 Plug 'git@github.com:jiangmiao/auto-pairs.git'
 
-" Multi Cursor
-" Plug 'git@github.com:terryma/vim-multiple-cursors.git'
-
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'git@github.com:garbas/vim-snipmate.git'
 Plug 'git@github.com:honza/vim-snippets.git'
-
-" COC
-Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
-
-" Use release branch (recommend)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Or build from source code by using yarn: https://yarnpkg.com
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 " Ruby
 Plug 'vim-ruby/vim-ruby'
@@ -52,34 +46,20 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'janko-m/vim-test'
 Plug 'git@github.com:tpope/vim-dispatch.git'
 
-" Tailwind
-" Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
-
 " Javascript
 Plug 'pangloss/vim-javascript' 
 Plug 'isRuslan/vim-es6'
 Plug 'mxw/vim-jsx'
-Plug 'posva/vim-vue'
 
 " https://thoughtbot.com/blog/modern-typescript-and-react-development-in-vim
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
-" Plug 'https://github.com/ternjs/tern_for_vim.git'
+Plug 'https://github.com/ternjs/tern_for_vim.git'
 
 " Python
 Plug 'hdima/python-syntax'
-
-" Scala
-" Plug 'derekwyatt/vim-scala'
-
-" Elixir
-Plug 'elixir-lang/vim-elixir'
-
-" Phoenix
-Plug 'c-brenn/phoenix.vim'
-Plug 'tpope/vim-projectionist'
 
 " Visually displaying indent levels
 Plug 'nathanaelkane/vim-indent-guides'
@@ -98,10 +78,6 @@ Plug 'git@github.com:vim-scripts/Rename2.git'
 " Copy and Past
 Plug 'christoomey/vim-system-copy'
 
-" Airline
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-
 " Displays icons for each language and technology
 Plug 'ryanoasis/vim-devicons'
 
@@ -111,6 +87,12 @@ Plug 'chriskempson/base16-vim'
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
+
+" Use release branch (recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Or build from source code by using yarn: https://yarnpkg.com
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 
 " Initialize plugin system
