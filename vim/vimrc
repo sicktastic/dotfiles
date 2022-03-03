@@ -67,6 +67,12 @@
 " Highlights -------------------------------------------------------------------------
   hi Visual ctermfg=black ctermbg=Yellow
   hi StatusLine ctermbg=magenta ctermfg=cyan
+  hi Pmenu ctermbg=black 
+  hi Pmenu ctermfg=white
+
+  "" FZF
+  set rtp+=/usr/local/opt/fzf
+  map <C-p> :GFiles<cr>
 
   " Quick clear highlight
   map <C-o> :nohl<cr>
@@ -188,11 +194,8 @@
 
     " ag is fast enough that CtrlP doesn't need to cache
     let g:ctrlp_use_caching = 0
-
     let g:ctrlp_working_path_mode = 0
-
     let g:ctrlp_match_window_bottom = 0
-
     let g:ctrlp_match_window_reversed = 0
   endif
 
@@ -280,14 +283,34 @@
   " Run test faster using spring
   let g:rspec_command = '!spring rspec {spec}'
 
+
 " Other-------------------------------------------------------------------------------
 
   let g:snipMate = {}
   let g:snipMate.scope_aliases = {}
   let g:snipMate.scope_aliases.javascript = 'html'
-
+  let g:snipMate = { 'snippet_version' : 0 }
   " let g:multi_cursor_next_key='<C-n>'
   " let g:multi_cursor_prev_key='<C-p>'
   " let g:multi_cursor_skip_key='<C-x>'
   " let g:multi_cursor_quit_key='<Esc>'
 
+" Use deoplete ------------------------------------------------------------------------
+  " let g:deoplete#enable_at_startup = 1
+
+
+" Prettier ----------------------------------------------------------------------------
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_config_present = 1
+let g:prettier#autoformat_require_pragma = 0
+
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+au FileType javascript setlocal formatprg=prettier
+au FileType javascript.jsx setlocal formatprg=prettier
+au FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+au FileType html setlocal formatprg=js-beautify\ --type\ html
+au FileType scss setlocal formatprg=prettier\ --parser\ css
+au FileType css setlocal formatprg=prettier\ --parser\ css
+
+packloadall
