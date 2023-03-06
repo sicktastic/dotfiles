@@ -317,8 +317,8 @@ eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 
 source $ZSH/oh-my-zsh.sh
-source /Users/anthonylee/Sites/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /Users/anthonylee/Sites/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 # tabtab source for serverless package
@@ -340,3 +340,5 @@ export NVM_DIR="/Users/anthonylee/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# source /Users/anthonylee/Sites/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /Users/anthonylee/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
