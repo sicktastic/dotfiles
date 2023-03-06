@@ -1,7 +1,10 @@
 export TERM=xterm-256color
 
 # User configuration
-plugins=(git)
+plugins=(
+  git
+  zsh-autosuggestions
+)
 stty start undef
 stty stop undef
 
