@@ -165,6 +165,8 @@ alias gsbyd='gatsby develop'
 
 # GIT
 # git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
+alias mastertomain='git branch -m master main'
+alias ghrepo='gh repo view --web'
 
 # Hugo
 alias hugoserver='hugo server -D'
