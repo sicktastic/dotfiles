@@ -1,10 +1,7 @@
 export TERM=xterm-256color
 
 # User configuration
-plugins=(
-  git
-  zsh-autosuggestions
-)
+plugins=(git)
 stty start undef
 stty stop undef
 
@@ -50,6 +47,7 @@ alias deleteremotebranch="git push -u origin"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias ds="cd ~/Sites"
+alias gbranch="git --no-pager branch"
 alias gc="git commit -m"
 alias gcache='git rm -r --cached .'
 alias gclean='git remote prune origin'
@@ -181,6 +179,7 @@ alias npmbootstrap='npm install bootstrap'
 alias npmgulp="sudo npm install -g gulp"
 alias npmgulpl="npm install --save-dev gulp"
 alias npmi="npm init"
+alias latest='npx ncu -u'
 
 # Elixir and Phoenix
 alias mixdatabase='mix ecto.create && mix ecto.migrate'
@@ -192,6 +191,7 @@ alias iexmix='iex -S mix'
 # NEXTJS
 alias next='npx next'
 alias createnextapp='npx create-next-app'
+alias updatenext='npm i next@latest react@latest react-dom@latest eslint-config-next@latest'
 
 # Jupyter
 alias jnotebook='jupyter notebook'
@@ -262,6 +262,7 @@ alias createreact="create-react-app"
 alias rnativeios="react-native run-ios"
 alias rnative="react-native"
 alias createreactnative="create-react-native-app"
+alias createexpo='npx create-expo-app'
 
 # Redis
 alias redis='redis-cli'
@@ -311,12 +312,12 @@ export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 export PATH="$HOME/.npm-packages/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 
-export PYENV_ROOT=/usr/local/opt/pyenv
+# export YENV_ROOT=/usr/local/opt/pyenv
 
 export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
 
 eval "$(rbenv init -)"
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 source $ZSH/oh-my-zsh.sh
 # source /Users/anthonylee/Sites/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -342,5 +343,30 @@ export NVM_DIR="/Users/anthonylee/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-# source /Users/anthonylee/Sites/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /Users/anthonylee/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+plugins=(
+    # other plugins...
+    zsh-autosuggestions
+)
+
+PATH="/Users/anthonylee/.local/share/solana/install/active_release/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/anthonylee/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/anthonylee/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/anthonylee/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/anthonylee/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+alias cursor='Open -a "Cursor"'
+# Python aliases
+alias python=python3
+alias pip=pip3
