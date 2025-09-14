@@ -14,24 +14,9 @@ export EDITOR='vim'
 # AUDIO
 alias  changeaudio="SwitchAudioSource"
 
-# Graduate School
-alias csphotography="cd ~/Sites/gatech/cs6475/Assignments"
-alias connecttoml="ssh -X alee354@buffet02.cc.gatech.edu"
-alias gitpushboth="git push -u gatech master && git push -u origin master"
-
 # Macbook Pro
-alias ajl="cd ~/Sites/artandjustice.development/artandjustice"
 alias anthonyleeio="cd ~/Sites/github.pages/antwonlee.github.io"
 alias dotfiles="cd ~/Sites/dotfiles"
-alias gatech="cd ~/Documents/gatech"
-alias js="cd ~/Sites/_playgrounds/javascript-playground/"
-alias luna="cd ~/Sites/rubyonrails.development/lunamisoo"
-alias ml="cd ~/Sites/machinelearning.development/"
-alias playground="cd ~/Sites/_playgrounds"
-alias pluralsight="cd ~/Pluralsight"
-alias ror="cd ~/Sites/rubyonrails.development/"
-alias thrive="cd ~/Sites/thrive.development/thriveministry"
-alias upcase="cd ~/Sites/upcase.trails"
 
 # iMac
 alias alongside="cd ~/Sites/alongside"
@@ -157,36 +142,17 @@ alias hstaging='git push staging master'
 alias productionhmon='heroku maintenance:on --app'
 alias productionhmoff='heroku maintenance:off --app'
 
-# Gatsby
-alias gsby='gatsby'
-alias gsbyd='gatsby develop'
-
 # GIT
 # git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
 alias mastertomain='git branch -m master main'
 alias ghrepo='gh repo view --web'
 
-# Hugo
-alias hugoserver='hugo server -D'
-
-# Jekyll
-alias jserve='jekyll serve'
-
 # NPM
 alias npmis='npm install --save'
 alias npmisd='npm install --save-dev'
-alias npmbootstrap='npm install bootstrap'
-alias npmgulp="sudo npm install -g gulp"
-alias npmgulpl="npm install --save-dev gulp"
 alias npmi="npm init"
-alias latest='npx ncu -u'
-
-# Elixir and Phoenix
-alias mixdatabase='mix ecto.create && mix ecto.migrate'
-alias mixnew='mix phoenix.new'
-alias mixserver='mix phoenix.server'
-alias mixdigest='mix phoenix.digest'
-alias iexmix='iex -S mix'
+alias outdated='npm outdated'
+alias list='npm list'
 
 # NEXTJS
 alias next='npx next'
@@ -196,8 +162,6 @@ alias updatenext='npm i next@latest react@latest react-dom@latest eslint-config-
 # Jupyter
 alias jnotebook='jupyter notebook'
 
-# Pry
-alias pryrails="pry -r ./config/environment"
 
 # Python
 alias p3='python3'
@@ -286,13 +250,12 @@ alias tmxo='tmuxinator open'
 alias tmxs='tmuxinator start'
 alias tmxthrive='tmuxinator start Thrive'
 
-# Vagrant for Georgia Tech
-alias vup='vagrant up'
-alias vhalt='vagrant halt'
-alias vssh='vagrant ssh'
-
-# Yarn
-alias yga='yarn global add'
+# Vercel
+alias vlist='vercel list'
+alias vlogin='vercel login'
+alias vprojects='vercel project'
+alias vpull='vercel pull'
+alias vwho='vercel whoami'
 
 # Exports
 export ZSH=$HOME/.oh-my-zsh
@@ -367,6 +330,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 alias cursor='Open -a "Cursor"'
+
 # Python aliases
 alias python=python3
 alias pip=pip3
