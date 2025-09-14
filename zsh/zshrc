@@ -153,6 +153,8 @@ alias npmisd='npm install --save-dev'
 alias npmi="npm init"
 alias outdated='npm outdated'
 alias list='npm list'
+alias ncucheck='npx ncu'
+alias ncunew='npx ncu -u'
 
 # NEXTJS
 alias next='npx next'
